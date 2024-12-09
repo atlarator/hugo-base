@@ -1,8 +1,8 @@
-baseurl: https://example.com/
+baseurl: https://victorzhangai.github.io
 languageCode: en-us
 theme: hugo-theme-stack
-title: Example Site
-copyright: Example Person
+title: VZstless-Articles
+copyright: VZstless
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
@@ -10,31 +10,16 @@ DefaultContentLanguage: en
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
+hasCJKLanguage: true
 
 languages:
     en:
         languageName: English
-        title: Example Site
+        title: VZstless
         weight: 1
         params:
             sidebar:
-                subtitle: Example description
-    zh-cn:
-        languageName: 中文
-        title: 演示站点
-        weight: 2
-        params:
-            sidebar:
-                subtitle: 演示说明
-    ar:
-        languageName: عربي
-        languagedirection: rtl
-        title: موقع تجريبي
-        weight: 3
-        params:
-            sidebar:
-                subtitle: وصف تجريبي
+                subtitle: maybe a cat
 
 services:
     # Change it to your Disqus shortname before using
@@ -56,26 +41,26 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    favicon: /1f365.ico
 
     footer:
-        since: 2020
-        customText:
+        since: 2024
+        customText: Maybe making a better tomorrow...
 
     dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+        published: 2006-01-02
+        lastUpdated: 2006-01-02 15:04 BJT
 
     sidebar:
         emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: maybe a cat
         avatar:
             enabled: true
             local: true
             src: img/avatar.png
 
     article:
-        math: false
+        math: true        
         toc: true
         readingTime: true
         license:
@@ -83,8 +68,8 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
-        provider: disqus
+        enabled: false
+        provider: utterance
 
         disqusjs:
             shortname:
@@ -217,7 +202,7 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
+          url: https://github.com/VictorZhangAI
           params:
               icon: brand-github
 
