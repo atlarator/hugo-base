@@ -7,7 +7,190 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Mon, 09 Dec 2024 20:45:32 +0800</lastBuildDate><atom:link href="https://victorzhangai.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 10 Dec 2024 16:55:17 +0800</lastBuildDate><atom:link href="https://victorzhangai.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>单周期处理器（LA）讲座笔记</title>
+        <link>https://victorzhangai.github.io/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Tue, 10 Dec 2024 16:55:17 +0800</pubDate>
+        
+        <guid>https://victorzhangai.github.io/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;h2 id=&#34;单周期处理器la版本&#34;&gt;单周期处理器（LA版本）
+&lt;/h2&gt;&lt;p&gt;延迟槽：曾几何时它很好，然而它非但无法解决延迟造成的流水线阻塞问题，而且会使微结构的设计复杂化，而且编译器并不能总是提取出有效指令填入流水线导致流水线中出现过量空指令，影响流水线性能&lt;/p&gt;
+&lt;p&gt;支持远距离跳转的指令集可以更好减少由于代码体积增大而产生的效率降低问题&lt;/p&gt;
+&lt;p&gt;跳转后还要从寄存器中获得对应的地址，故称间接跳转，link用于返回地址的链接&lt;/p&gt;
+&lt;p&gt;去掉unsigned的指令集依然是完整的&lt;/p&gt;
+&lt;p&gt;至少需要一条syscall才能使用操作系统，否则指令集无法区分用户态和核心态&lt;/p&gt;
+&lt;p&gt;务必注意当input的取值是最后一个值的时候的output&lt;/p&gt;
+&lt;p&gt;CPU = 数据通路 + 控制逻辑&lt;/p&gt;
+&lt;p&gt;指令在指令存储器中存储，地址为PC&lt;/p&gt;
+&lt;p&gt;每执行完一条指令，PC = PC + 4&lt;/p&gt;
+&lt;p&gt;指令存储器是一个静态存储器，所有写的端口恒为0&lt;/p&gt;
+&lt;p&gt;add.w: 从寄存器堆读取操作数，相加，写回寄存器堆&lt;/p&gt;
+&lt;p&gt;寄存器堆的读端口必须有两个，否则执行add需要两个周期；而写端口要有enable（或者reset）&lt;/p&gt;
+&lt;p&gt;addi.w: 与add.w唯一的区别就是第二个源操作数来自指令集中立即数符号扩展至32位&lt;/p&gt;
+&lt;p&gt;ld.w可以复用addi.w的数据通路，ld.w从从数据存储器中读取数据，取回的数据与加法器结果二选一放入寄存器堆&lt;/p&gt;
+&lt;p&gt;st.w写数据存储器，不写寄存器堆&lt;/p&gt;
+&lt;p&gt;务必注意：st.w的源操作数来自rd域，因为增加一个读端口会增加硬件开销&lt;/p&gt;
+&lt;p&gt;dest bne = PC + offset&lt;/p&gt;
+&lt;p&gt;bne根据判断的结果决定是否跳转&lt;/p&gt;
+&lt;p&gt;每次加指令时进行的检查：本条指令是否正确运行，已有的指令功能是否正常&lt;/p&gt;
+&lt;p&gt;zero寄存器的作用就是减少实现指令集子集时的xor&lt;/p&gt;
+&lt;p&gt;编写控制信号的真值表&lt;/p&gt;
+&lt;p&gt;存储器本质上属于核外单元，一些实际的案例中CPU的最顶层只有CLK和RESET&lt;/p&gt;
+&lt;p&gt;现如今的EDA几乎可以把电路性能优化到极致，所以要以可读性与可维护性作为更高的目标&lt;/p&gt;
+&lt;p&gt;不要写真值表，画卡诺图，直接对照指令的机器码格式和电路图敲Verilog&lt;/p&gt;
+&lt;p&gt;多一条assign可以提高代码可读性&lt;/p&gt;
+&lt;p&gt;b: 立即数增宽至26位&lt;/p&gt;
+&lt;p&gt;bl:b之后将PC + 4写入r1（单周期甚至可以直接拉线到MUX写入）&lt;/p&gt;
+&lt;p&gt;新增的控制信号依然要考虑所有的指令&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>一分钟上手Sublime</title>
+        <link>https://victorzhangai.github.io/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</link>
+        <pubDate>Tue, 10 Dec 2024 16:52:35 +0800</pubDate>
+        
+        <guid>https://victorzhangai.github.io/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</guid>
+        <description>&lt;p&gt;（注：这篇文章成文于一年前，放在博客上只是为了留档）&lt;/p&gt;
+&lt;p&gt;最开始接触这玩意儿其实是因为前端（一朝做贼，再想做好人可不容易啊），菜鸟教程推荐的编辑器里头有VSCode，Sublime和WebStorm，这仨里头VSC配C的环境给我配出心理阴影了，而且这玩意儿甚至原生不支持ctrl+滚轮缩放字体。WS要钱，一年两千八，我说我别tm做个前端还得贴钱打工，于是选了Sublime，不得不承认这玩意儿确实好使得一批，现在除了C，Python和Mathematica直接Sublime+命令行，真正做到了有高亮有编译器就能写。&lt;/p&gt;
+&lt;p&gt;这篇文章的内容全部为个人总结，毕竟网上能找到的Sublime教程都挺乐色的。&lt;/p&gt;
+&lt;h3 id=&#34;基本使用方法&#34;&gt;基本使用方法
+&lt;/h3&gt;&lt;p&gt;下载的话直接下就行，这玩意儿反正免费，不过保存文件的时候会时不时蹦个小窗口要你买License，有点烦人，不必管它。&lt;/p&gt;
+&lt;p&gt;建议使用原生英文环境，毕竟那几个单词也不难，中文得装包，而且多语言包其实不好用，有一些词语原来是英文到头还是英文。&lt;/p&gt;
+&lt;p&gt;双击快捷方式进入，View，SideBar，Show SideBar，调出来侧边栏，这样你就能看到你打开的文件。&lt;/p&gt;
+&lt;p&gt;File，New File可以新创建一个文件（注意这个文件是缺少后缀的），Open File可以打开一个文件并自动匹配高亮。&lt;/p&gt;
+&lt;p&gt;New File之后的第一件事务必先View，Syntax里头找这个语言的高亮，这不仅可以给你敲代码带来方便还能为你的代码文件添加对应的后缀（比如C的.c，Python的.py）&lt;/p&gt;
+&lt;p&gt;一些关键字，头文件和函数会有对应的联想，如果想使用这些联想（或者叫补全）就即使按下Tab应用。&lt;/p&gt;
+&lt;p&gt;敲完代码后ctrl+S保存&lt;/p&gt;
+&lt;h3 id=&#34;高级技巧也许&#34;&gt;高级技巧（也许？）
+&lt;/h3&gt;&lt;p&gt;ctrl+shift+P会打开一个搜索框，输入install，找到PackageInstaller就可以安装一些包让你的sublime变得花里胡哨。&lt;/p&gt;
+&lt;p&gt;卸载Package输入remove即可&lt;/p&gt;
+&lt;p&gt;比如你想要某个语言的高亮而Syntax找不见的时候就可以搜索这个语言的名称安装高亮和文件后缀支持。
+搜索Chinese可以找到多语言支持不过不好使。
+Emmet，直到我从前端滚蛋了四个月我才装这个包&lt;/p&gt;
+&lt;p&gt;ctrl+F在文件中进行搜索&lt;/p&gt;
+&lt;p&gt;左手双指滑动右手按住鼠标就可以控制选中文本的速度，适用于没怎么学快捷键而单用鼠标控制不住文本选择的人&lt;/p&gt;
+&lt;p&gt;ctrl+P添加//注释&lt;/p&gt;
+&lt;p&gt;ctrl+shift+P添加/* 注释* /&lt;/p&gt;
+&lt;p&gt;ctrl+F 全局查找对应关键词&lt;/p&gt;
+&lt;p&gt;至于其他的快捷键可以直接搜索对应关键词，不过我没咋用过别的快捷键就是了&lt;/p&gt;
+&lt;p&gt;Edit里的Undo和Redo可以用来吃后悔药&lt;/p&gt;
+&lt;p&gt;没保存也没关系，Sublime的逻辑是打开后自动开启上个工作文件的已有进程&lt;/p&gt;
+&lt;p&gt;每行旁边如果有个倒三角可以进行代码缩略（常见于函数和CSS样式表）（这玩意儿在编CSS的时候救了我的老命要不然眼睛迟早得完蛋）&lt;/p&gt;
+&lt;p&gt;右侧的代码预览可以快速转移至文件的某处代码&lt;/p&gt;
+&lt;p&gt;环境变量中添加&amp;hellip;&amp;hellip;\Sublime Text后可以使用Sublime的shell命令&lt;/p&gt;
+&lt;p&gt;subl 直接打开&lt;/p&gt;
+&lt;p&gt;subl 文件名 新建文件（Sublime直至你指定前不进行文件保存工作）&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Csapp Chapter4</title>
+        <link>https://victorzhangai.github.io/p/csapp-chapter4/</link>
+        <pubDate>Tue, 10 Dec 2024 16:44:47 +0800</pubDate>
+        
+        <guid>https://victorzhangai.github.io/p/csapp-chapter4/</guid>
+        <description>&lt;h2 id=&#34;41&#34;&gt;4.1
+&lt;/h2&gt;&lt;h3 id=&#34;prelude&#34;&gt;prelude
+&lt;/h3&gt;&lt;p&gt;PC holds the address of the instruction that currently executed.&lt;/p&gt;
+&lt;p&gt;registers, base pointer, stack pointer&lt;/p&gt;
+&lt;p&gt;condition code: ZF, SF, OF&lt;/p&gt;
+&lt;p&gt;memory(monolithic byte array)&lt;/p&gt;
+&lt;p&gt;Types of encoding the Y-86 instructions:&lt;/p&gt;
+&lt;p&gt;I-type, D-type and B-type&lt;/p&gt;
+&lt;h3 id=&#34;instructions&#34;&gt;instructions
+&lt;/h3&gt;&lt;p&gt;movq is split: I, R, M -&amp;gt; R, M&lt;/p&gt;
+&lt;p&gt;AL instructions: addq, subq, andq, xorq (as there is no zero register in Y-86 processor, you must add an xorq instruction)&lt;/p&gt;
+&lt;p&gt;jumps: jmp, &amp;lt;=, &amp;lt;, ==, !=, &amp;gt;=, &amp;gt;&lt;/p&gt;
+&lt;p&gt;cond move: &amp;lt;=, &amp;lt;, ==, !=, &amp;gt;=, &amp;gt;&lt;/p&gt;
+&lt;p&gt;halt: stops the program&lt;/p&gt;
+&lt;h3 id=&#34;encode&#34;&gt;encode
+&lt;/h3&gt;&lt;p&gt;code + function&lt;/p&gt;
+&lt;p&gt;store in a small RAM&lt;/p&gt;
+&lt;p&gt;no ambiguity when encoding the instructions&lt;/p&gt;
+&lt;p&gt;Y86-64 is CISC-like for its various length of instructions and RISC-like for its single load/store encoding&lt;/p&gt;
+&lt;h3 id=&#34;exceptions&#34;&gt;exceptions
+&lt;/h3&gt;&lt;p&gt;AOK, HLT, ADR, INS&lt;/p&gt;
+&lt;p&gt;shut whenever not AOK&lt;/p&gt;
+&lt;h3 id=&#34;run-a-code&#34;&gt;run a code
+&lt;/h3&gt;&lt;p&gt;addq needs another register but subq can also set the stat code&lt;/p&gt;
+&lt;p&gt;pushq and popq&amp;rsquo;s details may largely reduce the code portability, problem may occur when subq compares rsp and the pushed value, or pop the stack pointer, undefined behavior always annoy people anytime anywhere.&lt;/p&gt;
+&lt;h2 id=&#34;42&#34;&gt;4.2
+&lt;/h2&gt;&lt;h3 id=&#34;components&#34;&gt;components
+&lt;/h3&gt;&lt;p&gt;combinational logic, memory elements, clock signals(sequential logic is split into two parts)&lt;/p&gt;
+&lt;p&gt;similarity: Verilog -&amp;gt; C, VHDL -&amp;gt; Ada&lt;/p&gt;
+&lt;p&gt;HCL == block:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bool eq = (a &amp;amp;&amp;amp; b) || (!a &amp;amp;&amp;amp; !b)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;HCL MUX block:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bool out = (s &amp;amp;&amp;amp; a) || ()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;word level: using cases&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;word Out = [
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	s: A;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	1: B;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	];
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;sequential-logic&#34;&gt;sequential logic
+&lt;/h3&gt;&lt;p&gt;reg &amp;amp; RAM&lt;/p&gt;
+&lt;p&gt;state changes only when clock rises&lt;/p&gt;
+&lt;p&gt;simple regfile:&lt;/p&gt;
+&lt;p&gt;valA, valB, srcA, srcB, dstW, valW&lt;/p&gt;
+&lt;p&gt;in the Y86 processor: a memory with 2 ports, one for R inst, the other for R/W data&lt;/p&gt;
+&lt;h2 id=&#34;43&#34;&gt;4.3
+&lt;/h2&gt;&lt;h3 id=&#34;stages-of-instructions&#34;&gt;stages of instructions
+&lt;/h3&gt;&lt;h4 id=&#34;fetch&#34;&gt;Fetch
+&lt;/h4&gt;&lt;p&gt;PC = memaddr&lt;/p&gt;
+&lt;p&gt;valP = PC + len(inst)&lt;/p&gt;
+&lt;h4 id=&#34;decode&#34;&gt;Decode
+&lt;/h4&gt;&lt;p&gt;read operands from reg file&lt;/p&gt;
+&lt;h4 id=&#34;execute&#34;&gt;Execute
+&lt;/h4&gt;&lt;p&gt;ALU performs instruction or incr/decr the stack pointer, for other instruction, similar&lt;/p&gt;
+&lt;h4 id=&#34;memory&#34;&gt;Memory
+&lt;/h4&gt;&lt;p&gt;W/R data in mem&lt;/p&gt;
+&lt;h4 id=&#34;write-back&#34;&gt;Write back
+&lt;/h4&gt;&lt;p&gt;write back to register&lt;/p&gt;
+&lt;h4 id=&#34;pc-update&#34;&gt;PC update
+&lt;/h4&gt;&lt;p&gt;PC stores addr of next instruction&lt;/p&gt;
+&lt;p&gt;cost of adding hardware &amp;gt; cost of copying code in software&lt;/p&gt;
+&lt;p&gt;process similar instructions in same manners&lt;/p&gt;
+&lt;h3 id=&#34;hardware&#34;&gt;Hardware
+&lt;/h3&gt;&lt;p&gt;Fetch: PC computes valP, the incremented PC.&lt;/p&gt;
+&lt;p&gt;Decode: read valA and valB&lt;/p&gt;
+&lt;p&gt;Execute: ALU calculates integer or increments the stack pointer, decides whether jump or not.&lt;/p&gt;
+&lt;p&gt;Memory: read or write a word of mem&lt;/p&gt;
+&lt;p&gt;Write Back: write back from ALU or mem&lt;/p&gt;
+&lt;p&gt;PC update&lt;/p&gt;
+&lt;p&gt;only start next cycle when clock rises&lt;/p&gt;
+&lt;p&gt;processor never read back&lt;/p&gt;
+&lt;p&gt;eg: no instruction will both set and read the cond code&lt;/p&gt;
+&lt;p&gt;eg: stack pointer&lt;/p&gt;
+&lt;p&gt;fetch: fetching 6 bytes and generate instruction fields.&lt;/p&gt;
+&lt;p&gt;decode &amp;amp; write back: generate register identifiers, serve necessary data.&lt;/p&gt;
+&lt;p&gt;execute: ALU performs as the calculator or just the adder.&lt;/p&gt;
+&lt;p&gt;memory: write or read memory values.&lt;/p&gt;
+&lt;p&gt;PC increment: depend on instruction code or branch or not.&lt;/p&gt;
+&lt;h3 id=&#34;survey&#34;&gt;Survey
+&lt;/h3&gt;&lt;p&gt;the clock must run slow enough to suit the single-cycle.&lt;/p&gt;
+&lt;p&gt;the parts of the processor only active for a single part of time in the clock cycle&lt;/p&gt;
+&lt;h2 id=&#34;44&#34;&gt;4.4
+&lt;/h2&gt;&lt;h3 id=&#34;pipelining&#34;&gt;pipelining
+&lt;/h3&gt;&lt;p&gt;divide into a series of discrete stages&lt;/p&gt;
+&lt;p&gt;increase the throughput of a system, but slightly increase the latency&lt;/p&gt;
+&lt;p&gt;nonpipelined: a logic performs the computation with a register hold the result of the computation&lt;/p&gt;
+&lt;p&gt;latency: the total time to perform a single instruction&lt;/p&gt;
+&lt;p&gt;slowing the clock won&amp;rsquo;t change the behavior of a pipeline.&lt;/p&gt;
+&lt;p&gt;different clock delays of different instructions influences the pipeline,&lt;/p&gt;
+&lt;p&gt;due to the delay, pipeline doesn&amp;rsquo;t always have larger throughput with more stages on each instruction&lt;/p&gt;
+&lt;p&gt;logical dependencies limits the performance of pipeline&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Whoami</title>
         <link>https://victorzhangai.github.io/p/whoami/</link>
         <pubDate>Mon, 09 Dec 2024 20:45:32 +0800</pubDate>
