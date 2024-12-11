@@ -7,41 +7,27 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Fri, 09 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://victorzhangai.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 11 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://victorzhangai.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>转移中的故事</title>
+        <link>https://victorzhangai.github.io/%E8%BD%AC%E7%A7%BB%E4%B8%AD%E7%9A%84%E6%95%85%E4%BA%8B/</link>
+        <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://victorzhangai.github.io/%E8%BD%AC%E7%A7%BB%E4%B8%AD%E7%9A%84%E6%95%85%E4%BA%8B/</guid>
+        <description>&lt;p&gt;确切来讲，这个博客的转移拖得太久太久了。最开始我用的Hexo框架弄，结果Hexo在20年之后的几乎所有issue都在痛骂这个框架，帮助信息也是没几个正经的。我年中弄这个框架的时候就受不了两点，一是你一个博客框架在我电脑开性能模式下还敢狂转风扇你也是没谁了，二是这玩意儿的定制化程度低得可怕。我想把Hexo主页最上方的地球图片换了，结果前脚改完配置文件后脚一生成发布版就给我改回去了。牛的。&lt;/p&gt;
+&lt;p&gt;大概半年后就是今年十二月，我尝试了Hugo，怎么说呢，槽点还是很多。主要集中在你在Ubuntu上apt装的Hugo出了一堆在官网issue上头都找不到的离奇bug（点名批评server后白屏），最后把Hugo卸了，去snap上头安装一个，问题居然解决了。哈，你甚至没法界定到底是Ubuntu的锅还是Hugo的锅。&lt;/p&gt;
+&lt;p&gt;Hugo另外一个和Hexo逻辑不太一样的地方在于Hugo的自动化部署比较麻烦，需要借助脚本还得分两个repo存放。因为Hexo是不区分public和dev的而Hugo在每次发布的时候都会生成一个新的public。&lt;/p&gt;
+&lt;p&gt;有一篇关于Turing Complete的指令集速查表在这次博客迁移的过程中丢失了，剩下的文章都从我的大机械盘中找了回来。总之，盖新家是真折腾人啊，但愿Hugo别突然爆发什么奇怪的Breaking Change，能让我的博客活久一点儿。如果Hugo爆发Breaking Change，大概率我就只能转战W3C了（笑）&lt;/p&gt;
+&lt;p&gt;接下来就是找时间部署在Cloudflare上头然后尝试着把评论和Tag加上。&lt;/p&gt;
+&lt;p&gt;总之，很高兴认识你，各种意义上的。愿你在这儿找到你想要的东西！&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Archives</title>
         <link>https://victorzhangai.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
         <guid>https://victorzhangai.github.io/archives/</guid>
         <description></description>
-        </item>
-        <item>
-        <title>About</title>
-        <link>https://victorzhangai.github.io/about/</link>
-        <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://victorzhangai.github.io/about/</guid>
-        <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Apache License 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/yuin/goldmark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/alecthomas/chroma&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/muesli/smartcrop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/viper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;
-&lt;p&gt;Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.&lt;/p&gt;
-&lt;p&gt;Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.&lt;/p&gt;
-&lt;p&gt;Learn more and contribute on &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
         </item>
         <item>
         <title>Links</title>
