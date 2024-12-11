@@ -2,13 +2,33 @@
 title: Links
 links:
   - title: GitHub
-    description: GitHub is the world's largest software development platform.
+    description: 猫之家
     website: https://github.com
     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
+  - title: Compumuseum
+    description: 网页里的电脑博物馆
+    website: https://www.compumuseum.com/
+    image: compumuseum.ico
+  - title: Spinal HDL
+    description: 也许是未来硬件开发的先声
+    website: https://spinalhdl.github.io/SpinalDoc-RTD/zh_CN/index.html
+    image: spinal.png
+  - title: Nushell
+    description: 新的Shell
+    website: https://www.nushell.sh/zh-CN/
+    image: nushell.png
+  - title: IT邦帮忙
+    description: 宝岛电脑论坛
+    website: https://ithelp.ithome.com.tw/
+    image: ithelp.png
+  - title: limonnur
+    description: 猫猫的咖啡馆
+    website: https://forum.limonnur.party/
+    image: limo.png
+  - title: clansty
+    description: 某个给我很大启发的猫猫
+    website: https://nyac.at/
+    image: clansty.png
 menu:
     main: 
         weight: -50
@@ -18,20 +38,6 @@ menu:
 comments: false
 ---
 
-To use this feature, add `links` section to frontmatter.
+一些友链，包括论坛或者正在心水的工具
 
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images.
+如果你也想把友链加在这里可以电邮call我
