@@ -2,7 +2,7 @@
 menu:
     main:
         name: SCSA-S
-        weight: -100
+        weight: -90
         params:
             icon: hash
 ---

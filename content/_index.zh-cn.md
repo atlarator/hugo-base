@@ -2,7 +2,7 @@
 menu:
     main:
         name: 关于我
-        weight: -100
+        weight: -200
         params:
             icon: rss
 ---

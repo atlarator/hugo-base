@@ -206,9 +206,9 @@ menu:
           params:
               icon: brand-github
 
-        - identifier: twitter
+        - identifier: notion
           name: Twitter
-          url: https://twitter.com
+          url: https://vzstless.notion.so
           params:
               icon: brand-twitter
 
