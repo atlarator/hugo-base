@@ -31,3 +31,20 @@ nmap -p 80 -sA [IP]
 ```
 对目标主机进行TCP ACK扫描。nmap向目标端口发送TCP ACK报文，无论目标端口是否处于开放状态，目标机都会返回TCP RST报文。如果nmap主机能收到此TCP RST报文，则说明目标端口未被防火墙屏蔽。TCP ACK扫描只能用于确定防火墙是否屏蔽某个端口，可以辅助TCP SYN的方式来判断目标主机防火墙的状况。
 
+```bash
+nmap –sn –PE -n [IP] –oX out.xml
+```
+C段扫描，其中-sn为不扫描端口，-PE为使用ICMP扫描，-n为不使用DNS解析
+
+```bash
+nmap –sS –Pn –O [IP]
+nmap -sS -sV [IP]
+nmap -p 80 --script http-waf-fingerprint [IP]
+```
+探测资产服务指纹
+
+```bash
+nmap --script dns-zone-transfer.nse --script-args "dns-zone-transfer.domain=[request_URL]" -Pn -p 53 [DNS_server]
+```
+
+其中``--script dns-zone-transfer.nse``代表使用域传输脚本，``--script-args``配置脚本对应参数，``-Pn``进行ping测试``-p 53``为指定53号端口
