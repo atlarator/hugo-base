@@ -107,6 +107,10 @@ SSH: 建立在应用层上，较为可靠&lt;br&gt;
 &lt;/h2&gt;&lt;p&gt;采用UDP传输协议&lt;br&gt;
 发现，提供，选择，确认&lt;br&gt;
 重新登录，更新租约&lt;/p&gt;
+&lt;p&gt;防火墙位于路由器后，交换机前，典型功能为访问控制，传输安全，路由，地址切换，服务代理，攻击检测和防御&lt;br&gt;
+性能指标：丢包率，吞吐量，时延，并发连接数&lt;br&gt;
+IDS: HIDS, NIDS&lt;br&gt;
+VPN: 依托NSP在公共网络中建立的虚拟专用通信网络&lt;/p&gt;
 &lt;p&gt;（不是，这也太多了，半天根本复习不完啊）&lt;/p&gt;
 </description>
         </item>
