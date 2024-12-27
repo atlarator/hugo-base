@@ -5,11 +5,11 @@ draft: false
 ---
 
 ### Metasploit
-```bash
+```shell
 msfdb init && msfconsole
 ```
 启动MSF
-```bash
+```shell
 search [vul_name]
 use [module_name]
 show options
@@ -17,7 +17,7 @@ set RHOSTS [IP]
 run
 ```
 检测靶机是否存在漏洞
-```bash
+```shell
 use [module_name]
 set RHOST [dest_IP]
 set LHOST [src_IP]

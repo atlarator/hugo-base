@@ -9,23 +9,23 @@ draft: false
 #### 子域名查询
 域名反查工具：<a href="https://tool.chinaz.com/">站长之家</a>
 域名查询指令
-```bash
+```shell
 whois [URL]
 ```
 DNS解析指令
-```bash
+```shell
 dig [URL]
 ```
 查找负责解析的DNS主机
-```bash
+```shell
 dig [URL] @m.n.p.q
 ```
 查找NS记录
-```bash
+```shell
 dig [URL] NS
 ```
 查找TXT记录
-```bash
+```shell
 dig [URL] TXT
 ```
 多地ping
@@ -34,7 +34,7 @@ dig [URL] TXT
 #### 子域名爆破
 
 ##### subDomainsBrute
-```bash
+```shell
 python3 subDomainsBrute.py --full -t 10 [URL] -w
 ```
 其中--full为全部扫描，-t为使用线程数，-w为扩展扫描
@@ -43,7 +43,7 @@ python3 subDomainsBrute.py --full -t 10 [URL] -w
 
 ##### theHarvester
 theHarvester: -d指定域名，-g指定google搜索，-s使用shodan搜索，-b为指定搜索引擎或使用全部
-```bash
+```shell
 theHarvester -d [URL] -c
 ```
 -c进行子域名爆破
@@ -53,36 +53,36 @@ theHarvester -d [URL] -c
 --disable-collectors+搜索引擎名可以将对应的搜集器排除
 
 扩展查询
-```bash
+```shell
 aquatone-discover --set-key [engine-name] [key]
 ```
 减少扫描目标
-```bash
+```shell
 aquatone-scan -d [URL] -p [PORTS] -t [THREADS] -s [SLEEP_TIME]
 ```
 -d指定域名，-p指定端口，使用逗号隔开，-t指定使用线程数目，-s指定发送请求的间隔时间
 
 #### C段扫描
-```bash
+```shell
 masscan –p 80 ip/24 --rate 10000 -oL output.txt
 ```
 -p为设定输出端口，--rate为设定发包速率，-oL为设定输出路径
 
 #### 资产服务指纹查询
-```bash
+```shell
 wafw00f [IP]
 ```
 使用waf00f探测waf设备
 
 #### 目录扫描
 
-```bash
+```shell
 dirb http://IP [dict_path]
 ```
 使用dirb，借助字典暴力探测web目录
 
 #### 域传输漏洞
-```bash
+```shell
 dig [DNS_server] -t axfr [request_URL]
 ```
 
