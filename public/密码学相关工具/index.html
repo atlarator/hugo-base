@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Hashcat -a 0 字典破解; -a 1 组合破解; -a 3 掩码暴力破解;\n-a 6 字典+掩码破解; -a 7 掩码+字典破解\n-m 规定hash类型\n掩码字符集：\n?l 小写字母; ?u 大写字母; ?d 十进制数字; ?h小写十六进制数字;\n?H大写十六进制数字; ?s 特殊字符; ?a 键盘上的可见字符; ?b 0x00-0xff\n">
 <title>密码学相关工具</title>
 
-<link rel='canonical' href='http://localhost:1313/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/'>
+<link rel='canonical' href='https://victorzhangai.github.io/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="密码学相关工具">
 <meta property='og:description' content="Hashcat -a 0 字典破解; -a 1 组合破解; -a 3 掩码暴力破解;\n-a 6 字典+掩码破解; -a 7 掩码+字典破解\n-m 规定hash类型\n掩码字符集：\n?l 小写字母; ?u 大写字母; ?d 十进制数字; ?h小写十六进制数字;\n?H大写十六进制数字; ?s 特殊字符; ?a 键盘上的可见字符; ?b 0x00-0xff\n">
-<meta property='og:url' content='http://localhost:1313/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/'>
+<meta property='og:url' content='https://victorzhangai.github.io/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/'>
 <meta property='og:site_name' content='VZstless'>
 <meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2024-12-26T21:33:00&#43;08:00'/><meta property='article:modified_time' content='2024-12-26T21:33:00&#43;08:00'/>
 <meta name="twitter:title" content="密码学相关工具">
@@ -400,7 +400,15 @@
 </div>
 </div><p>对靶机FTP登录用户名li进行密码字典攻击</p>
 <h2 id="crunch">crunch
-</h2><p>(TODO)</p>
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">crunch <span class="m">4</span> <span class="m">4</span> -t %^@, -o ./password.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>生成四位密码字典，第一位为数字，第二位为特殊字符，第三位为小写字母，第四位为大写字母</p>
 
 </section>
 
@@ -559,7 +567,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.df02a2d3ca6d85f1dcd8611340bb41a5cf3378772425492569e55dbf29dd1c8b.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

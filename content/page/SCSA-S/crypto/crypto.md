@@ -20,4 +20,7 @@ hydra -l li -P /usr/password.txt ftp://[IP]
 对靶机FTP登录用户名li进行密码字典攻击  
 
 ## crunch
-(TODO)
+```shell
+crunch 4 4 -t %^@, -o ./password.txt
+```
+生成四位密码字典，第一位为数字，第二位为特殊字符，第三位为小写字母，第四位为大写字母  

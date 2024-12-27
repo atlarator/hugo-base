@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on VZstless</title>
-        <link>http://localhost:1313/post/</link>
+        <link>https://victorzhangai.github.io/post/</link>
         <description>Recent content in Posts on VZstless</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Wed, 18 Dec 2024 21:38:49 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 18 Dec 2024 21:38:49 +0800</lastBuildDate><atom:link href="https://victorzhangai.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>系数为±1的n次方程根在复平面的分布</title>
-        <link>http://localhost:1313/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</link>
+        <link>https://victorzhangai.github.io/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</link>
         <pubDate>Wed, 18 Dec 2024 21:38:49 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</guid>
+        <guid>https://victorzhangai.github.io/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</guid>
         <description>&lt;p&gt;（一篇在分享会上的稿件的留档）&lt;/p&gt;
 &lt;h3 id=&#34;引子&#34;&gt;引子
 &lt;/h3&gt;&lt;p&gt;Mathematica的基础语法三句话就能解决：&lt;/p&gt;
@@ -91,7 +91,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其中ListPlot为绘制散点图，@@@用于替换表达式的一级标头（TreeForm的第一层），#和&amp;amp;为纯函数的自变量和结尾标识，这个图长这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/initial.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/initial.jpg&#34;
 	
 	
 	
@@ -166,7 +166,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;理论上，只要把这玩意儿封装成函数，画个散点图这事儿就结束了。但是还是别这样了，我试过了，13次方程，用了65秒，全程内存占用没下700M。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/amerga.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/amerga.jpg&#34;
 	
 	
 	
@@ -277,7 +277,7 @@ $$&lt;p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;大概长这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/milestone.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/milestone.jpg&#34;
 	
 	
 	
@@ -310,7 +310,7 @@ $$&lt;p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mathematica&#34; data-lang=&#34;mathematica&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ArrayPlot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UnitStep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/dolce.jpg&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/dolce.jpg&#34;
 	
 	
 	
@@ -329,7 +329,7 @@ $$&lt;p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mathematica&#34; data-lang=&#34;mathematica&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ArrayPlot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UnitStep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ColorFunction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AvocadoColor&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/complete.jpg&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/complete.jpg&#34;
 	
 	
 	
@@ -369,10 +369,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>生产力与生产关系</title>
-        <link>http://localhost:1313/p/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/</link>
+        <link>https://victorzhangai.github.io/p/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/</link>
         <pubDate>Mon, 16 Dec 2024 21:51:39 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/</guid>
+        <guid>https://victorzhangai.github.io/p/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/</guid>
         <description>&lt;p&gt;注：以下讨论不涉及C，Python和JavaScript，因为你不用也得用，迟早有一天你会被这仨语言中的一个找上茬儿&lt;/p&gt;
 &lt;p&gt;马原课本告诉我们，生产力决定生产关系，生产关系反作用于生产力。我们可以使用这个理论来给计算机行业中的错误思想套公式。现在许多人中流传着Java焦虑，好像Java死了我的工作就彻底寄了，然后经典的中年危机就业焦虑。然而大概率事实是不是Java不行，而是你从始至终就没入行。换语言不会使你干好，反而你长期囿于原先的生产关系而没有意识到自己的生产力本身落后，换了语言，原形毕露，没有论坛可查，自己失去了debug和查找性能瓶颈的能力。类似的还有软件工程。首先，你大概率不是CEO之类的要职，而你的第一个demo做得并不好甚至没做出来，你就觉得现在的软件生产模型不行，想从瀑布模型转变成敏捷模型。然而你没注意到敏捷模型对生产力的要求是达到了一定境界的，你的生产力并不足以满足敏捷模型短期迭代的内在要求，大概率结局是项目流产。&lt;/p&gt;
 &lt;p&gt;换一个视角，你应该在简历上写精通XXX语言吗？理论上不应该。这时候就有人问有人就看简历里头的这玩意儿你咋办嘛，我只能说这玩意儿只能反映你接触过这种生产关系，对于你的生产力没有任何反映。你用解释型编程语言大写特写for循环，最后的结果必定是慢的要死。当你想要入坑一个新的编程语言的时候，最好问问自己：&lt;/p&gt;
@@ -383,10 +383,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>关于一些网络热门课程</title>
-        <link>http://localhost:1313/p/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%83%AD%E9%97%A8%E8%AF%BE%E7%A8%8B/</link>
+        <link>https://victorzhangai.github.io/p/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%83%AD%E9%97%A8%E8%AF%BE%E7%A8%8B/</link>
         <pubDate>Sun, 15 Dec 2024 13:38:47 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%83%AD%E9%97%A8%E8%AF%BE%E7%A8%8B/</guid>
+        <guid>https://victorzhangai.github.io/p/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%83%AD%E9%97%A8%E8%AF%BE%E7%A8%8B/</guid>
         <description>&lt;p&gt;事先声明，锐评不代表讨厌，相反，正是因为你有了足够的了解之后你才能知道为啥人家的课程好，我们的为什么烂。我感谢它们，在无数节水课中带我消磨时间，做有趣的事情。&lt;/p&gt;
 &lt;h3 id=&#34;sicp&#34;&gt;SICP
 &lt;/h3&gt;&lt;p&gt;SICP这个课可就有点儿历史了，上世纪80年代，Abelson和Sussman这俩人用他们编写的教科书改造了MIT的计算机入门课程。它主要使用Lisp的一门方言——MIT Scheme进行编程，讲解关于计算机思维与计算方法的基础知识。现在网上流传的始祖SICP实质上是两个教授去惠普公司进行的讲座，不过内容大同小异就是了。说是基础，但是这个课联同这本书都是极其折磨的。&lt;/p&gt;
@@ -404,10 +404,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>《算法竞赛》第一章笔记</title>
-        <link>http://localhost:1313/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/</link>
+        <link>https://victorzhangai.github.io/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Wed, 11 Dec 2024 10:17:29 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://victorzhangai.github.io/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h3 id=&#34;单调栈&#34;&gt;单调栈
 &lt;/h3&gt;&lt;p&gt;栈中元素从栈顶到栈底依次递增&lt;/p&gt;
 &lt;p&gt;一个新数字进栈前要弹出所有比它小的数，所有数字都入栈&lt;/p&gt;
@@ -618,10 +618,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>单周期处理器（LA）讲座笔记</title>
-        <link>http://localhost:1313/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</link>
+        <link>https://victorzhangai.github.io/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 10 Dec 2024 16:55:17 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://victorzhangai.github.io/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h2 id=&#34;单周期处理器la版本&#34;&gt;单周期处理器（LA版本）
 &lt;/h2&gt;&lt;p&gt;延迟槽：曾几何时它很好，然而它非但无法解决延迟造成的流水线阻塞问题，而且会使微结构的设计复杂化，而且编译器并不能总是提取出有效指令填入流水线导致流水线中出现过量空指令，影响流水线性能&lt;/p&gt;
 &lt;p&gt;支持远距离跳转的指令集可以更好减少由于代码体积增大而产生的效率降低问题&lt;/p&gt;
@@ -655,10 +655,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>一分钟上手Sublime</title>
-        <link>http://localhost:1313/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</link>
+        <link>https://victorzhangai.github.io/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</link>
         <pubDate>Tue, 10 Dec 2024 16:52:35 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</guid>
+        <guid>https://victorzhangai.github.io/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</guid>
         <description>&lt;p&gt;（注：这篇文章成文于一年前，放在博客上只是为了留档）&lt;/p&gt;
 &lt;p&gt;最开始接触这玩意儿其实是因为前端（一朝做贼，再想做好人可不容易啊），菜鸟教程推荐的编辑器里头有VSCode，Sublime和WebStorm，这仨里头VSC配C的环境给我配出心理阴影了，而且这玩意儿甚至原生不支持ctrl+滚轮缩放字体。WS要钱，一年两千八，我说我别tm做个前端还得贴钱打工，于是选了Sublime，不得不承认这玩意儿确实好使得一批，现在除了C，Python和Mathematica直接Sublime+命令行，真正做到了有高亮有编译器就能写。&lt;/p&gt;
 &lt;p&gt;这篇文章的内容全部为个人总结，毕竟网上能找到的Sublime教程都挺乐色的。&lt;/p&gt;
@@ -693,10 +693,10 @@ Emmet，直到我从前端滚蛋了四个月我才装这个包&lt;/p&gt;
         </item>
         <item>
         <title>Csapp Chapter4</title>
-        <link>http://localhost:1313/p/csapp-chapter4/</link>
+        <link>https://victorzhangai.github.io/p/csapp-chapter4/</link>
         <pubDate>Tue, 10 Dec 2024 16:44:47 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/csapp-chapter4/</guid>
+        <guid>https://victorzhangai.github.io/p/csapp-chapter4/</guid>
         <description>&lt;h2 id=&#34;41&#34;&gt;4.1
 &lt;/h2&gt;&lt;h3 id=&#34;prelude&#34;&gt;prelude
 &lt;/h3&gt;&lt;p&gt;PC holds the address of the instruction that currently executed.&lt;/p&gt;
@@ -801,10 +801,10 @@ Emmet，直到我从前端滚蛋了四个月我才装这个包&lt;/p&gt;
         </item>
         <item>
         <title>Whoami</title>
-        <link>http://localhost:1313/p/whoami/</link>
+        <link>https://victorzhangai.github.io/p/whoami/</link>
         <pubDate>Mon, 09 Dec 2024 20:45:32 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/whoami/</guid>
+        <guid>https://victorzhangai.github.io/p/whoami/</guid>
         <description>&lt;h1 id=&#34;vzstless-as-your-friend-or-thinker&#34;&gt;VZstless as your friend or thinker
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;🍥 Call this name as VictorZhang was signed up by somebody else&amp;hellip;&lt;/li&gt;

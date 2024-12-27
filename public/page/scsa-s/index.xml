@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>VZstless</title>
-        <link>http://localhost:1313/page/scsa-s/</link>
+        <link>https://victorzhangai.github.io/page/scsa-s/</link>
         <description>Recent content on VZstless</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Thu, 26 Dec 2024 21:33:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/page/scsa-s/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 26 Dec 2024 21:33:00 +0800</lastBuildDate><atom:link href="https://victorzhangai.github.io/page/scsa-s/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>密码学相关工具</title>
-        <link>http://localhost:1313/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</link>
+        <link>https://victorzhangai.github.io/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</link>
         <pubDate>Thu, 26 Dec 2024 21:33:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</guid>
+        <guid>https://victorzhangai.github.io/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</guid>
         <description>&lt;h2 id=&#34;hashcat&#34;&gt;Hashcat
 &lt;/h2&gt;&lt;p&gt;-a 0 字典破解; -a 1 组合破解; -a 3 掩码暴力破解;&lt;br&gt;
 -a 6 字典+掩码破解; -a 7 掩码+字典破解&lt;br&gt;
@@ -31,15 +31,23 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;对靶机FTP登录用户名li进行密码字典攻击&lt;/p&gt;
 &lt;h2 id=&#34;crunch&#34;&gt;crunch
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crunch &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -t %^@, -o ./password.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;生成四位密码字典，第一位为数字，第二位为特殊字符，第三位为小写字母，第四位为大写字母&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>计网All-in-One</title>
-        <link>http://localhost:1313/%E8%AE%A1%E7%BD%91all-in-one/</link>
+        <link>https://victorzhangai.github.io/%E8%AE%A1%E7%BD%91all-in-one/</link>
         <pubDate>Sat, 21 Dec 2024 15:31:11 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E8%AE%A1%E7%BD%91all-in-one/</guid>
+        <guid>https://victorzhangai.github.io/%E8%AE%A1%E7%BD%91all-in-one/</guid>
         <description>&lt;h2 id=&#34;分类&#34;&gt;分类
 &lt;/h2&gt;&lt;p&gt;星型结构：易于组网，中心节点瘫痪会导致整个网络瘫痪&lt;br&gt;
 环型结构：没有路径选择问题，但某个节点故障直接影响网络通信，网络吞吐能力差&lt;br&gt;
@@ -162,10 +170,10 @@ TFTP使用UDP&lt;br&gt;
         </item>
         <item>
         <title>信息搜集</title>
-        <link>http://localhost:1313/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/</link>
+        <link>https://victorzhangai.github.io/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/</link>
         <pubDate>Sat, 21 Dec 2024 08:33:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/</guid>
+        <guid>https://victorzhangai.github.io/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/</guid>
         <description>&lt;h3 id=&#34;信息查询&#34;&gt;信息查询
 &lt;/h3&gt;&lt;h4 id=&#34;子域名查询&#34;&gt;子域名查询
 &lt;/h4&gt;&lt;p&gt;域名反查工具：&lt;a href=&#34;https://tool.chinaz.com/&#34;&gt;站长之家&lt;/a&gt;
@@ -305,10 +313,10 @@ TFTP使用UDP&lt;br&gt;
         </item>
         <item>
         <title>文件包含相关</title>
-        <link>http://localhost:1313/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9B%B8%E5%85%B3/</link>
+        <link>https://victorzhangai.github.io/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9B%B8%E5%85%B3/</link>
         <pubDate>Fri, 20 Dec 2024 20:45:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9B%B8%E5%85%B3/</guid>
+        <guid>https://victorzhangai.github.io/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9B%B8%E5%85%B3/</guid>
         <description>&lt;h3 id=&#34;文件名后缀检测与绕过&#34;&gt;文件名后缀检测与绕过
 &lt;/h3&gt;&lt;h4 id=&#34;一般思路&#34;&gt;一般思路
 &lt;/h4&gt;&lt;p&gt;.php -&amp;gt; 更换大小写 -&amp;gt; Windows可使用末尾增加.或者空格或者::$DATA进行过滤绕过 -&amp;gt; Apache可使用&lt;code&gt;SetHandler application/x-httpd-php&lt;/code&gt;进行任意文件绕过 -&amp;gt; MIME绕过 -&amp;gt; 图片马&lt;/p&gt;
@@ -357,10 +365,10 @@ TFTP使用UDP&lt;br&gt;
         </item>
         <item>
         <title>速查表</title>
-        <link>http://localhost:1313/%E9%80%9F%E6%9F%A5%E8%A1%A8/</link>
+        <link>https://victorzhangai.github.io/%E9%80%9F%E6%9F%A5%E8%A1%A8/</link>
         <pubDate>Fri, 20 Dec 2024 20:27:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E9%80%9F%E6%9F%A5%E8%A1%A8/</guid>
+        <guid>https://victorzhangai.github.io/%E9%80%9F%E6%9F%A5%E8%A1%A8/</guid>
         <description>&lt;h3 id=&#34;xss&#34;&gt;XSS
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -530,10 +538,10 @@ popen()
         </item>
         <item>
         <title>Metasploit</title>
-        <link>http://localhost:1313/metasploit/</link>
+        <link>https://victorzhangai.github.io/metasploit/</link>
         <pubDate>Thu, 19 Dec 2024 21:25:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/metasploit/</guid>
+        <guid>https://victorzhangai.github.io/metasploit/</guid>
         <description>&lt;h3 id=&#34;metasploit&#34;&gt;Metasploit
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -586,10 +594,10 @@ popen()
         </item>
         <item>
         <title>nmap</title>
-        <link>http://localhost:1313/nmap/</link>
+        <link>https://victorzhangai.github.io/nmap/</link>
         <pubDate>Thu, 19 Dec 2024 21:25:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/nmap/</guid>
+        <guid>https://victorzhangai.github.io/nmap/</guid>
         <description>&lt;h3 id=&#34;nmap&#34;&gt;nmap
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -680,10 +688,10 @@ popen()
         </item>
         <item>
         <title>openssl</title>
-        <link>http://localhost:1313/openssl/</link>
+        <link>https://victorzhangai.github.io/openssl/</link>
         <pubDate>Thu, 19 Dec 2024 21:25:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/openssl/</guid>
+        <guid>https://victorzhangai.github.io/openssl/</guid>
         <description>&lt;p&gt;这里只收录openssl中关于密码学的内容&lt;/p&gt;
 &lt;h4 id=&#34;rc4加解密&#34;&gt;rc4加解密
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -903,10 +911,10 @@ popen()
         </item>
         <item>
         <title>sqlmap</title>
-        <link>http://localhost:1313/sqlmap/</link>
+        <link>https://victorzhangai.github.io/sqlmap/</link>
         <pubDate>Thu, 19 Dec 2024 21:25:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/sqlmap/</guid>
+        <guid>https://victorzhangai.github.io/sqlmap/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

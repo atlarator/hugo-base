@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>VZstless</title>
-        <link>http://localhost:1313/</link>
+        <link>https://victorzhangai.github.io/</link>
         <description>Recent content on VZstless</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Thu, 26 Dec 2024 21:33:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 26 Dec 2024 21:33:00 +0800</lastBuildDate><atom:link href="https://victorzhangai.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>密码学相关工具</title>
-        <link>http://localhost:1313/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</link>
+        <link>https://victorzhangai.github.io/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</link>
         <pubDate>Thu, 26 Dec 2024 21:33:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</guid>
+        <guid>https://victorzhangai.github.io/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</guid>
         <description>&lt;h2 id=&#34;hashcat&#34;&gt;Hashcat
 &lt;/h2&gt;&lt;p&gt;-a 0 字典破解; -a 1 组合破解; -a 3 掩码暴力破解;&lt;br&gt;
 -a 6 字典+掩码破解; -a 7 掩码+字典破解&lt;br&gt;
@@ -31,15 +31,23 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;对靶机FTP登录用户名li进行密码字典攻击&lt;/p&gt;
 &lt;h2 id=&#34;crunch&#34;&gt;crunch
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crunch &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -t %^@, -o ./password.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;生成四位密码字典，第一位为数字，第二位为特殊字符，第三位为小写字母，第四位为大写字母&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>计网All-in-One</title>
-        <link>http://localhost:1313/%E8%AE%A1%E7%BD%91all-in-one/</link>
+        <link>https://victorzhangai.github.io/%E8%AE%A1%E7%BD%91all-in-one/</link>
         <pubDate>Sat, 21 Dec 2024 15:31:11 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E8%AE%A1%E7%BD%91all-in-one/</guid>
+        <guid>https://victorzhangai.github.io/%E8%AE%A1%E7%BD%91all-in-one/</guid>
         <description>&lt;h2 id=&#34;分类&#34;&gt;分类
 &lt;/h2&gt;&lt;p&gt;星型结构：易于组网，中心节点瘫痪会导致整个网络瘫痪&lt;br&gt;
 环型结构：没有路径选择问题，但某个节点故障直接影响网络通信，网络吞吐能力差&lt;br&gt;
@@ -162,10 +170,10 @@ TFTP使用UDP&lt;br&gt;
         </item>
         <item>
         <title>信息搜集</title>
-        <link>http://localhost:1313/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/</link>
+        <link>https://victorzhangai.github.io/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/</link>
         <pubDate>Sat, 21 Dec 2024 08:33:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/</guid>
+        <guid>https://victorzhangai.github.io/%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/</guid>
         <description>&lt;h3 id=&#34;信息查询&#34;&gt;信息查询
 &lt;/h3&gt;&lt;h4 id=&#34;子域名查询&#34;&gt;子域名查询
 &lt;/h4&gt;&lt;p&gt;域名反查工具：&lt;a href=&#34;https://tool.chinaz.com/&#34;&gt;站长之家&lt;/a&gt;
@@ -305,10 +313,10 @@ TFTP使用UDP&lt;br&gt;
         </item>
         <item>
         <title>文件包含相关</title>
-        <link>http://localhost:1313/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9B%B8%E5%85%B3/</link>
+        <link>https://victorzhangai.github.io/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9B%B8%E5%85%B3/</link>
         <pubDate>Fri, 20 Dec 2024 20:45:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9B%B8%E5%85%B3/</guid>
+        <guid>https://victorzhangai.github.io/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E7%9B%B8%E5%85%B3/</guid>
         <description>&lt;h3 id=&#34;文件名后缀检测与绕过&#34;&gt;文件名后缀检测与绕过
 &lt;/h3&gt;&lt;h4 id=&#34;一般思路&#34;&gt;一般思路
 &lt;/h4&gt;&lt;p&gt;.php -&amp;gt; 更换大小写 -&amp;gt; Windows可使用末尾增加.或者空格或者::$DATA进行过滤绕过 -&amp;gt; Apache可使用&lt;code&gt;SetHandler application/x-httpd-php&lt;/code&gt;进行任意文件绕过 -&amp;gt; MIME绕过 -&amp;gt; 图片马&lt;/p&gt;
@@ -357,10 +365,10 @@ TFTP使用UDP&lt;br&gt;
         </item>
         <item>
         <title>速查表</title>
-        <link>http://localhost:1313/%E9%80%9F%E6%9F%A5%E8%A1%A8/</link>
+        <link>https://victorzhangai.github.io/%E9%80%9F%E6%9F%A5%E8%A1%A8/</link>
         <pubDate>Fri, 20 Dec 2024 20:27:00 +0800</pubDate>
         
-        <guid>http://localhost:1313/%E9%80%9F%E6%9F%A5%E8%A1%A8/</guid>
+        <guid>https://victorzhangai.github.io/%E9%80%9F%E6%9F%A5%E8%A1%A8/</guid>
         <description>&lt;h3 id=&#34;xss&#34;&gt;XSS
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -530,10 +538,10 @@ popen()
         </item>
         <item>
         <title>Metasploit</title>
-        <link>http://localhost:1313/metasploit/</link>
+        <link>https://victorzhangai.github.io/metasploit/</link>
         <pubDate>Thu, 19 Dec 2024 21:25:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/metasploit/</guid>
+        <guid>https://victorzhangai.github.io/metasploit/</guid>
         <description>&lt;h3 id=&#34;metasploit&#34;&gt;Metasploit
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -586,10 +594,10 @@ popen()
         </item>
         <item>
         <title>nmap</title>
-        <link>http://localhost:1313/nmap/</link>
+        <link>https://victorzhangai.github.io/nmap/</link>
         <pubDate>Thu, 19 Dec 2024 21:25:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/nmap/</guid>
+        <guid>https://victorzhangai.github.io/nmap/</guid>
         <description>&lt;h3 id=&#34;nmap&#34;&gt;nmap
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -680,10 +688,10 @@ popen()
         </item>
         <item>
         <title>openssl</title>
-        <link>http://localhost:1313/openssl/</link>
+        <link>https://victorzhangai.github.io/openssl/</link>
         <pubDate>Thu, 19 Dec 2024 21:25:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/openssl/</guid>
+        <guid>https://victorzhangai.github.io/openssl/</guid>
         <description>&lt;p&gt;这里只收录openssl中关于密码学的内容&lt;/p&gt;
 &lt;h4 id=&#34;rc4加解密&#34;&gt;rc4加解密
 &lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -903,10 +911,10 @@ popen()
         </item>
         <item>
         <title>sqlmap</title>
-        <link>http://localhost:1313/sqlmap/</link>
+        <link>https://victorzhangai.github.io/sqlmap/</link>
         <pubDate>Thu, 19 Dec 2024 21:25:05 +0800</pubDate>
         
-        <guid>http://localhost:1313/sqlmap/</guid>
+        <guid>https://victorzhangai.github.io/sqlmap/</guid>
         <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -983,10 +991,10 @@ popen()
         </item>
         <item>
         <title>系数为±1的n次方程根在复平面的分布</title>
-        <link>http://localhost:1313/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</link>
+        <link>https://victorzhangai.github.io/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</link>
         <pubDate>Wed, 18 Dec 2024 21:38:49 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</guid>
+        <guid>https://victorzhangai.github.io/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</guid>
         <description>&lt;p&gt;（一篇在分享会上的稿件的留档）&lt;/p&gt;
 &lt;h3 id=&#34;引子&#34;&gt;引子
 &lt;/h3&gt;&lt;p&gt;Mathematica的基础语法三句话就能解决：&lt;/p&gt;
@@ -1065,7 +1073,7 @@ popen()
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其中ListPlot为绘制散点图，@@@用于替换表达式的一级标头（TreeForm的第一层），#和&amp;amp;为纯函数的自变量和结尾标识，这个图长这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/initial.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/initial.jpg&#34;
 	
 	
 	
@@ -1140,7 +1148,7 @@ popen()
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;理论上，只要把这玩意儿封装成函数，画个散点图这事儿就结束了。但是还是别这样了，我试过了，13次方程，用了65秒，全程内存占用没下700M。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/amerga.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/amerga.jpg&#34;
 	
 	
 	
@@ -1251,7 +1259,7 @@ $$&lt;p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;大概长这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/milestone.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/milestone.jpg&#34;
 	
 	
 	
@@ -1284,7 +1292,7 @@ $$&lt;p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mathematica&#34; data-lang=&#34;mathematica&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ArrayPlot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UnitStep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/dolce.jpg&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/dolce.jpg&#34;
 	
 	
 	
@@ -1303,7 +1311,7 @@ $$&lt;p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mathematica&#34; data-lang=&#34;mathematica&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ArrayPlot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UnitStep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ColorFunction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AvocadoColor&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/complete.jpg&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/complete.jpg&#34;
 	
 	
 	
@@ -1343,10 +1351,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>生产力与生产关系</title>
-        <link>http://localhost:1313/p/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/</link>
+        <link>https://victorzhangai.github.io/p/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/</link>
         <pubDate>Mon, 16 Dec 2024 21:51:39 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/</guid>
+        <guid>https://victorzhangai.github.io/p/%E7%94%9F%E4%BA%A7%E5%8A%9B%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%85%B3%E7%B3%BB/</guid>
         <description>&lt;p&gt;注：以下讨论不涉及C，Python和JavaScript，因为你不用也得用，迟早有一天你会被这仨语言中的一个找上茬儿&lt;/p&gt;
 &lt;p&gt;马原课本告诉我们，生产力决定生产关系，生产关系反作用于生产力。我们可以使用这个理论来给计算机行业中的错误思想套公式。现在许多人中流传着Java焦虑，好像Java死了我的工作就彻底寄了，然后经典的中年危机就业焦虑。然而大概率事实是不是Java不行，而是你从始至终就没入行。换语言不会使你干好，反而你长期囿于原先的生产关系而没有意识到自己的生产力本身落后，换了语言，原形毕露，没有论坛可查，自己失去了debug和查找性能瓶颈的能力。类似的还有软件工程。首先，你大概率不是CEO之类的要职，而你的第一个demo做得并不好甚至没做出来，你就觉得现在的软件生产模型不行，想从瀑布模型转变成敏捷模型。然而你没注意到敏捷模型对生产力的要求是达到了一定境界的，你的生产力并不足以满足敏捷模型短期迭代的内在要求，大概率结局是项目流产。&lt;/p&gt;
 &lt;p&gt;换一个视角，你应该在简历上写精通XXX语言吗？理论上不应该。这时候就有人问有人就看简历里头的这玩意儿你咋办嘛，我只能说这玩意儿只能反映你接触过这种生产关系，对于你的生产力没有任何反映。你用解释型编程语言大写特写for循环，最后的结果必定是慢的要死。当你想要入坑一个新的编程语言的时候，最好问问自己：&lt;/p&gt;
@@ -1357,10 +1365,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>关于一些网络热门课程</title>
-        <link>http://localhost:1313/p/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%83%AD%E9%97%A8%E8%AF%BE%E7%A8%8B/</link>
+        <link>https://victorzhangai.github.io/p/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%83%AD%E9%97%A8%E8%AF%BE%E7%A8%8B/</link>
         <pubDate>Sun, 15 Dec 2024 13:38:47 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%83%AD%E9%97%A8%E8%AF%BE%E7%A8%8B/</guid>
+        <guid>https://victorzhangai.github.io/p/%E5%85%B3%E4%BA%8E%E4%B8%80%E4%BA%9B%E7%BD%91%E7%BB%9C%E7%83%AD%E9%97%A8%E8%AF%BE%E7%A8%8B/</guid>
         <description>&lt;p&gt;事先声明，锐评不代表讨厌，相反，正是因为你有了足够的了解之后你才能知道为啥人家的课程好，我们的为什么烂。我感谢它们，在无数节水课中带我消磨时间，做有趣的事情。&lt;/p&gt;
 &lt;h3 id=&#34;sicp&#34;&gt;SICP
 &lt;/h3&gt;&lt;p&gt;SICP这个课可就有点儿历史了，上世纪80年代，Abelson和Sussman这俩人用他们编写的教科书改造了MIT的计算机入门课程。它主要使用Lisp的一门方言——MIT Scheme进行编程，讲解关于计算机思维与计算方法的基础知识。现在网上流传的始祖SICP实质上是两个教授去惠普公司进行的讲座，不过内容大同小异就是了。说是基础，但是这个课联同这本书都是极其折磨的。&lt;/p&gt;
@@ -1378,10 +1386,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>《算法竞赛》第一章笔记</title>
-        <link>http://localhost:1313/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/</link>
+        <link>https://victorzhangai.github.io/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Wed, 11 Dec 2024 10:17:29 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://victorzhangai.github.io/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h3 id=&#34;单调栈&#34;&gt;单调栈
 &lt;/h3&gt;&lt;p&gt;栈中元素从栈顶到栈底依次递增&lt;/p&gt;
 &lt;p&gt;一个新数字进栈前要弹出所有比它小的数，所有数字都入栈&lt;/p&gt;
@@ -1592,10 +1600,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>转移中的故事</title>
-        <link>http://localhost:1313/%E8%BD%AC%E7%A7%BB%E4%B8%AD%E7%9A%84%E6%95%85%E4%BA%8B/</link>
+        <link>https://victorzhangai.github.io/%E8%BD%AC%E7%A7%BB%E4%B8%AD%E7%9A%84%E6%95%85%E4%BA%8B/</link>
         <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/%E8%BD%AC%E7%A7%BB%E4%B8%AD%E7%9A%84%E6%95%85%E4%BA%8B/</guid>
+        <guid>https://victorzhangai.github.io/%E8%BD%AC%E7%A7%BB%E4%B8%AD%E7%9A%84%E6%95%85%E4%BA%8B/</guid>
         <description>&lt;p&gt;2024.12.11&lt;/p&gt;
 &lt;p&gt;确切来讲，这个博客的转移拖得太久太久了。最开始我用的Hexo框架弄，结果Hexo在20年之后的几乎所有issue都在痛骂这个框架，帮助信息也是没几个正经的。我年中弄这个框架的时候就受不了两点，一是你一个博客框架在我电脑开性能模式下还敢狂转风扇你也是没谁了，二是这玩意儿的定制化程度低得可怕。我想把Hexo主页最上方的地球图片换了，结果前脚改完配置文件后脚一生成发布版就给我改回去了。牛的。&lt;/p&gt;
 &lt;p&gt;大概半年后就是今年十二月，我尝试了Hugo，怎么说呢，槽点还是很多。主要集中在你在Ubuntu上apt装的Hugo出了一堆在官网issue上头都找不到的离奇bug（点名批评server后白屏），最后把Hugo卸了，去snap上头安装一个，问题居然解决了。哈，你甚至没法界定到底是Ubuntu的锅还是Hugo的锅。&lt;/p&gt;
@@ -1611,10 +1619,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>单周期处理器（LA）讲座笔记</title>
-        <link>http://localhost:1313/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</link>
+        <link>https://victorzhangai.github.io/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 10 Dec 2024 16:55:17 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://victorzhangai.github.io/p/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%A4%84%E7%90%86%E5%99%A8la%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h2 id=&#34;单周期处理器la版本&#34;&gt;单周期处理器（LA版本）
 &lt;/h2&gt;&lt;p&gt;延迟槽：曾几何时它很好，然而它非但无法解决延迟造成的流水线阻塞问题，而且会使微结构的设计复杂化，而且编译器并不能总是提取出有效指令填入流水线导致流水线中出现过量空指令，影响流水线性能&lt;/p&gt;
 &lt;p&gt;支持远距离跳转的指令集可以更好减少由于代码体积增大而产生的效率降低问题&lt;/p&gt;
@@ -1648,10 +1656,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>一分钟上手Sublime</title>
-        <link>http://localhost:1313/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</link>
+        <link>https://victorzhangai.github.io/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</link>
         <pubDate>Tue, 10 Dec 2024 16:52:35 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</guid>
+        <guid>https://victorzhangai.github.io/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</guid>
         <description>&lt;p&gt;（注：这篇文章成文于一年前，放在博客上只是为了留档）&lt;/p&gt;
 &lt;p&gt;最开始接触这玩意儿其实是因为前端（一朝做贼，再想做好人可不容易啊），菜鸟教程推荐的编辑器里头有VSCode，Sublime和WebStorm，这仨里头VSC配C的环境给我配出心理阴影了，而且这玩意儿甚至原生不支持ctrl+滚轮缩放字体。WS要钱，一年两千八，我说我别tm做个前端还得贴钱打工，于是选了Sublime，不得不承认这玩意儿确实好使得一批，现在除了C，Python和Mathematica直接Sublime+命令行，真正做到了有高亮有编译器就能写。&lt;/p&gt;
 &lt;p&gt;这篇文章的内容全部为个人总结，毕竟网上能找到的Sublime教程都挺乐色的。&lt;/p&gt;
@@ -1686,10 +1694,10 @@ Emmet，直到我从前端滚蛋了四个月我才装这个包&lt;/p&gt;
         </item>
         <item>
         <title>Csapp Chapter4</title>
-        <link>http://localhost:1313/p/csapp-chapter4/</link>
+        <link>https://victorzhangai.github.io/p/csapp-chapter4/</link>
         <pubDate>Tue, 10 Dec 2024 16:44:47 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/csapp-chapter4/</guid>
+        <guid>https://victorzhangai.github.io/p/csapp-chapter4/</guid>
         <description>&lt;h2 id=&#34;41&#34;&gt;4.1
 &lt;/h2&gt;&lt;h3 id=&#34;prelude&#34;&gt;prelude
 &lt;/h3&gt;&lt;p&gt;PC holds the address of the instruction that currently executed.&lt;/p&gt;
@@ -1794,10 +1802,10 @@ Emmet，直到我从前端滚蛋了四个月我才装这个包&lt;/p&gt;
         </item>
         <item>
         <title>Whoami</title>
-        <link>http://localhost:1313/p/whoami/</link>
+        <link>https://victorzhangai.github.io/p/whoami/</link>
         <pubDate>Mon, 09 Dec 2024 20:45:32 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/whoami/</guid>
+        <guid>https://victorzhangai.github.io/p/whoami/</guid>
         <description>&lt;h1 id=&#34;vzstless-as-your-friend-or-thinker&#34;&gt;VZstless as your friend or thinker
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;🍥 Call this name as VictorZhang was signed up by somebody else&amp;hellip;&lt;/li&gt;
@@ -1823,18 +1831,18 @@ Emmet，直到我从前端滚蛋了四个月我才装这个包&lt;/p&gt;
         </item>
         <item>
         <title>Archives</title>
-        <link>http://localhost:1313/archives/</link>
+        <link>https://victorzhangai.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/archives/</guid>
+        <guid>https://victorzhangai.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title></title>
-        <link>http://localhost:1313/_index.zh-cn/</link>
+        <link>https://victorzhangai.github.io/_index.zh-cn/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/_index.zh-cn/</guid>
+        <guid>https://victorzhangai.github.io/_index.zh-cn/</guid>
         <description>&lt;h1 id=&#34;vzstless-as-your-friend-or-thinker&#34;&gt;VZstless as your friend or thinker
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;🍥 Call this name as VictorZhang was signed up by somebody else&amp;hellip;&lt;/li&gt;
@@ -1860,20 +1868,20 @@ Emmet，直到我从前端滚蛋了四个月我才装这个包&lt;/p&gt;
         </item>
         <item>
         <title>Links</title>
-        <link>http://localhost:1313/links/</link>
+        <link>https://victorzhangai.github.io/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/links/</guid>
+        <guid>https://victorzhangai.github.io/links/</guid>
         <description>&lt;p&gt;一些友链，包括论坛或者正在心水的工具&lt;/p&gt;
 &lt;p&gt;如果你也想把友链加在这里可以电邮call我&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Search</title>
-        <link>http://localhost:1313/search/</link>
+        <link>https://victorzhangai.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/search/</guid>
+        <guid>https://victorzhangai.github.io/search/</guid>
         <description></description>
         </item>
         
