@@ -13,6 +13,10 @@ links:
     description: 也许是未来硬件开发的先声
     website: https://spinalhdl.github.io/SpinalDoc-RTD/zh_CN/index.html
     image: spinal.png
+  - title: NixOS
+    description: 新的Linux物种
+    website: https://nixos-cn.org/
+    image: NixOS.ico
   - title: Nushell
     description: 新的Shell
     website: https://www.nushell.sh/zh-CN/
