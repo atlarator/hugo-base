@@ -1,10 +1,12 @@
 ---
+title: "Who Am I"
 menu:
     main:
         name: 关于我
         weight: -200
         params:
             icon: rss
+tags: ["MISC"]
 ---
 
 # VZstless as your friend or thinker

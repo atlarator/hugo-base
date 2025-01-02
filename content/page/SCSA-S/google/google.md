@@ -2,6 +2,7 @@
 title: "Google Hacking"
 date: 2024-12-28T08:25:40+08:00
 draft: false
+tags: ["SECURITY"]
 ---
 
 ## Google

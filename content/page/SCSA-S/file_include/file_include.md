@@ -2,6 +2,7 @@
 title: "文件包含相关"
 date: 2024-12-20T20:45:05+08:00
 draft: false
+tags: ["SECURITY"]
 ---
 
 ### 文件名后缀检测与绕过

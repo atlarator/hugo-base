@@ -2,6 +2,7 @@
 title: "速查表"
 date: 2024-12-20T20:27:00+08:00
 draft: false
+tags: ["SECURITY"]
 ---
 
 ### XSS

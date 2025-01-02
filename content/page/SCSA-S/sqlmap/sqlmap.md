@@ -2,6 +2,7 @@
 title: "sqlmap"
 date: 2024-12-19T21:25:05+08:00
 draft: false
+tags: ["SECURITY"]
 ---
 
 ```shell

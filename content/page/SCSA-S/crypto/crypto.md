@@ -2,6 +2,7 @@
 title: "密码学相关工具"
 date: 2024-12-26T21:33:00+08:00
 draft: false
+tags: ["SECURITY"]
 ---
 
 ## Hashcat

@@ -2,6 +2,7 @@
 title: "Csapp Chapter4"
 date: 2024-12-10T16:44:47+08:00
 draft: false
+tags: ["COA"]
 ---
 
 ## 4.1

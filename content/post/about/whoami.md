@@ -4,6 +4,8 @@ date: 2024-12-09T20:45:32+08:00
 draft: false
 ---
 
+(This is the first version of my README)
+
 # VZstless as your friend or thinker
 
 - 🍥 Call this name as VictorZhang was signed up by somebody else...

@@ -2,6 +2,7 @@
 title: "xv6 LECTURE1"
 date: 2025-01-01T08:28:39+08:00
 draft: false
+tags: ["XV6 OS"]
 ---
 
 ## Handout 1

@@ -2,6 +2,7 @@
 title: "漏洞扫描"
 date: 2024-12-28T07:53:00+08:00
 draft: false
+tags: ["SECURITY"]
 ---
 
 ## Nikto

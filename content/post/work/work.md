@@ -2,6 +2,7 @@
 title: "生产力与生产关系"
 date: 2024-12-16T21:51:39+08:00
 draft: false
+tags: ["COMMENT"]
 ---
 
 注：以下讨论不涉及C，Python和JavaScript，因为你不用也得用，迟早有一天你会被这仨语言中的一个找上茬儿
