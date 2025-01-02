@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>MISC on VZstless</title>
-        <link>https://victorzhangai.github.io/tags/misc/</link>
+        <link>https://vzstless.moe/tags/misc/</link>
         <description>Recent content in MISC on VZstless</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Wed, 18 Dec 2024 21:38:49 +0800</lastBuildDate><atom:link href="https://victorzhangai.github.io/tags/misc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 18 Dec 2024 21:38:49 +0800</lastBuildDate><atom:link href="https://vzstless.moe/tags/misc/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>系数为±1的n次方程根在复平面的分布</title>
-        <link>https://victorzhangai.github.io/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</link>
+        <link>https://vzstless.moe/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</link>
         <pubDate>Wed, 18 Dec 2024 21:38:49 +0800</pubDate>
         
-        <guid>https://victorzhangai.github.io/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</guid>
+        <guid>https://vzstless.moe/p/%E7%B3%BB%E6%95%B0%E4%B8%BA1%E7%9A%84n%E6%AC%A1%E6%96%B9%E7%A8%8B%E6%A0%B9%E5%9C%A8%E5%A4%8D%E5%B9%B3%E9%9D%A2%E7%9A%84%E5%88%86%E5%B8%83/</guid>
         <description>&lt;p&gt;（一篇在分享会上的稿件的留档）&lt;/p&gt;
 &lt;h3 id=&#34;引子&#34;&gt;引子
 &lt;/h3&gt;&lt;p&gt;Mathematica的基础语法三句话就能解决：&lt;/p&gt;
@@ -91,7 +91,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;其中ListPlot为绘制散点图，@@@用于替换表达式的一级标头（TreeForm的第一层），#和&amp;amp;为纯函数的自变量和结尾标识，这个图长这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/initial.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://vzstless.moe/initial.jpg&#34;
 	
 	
 	
@@ -166,7 +166,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;理论上，只要把这玩意儿封装成函数，画个散点图这事儿就结束了。但是还是别这样了，我试过了，13次方程，用了65秒，全程内存占用没下700M。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/amerga.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://vzstless.moe/amerga.jpg&#34;
 	
 	
 	
@@ -277,7 +277,7 @@ $$&lt;p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;大概长这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/milestone.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://vzstless.moe/milestone.jpg&#34;
 	
 	
 	
@@ -310,7 +310,7 @@ $$&lt;p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mathematica&#34; data-lang=&#34;mathematica&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ArrayPlot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UnitStep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/dolce.jpg&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://vzstless.moe/dolce.jpg&#34;
 	
 	
 	
@@ -329,7 +329,7 @@ $$&lt;p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mathematica&#34; data-lang=&#34;mathematica&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ArrayPlot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UnitStep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;300&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ColorFunction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AvocadoColor&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://victorzhangai.github.io/complete.jpg&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://vzstless.moe/complete.jpg&#34;
 	
 	
 	
@@ -369,10 +369,10 @@ $$&lt;p&gt;
         </item>
         <item>
         <title>一分钟上手Sublime</title>
-        <link>https://victorzhangai.github.io/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</link>
+        <link>https://vzstless.moe/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</link>
         <pubDate>Tue, 10 Dec 2024 16:52:35 +0800</pubDate>
         
-        <guid>https://victorzhangai.github.io/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</guid>
+        <guid>https://vzstless.moe/p/%E4%B8%80%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8Bsublime/</guid>
         <description>&lt;p&gt;（注：这篇文章成文于一年前，放在博客上只是为了留档）&lt;/p&gt;
 &lt;p&gt;最开始接触这玩意儿其实是因为前端（一朝做贼，再想做好人可不容易啊），菜鸟教程推荐的编辑器里头有VSCode，Sublime和WebStorm，这仨里头VSC配C的环境给我配出心理阴影了，而且这玩意儿甚至原生不支持ctrl+滚轮缩放字体。WS要钱，一年两千八，我说我别tm做个前端还得贴钱打工，于是选了Sublime，不得不承认这玩意儿确实好使得一批，现在除了C，Python和Mathematica直接Sublime+命令行，真正做到了有高亮有编译器就能写。&lt;/p&gt;
 &lt;p&gt;这篇文章的内容全部为个人总结，毕竟网上能找到的Sublime教程都挺乐色的。&lt;/p&gt;
@@ -407,10 +407,10 @@ Emmet，直到我从前端滚蛋了四个月我才装这个包&lt;/p&gt;
         </item>
         <item>
         <title>Who Am I</title>
-        <link>https://victorzhangai.github.io/_index.zh-cn/</link>
+        <link>https://vzstless.moe/_index.zh-cn/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://victorzhangai.github.io/_index.zh-cn/</guid>
+        <guid>https://vzstless.moe/_index.zh-cn/</guid>
         <description>&lt;h1 id=&#34;vzstless-as-your-friend-or-thinker&#34;&gt;VZstless as your friend or thinker
 &lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;🍥 Call this name as VictorZhang was signed up by somebody else&amp;hellip;&lt;/li&gt;
