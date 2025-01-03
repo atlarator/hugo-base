@@ -7,7 +7,33 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Wed, 01 Jan 2025 08:28:39 +0800</lastBuildDate><atom:link href="https://vzstless.moe/tags/xv6-os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 03 Jan 2025 22:12:02 +0800</lastBuildDate><atom:link href="https://vzstless.moe/tags/xv6-os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE2</title>
+        <link>https://vzstless.moe/p/xv6-lecture2/</link>
+        <pubDate>Fri, 03 Jan 2025 22:12:02 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture2/</guid>
+        <description>&lt;h2 id=&#34;handout-2&#34;&gt;Handout 2
+&lt;/h2&gt;&lt;p&gt;memory layout:&lt;br&gt;
+text: code, read-only data&lt;br&gt;
+data: global C vars&lt;br&gt;
+stack: local variables&lt;br&gt;
+heap: sbrk, malloc, free&lt;br&gt;
+.c -compile-&amp;gt; .o -link-&amp;gt; executable file&lt;br&gt;
+strlen() uses array access while strcmp() uses pointer access&lt;br&gt;
+kalloc() keeps a large linked list of free pages of memory&lt;br&gt;
+LRU buffer cache is implemented as a dual-pointer linked list&lt;br&gt;
+static: limited to the file where the variable is declared&lt;/p&gt;
+&lt;h2 id=&#34;slides&#34;&gt;Slides
+&lt;/h2&gt;&lt;p&gt;This class focus on RAM and I/O&lt;br&gt;
+address space: represent bus as a giant array of data&lt;br&gt;
+memory allocation: decide where array to store things&lt;br&gt;
+A stack is much more smaller than heap&lt;/p&gt;
+&lt;h2 id=&#34;kr&#34;&gt;K&amp;amp;R
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>xv6 LECTURE1</title>
         <link>https://vzstless.moe/p/xv6-lecture1/</link>
         <pubDate>Wed, 01 Jan 2025 08:28:39 +0800</pubDate>
