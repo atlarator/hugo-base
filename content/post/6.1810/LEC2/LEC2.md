@@ -26,4 +26,8 @@ memory allocation: decide where array to store things
 A stack is much more smaller than heap  
 
 ## K&R 
-(TODO)
+alloc: use a stack to allocate memory space  
+afree: pop the space and decrease the pointer  
+the behavior is undefined for arithmetic or comparisons with pointers that do not point to members of the same array  
+size_t is uint returned by sizeof()  
+the result of modifying the string pointer is undefined  
