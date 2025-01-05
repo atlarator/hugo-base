@@ -41,4 +41,16 @@ Boot a RISC-V Computer:
 power on -> run bootloader -> load kernel into memory address 0x80000000(I/O starts from here) and run into M mode -> set up a stack at _entry for runnning C code -> run into start of C -> program the clock chip to generate timer interrupts -> call useerinit to start the first syscall -> complete exec() -> return to user space and initialize the shell  
 
 ## Lecture 3
-(TODO)
+No strong isolation will cause memory overwrite, which will lead to a bug hard to debug  
+OS should be defensive  
+There is a flag to check whether the CPU is at user mode or kernel mode  
+BIOS is always trustworthy  
+
+fork() as a syscall hasn't its function decalaration  
+when calling fork: ecall sys_fork (here sys_fork is a number) -> syscall -> find number in a0 -> create a new process  
+How to get control from buggy useer application? set a timer  
+
+think qemu as a real circuit board  
+qemu is an infinite for loop: fetch, decode, execute  
+use gdb: b _entry; c; si; layout asm;  
+use n to goto next line of C code  

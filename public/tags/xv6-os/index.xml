@@ -41,7 +41,17 @@ sret instruction is used to return to user space from kernel space&lt;/p&gt;
 &lt;p&gt;Boot a RISC-V Computer:&lt;br&gt;
 power on -&amp;gt; run bootloader -&amp;gt; load kernel into memory address 0x80000000(I/O starts from here) and run into M mode -&amp;gt; set up a stack at _entry for runnning C code -&amp;gt; run into start of C -&amp;gt; program the clock chip to generate timer interrupts -&amp;gt; call useerinit to start the first syscall -&amp;gt; complete exec() -&amp;gt; return to user space and initialize the shell&lt;/p&gt;
 &lt;h2 id=&#34;lecture-3&#34;&gt;Lecture 3
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;No strong isolation will cause memory overwrite, which will lead to a bug hard to debug&lt;br&gt;
+OS should be defensive&lt;br&gt;
+There is a flag to check whether the CPU is at user mode or kernel mode&lt;br&gt;
+BIOS is always trustworthy&lt;/p&gt;
+&lt;p&gt;fork() as a syscall hasn&amp;rsquo;t its function decalaration&lt;br&gt;
+when calling fork: ecall sys_fork (here sys_fork is a number) -&amp;gt; syscall -&amp;gt; find number in a0 -&amp;gt; create a new process&lt;br&gt;
+How to get control from buggy useer application? set a timer&lt;/p&gt;
+&lt;p&gt;think qemu as a real circuit board&lt;br&gt;
+qemu is an infinite for loop: fetch, decode, execute&lt;br&gt;
+use gdb: b _entry; c; si; layout asm;&lt;br&gt;
+use n to goto next line of C code&lt;/p&gt;
 </description>
         </item>
         <item>
