@@ -7,7 +7,60 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Sun, 05 Jan 2025 09:49:10 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 06 Jan 2025 10:04:13 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>《算法竞赛》第二章笔记</title>
+        <link>https://vzstless.moe/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Mon, 06 Jan 2025 10:04:13 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;h2 id=&#34;bfs与dfs&#34;&gt;BFS与DFS
+&lt;/h2&gt;&lt;p&gt;BFS = 队列，访问第i层节点时，第i层节点出队，第i+1层节点入队&lt;br&gt;
+DFS = 递归&lt;br&gt;
+DFS的常见操作：DFS时间戳，DFS序列二次输出，产生树的深度，产生子树节点总数&lt;br&gt;
+先序遍历，中序遍历，后序遍历&lt;br&gt;
+DFS框架：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ans;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;void dfs(层数, 其他参数){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    if(出局判断){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        更新答案;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        return;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    (剪枝)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    for(下一层可能的枚举情况)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        if(used[i] == 0){
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            used[i] = 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            dfs(层数+1, 其他参数);
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            used[i] = 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    return;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;对比：BFS可能耗费大量空间，DFS可能搜索大量无效节点，DFS适合用于寻找任意可行解，BFS适合用于寻找范围最优解，DFS代码量远小于BFS&lt;br&gt;
+BFS常使用map和set进行去重，DFS常使用剪枝进行优化&lt;/p&gt;
+&lt;p&gt;连通性判断(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>xv6 LECTURE3</title>
         <link>https://vzstless.moe/p/xv6-lecture3/</link>
         <pubDate>Sun, 05 Jan 2025 09:49:10 +0800</pubDate>
