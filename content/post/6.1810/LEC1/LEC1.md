@@ -69,3 +69,10 @@ Parent and child process shares the same fd
 exec() loads the program in the file and throw away current process  
 exec() remains the fd that already exists  
 wait() waits the child process to return, if the process hasn't child process, it'll return -1  
+
+## Just before Lab util...
+
+installing the riscv64-unknown-elf-gcc:  
+```shell
+sudo apt install gcc=riscv64-unknown-elf
+```

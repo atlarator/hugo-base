@@ -54,3 +54,23 @@ think qemu as a real circuit board
 qemu is an infinite for loop: fetch, decode, execute  
 use gdb: b _entry; c; si; layout asm;  
 use n to goto next line of C code  
+
+## Book Chapter 4.3 & 4.4
+(Before the labs...)  
+args for exec() in a0 & a1, syscall number in a7  
+SYS_exec -> sys_exec  
+return value in p->trapframe->a0  
+
+fetchstr -> copyinstr -> walkaddr -> walk -> pagetable  
+
+## Just before Lab syscall...
+
+installing riscv64-unknown-elf-gdb:  
+download the tar file from TUNA mirror site, unpack it, enter the current directory
+```shell
+mkdir build
+cd build
+../configure --prefix=/usr/local --target=riscv64-unknown-elf
+make -j 12
+sudo make install
+```
