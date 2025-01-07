@@ -52,7 +52,7 @@ How to get control from buggy useer application? set a timer
 
 think qemu as a real circuit board  
 qemu is an infinite for loop: fetch, decode, execute  
-use gdb: b _entry; c; si; layout asm;  
+use gdb: b _entry; c; si; layout src;  
 use n to goto next line of C code  
 
 ## Book Chapter 4.3 & 4.4
@@ -73,4 +73,18 @@ cd build
 ../configure --prefix=/usr/local --target=riscv64-unknown-elf
 make -j 12
 sudo make install
+```
+
+## using gdb
+```shell
+target remote localhost:26000
+b syscall
+c
+layout src
+backtrace
+```
+
+```shell
+p /x *p
+p /x $sstatus
 ```
