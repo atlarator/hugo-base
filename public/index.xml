@@ -74,7 +74,49 @@ make exploit attack harder by such a protection process&lt;/p&gt;
 exec() -&amp;gt; namei() -&amp;gt; quick check -&amp;gt; proc_pagetable() -&amp;gt; loadseg() -&amp;gt; walkaddr()&lt;/p&gt;
 &lt;p&gt;xv6 is lack of malloc()-like allocator to allocate small pieces of space&lt;/p&gt;
 &lt;h2 id=&#34;lecture-4&#34;&gt;Lecture 4
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;What do we want from isolation?&lt;/p&gt;
+&lt;p&gt;The VA_MAX could be larger than PA_MAX&lt;br&gt;
+where does page table allocates? kalloc()&lt;br&gt;
+there are 4096 bytes of continuous PA in PM, but not continuous for pages&lt;br&gt;
+the size of PM is determined by designers&lt;br&gt;
+satp is points to the top directory&lt;/p&gt;
+&lt;p&gt;don&amp;rsquo;t use a translation scheme to rely on another translation scheme, so store PA in tables&lt;br&gt;
+satp also stores PA&lt;br&gt;
+why walk() ? initialization, sysinfo() needs walk()&lt;br&gt;
+flexibility stays in dealing with page faults&lt;br&gt;
+where will the data store? depends on a &amp;ldquo;multiplexer&amp;rdquo;&lt;br&gt;
+mostly-identity mapping is used in kernel mapping&lt;/p&gt;
+&lt;p&gt;stack overflow: page fault instead of covering other program&amp;rsquo;s memory&lt;br&gt;
+consolidate the mapping? good, but xv6 didn&amp;rsquo;t do this action&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b kvminit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;layout src
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b kvminithart
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;where to store satp? in each proc structure, there&amp;rsquo;s a satp&lt;br&gt;
+why 3-level not a single big table? you can remain many blocks empty&lt;br&gt;
+etext is the last addr of kernel, KERNBASE=0x80000000, etext-KERNBASE=size of kernel&lt;/p&gt;
 </description>
         </item>
         <item>

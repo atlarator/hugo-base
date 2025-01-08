@@ -67,4 +67,39 @@ exec() -> namei() -> quick check -> proc_pagetable() -> loadseg() -> walkaddr()
 xv6 is lack of malloc()-like allocator to allocate small pieces of space  
 
 ## Lecture 4
-(TODO)
+
+What do we want from isolation?  
+
+The VA_MAX could be larger than PA_MAX  
+where does page table allocates? kalloc()  
+there are 4096 bytes of continuous PA in PM, but not continuous for pages  
+the size of PM is determined by designers  
+satp is points to the top directory  
+
+don't use a translation scheme to rely on another translation scheme, so store PA in tables  
+satp also stores PA  
+why walk() ? initialization, sysinfo() needs walk()  
+flexibility stays in dealing with page faults  
+where will the data store? depends on a "multiplexer"  
+mostly-identity mapping is used in kernel mapping  
+
+stack overflow: page fault instead of covering other program's memory  
+consolidate the mapping? good, but xv6 didn't do this action  
+
+```shell
+b main
+c
+b kvminit
+c
+layout src
+
+```
+
+```shell
+b kvminithart
+c
+```
+
+where to store satp? in each proc structure, there's a satp  
+why 3-level not a single big table? you can remain many blocks empty  
+etext is the last addr of kernel, KERNBASE=0x80000000, etext-KERNBASE=size of kernel  
