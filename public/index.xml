@@ -7,7 +7,37 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Tue, 07 Jan 2025 18:57:30 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 09 Jan 2025 21:52:22 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE5</title>
+        <link>https://vzstless.moe/p/xv6-lecture5/</link>
+        <pubDate>Thu, 09 Jan 2025 21:52:22 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture5/</guid>
+        <description>&lt;h2 id=&#34;gdb&#34;&gt;GDB
+&lt;/h2&gt;&lt;p&gt;step: one line of code at a time, jumps into the function&lt;br&gt;
+next: jump over functions&lt;br&gt;
+stepi, nexti: do same thing for asm code&lt;br&gt;
+continue: run until next breakpoint&lt;br&gt;
+finish: runs until the function ends&lt;/p&gt;
+&lt;p&gt;break: set a breakpoint&lt;br&gt;
+watch: stop whenever value changes&lt;br&gt;
+x: prints the raw memory&lt;br&gt;
+print: prints the expression&lt;br&gt;
+info registers: print value of registers&lt;br&gt;
+info frame: prints current stack frame&lt;/p&gt;
+&lt;p&gt;set: change value of a variable&lt;/p&gt;
+&lt;h2 id=&#34;handout-5&#34;&gt;Handout 5
+&lt;/h2&gt;&lt;p&gt;overwrite return address will cause an infinite loop&lt;/p&gt;
+&lt;h2 id=&#34;calling-conventions&#34;&gt;Calling Conventions
+&lt;/h2&gt;&lt;p&gt;int in RISC-V is always 32-bit wide, while long is 32-bit wide in RV32 and 64-bit wide in RV64&lt;br&gt;
+in RV64, int is sign-extended&lt;br&gt;
+struct: pass first 8 pointer-words into register&lt;br&gt;
+twice size as a pointer word: use an even-odd pair; more than twice: pass by reference&lt;/p&gt;
+&lt;h2 id=&#34;lecture-5&#34;&gt;Lecture 5
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>xv6 LECTURE4</title>
         <link>https://vzstless.moe/p/xv6-lecture4/</link>
         <pubDate>Tue, 07 Jan 2025 18:57:30 +0800</pubDate>
