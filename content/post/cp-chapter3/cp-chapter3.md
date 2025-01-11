@@ -101,4 +101,37 @@ void floodfill(int x, int y, int fillColor, int oldColor)
 给定一个确定的起点与确定（或可预测）的终点，求起点到终点的最短路径  
 贪心搜索：只看终点，不看起点，不回头重新选择，不能提前绕开障碍  
 Dijkstra：只管起点，不管终点，遍历几乎所有的点就可以得到最终的结果  
-(TODO)
+
+A*算法的核心：f(i)=g(i)+h(i)  
+设路径为s-i-t，f(i)为对i的评估，g(i)为已经走过的路径，h(i)为从i到t的代价  
+
+曼哈顿距离：只能朝四个方向进行移动  
+h(i)=abs(i.x-t.x)+abs(i.y-t.y)  
+对角线距离：只能在八个方向移动  
+h(i)=max(abs(i.x-t.x), abs(i-y-t.y))  
+欧氏距离：可以向任意方向移动  
+h(i)=sqrt((i.x-t.x)^2 + (i.y-t.y)^2)  
+
+## IDDFS与IDA*
+
+IDDFS：限制层数的基础上进行DFS  
+```
+bool IDDFS(s, t, max_depth)
+    for depth from 0 to max_depth
+        if(DFS(s, t, 0) == true)
+            return true;
+    return false;
+
+bool DFS(s, t, d)
+    if(d > Depth)
+        return false;
+    if(s == t)
+        return true;
+    for each adjacent i of s
+        if(DFS(i, t, d+1) == true)
+            return true;
+    return false;
+```
+
+IDA*：在IDDFS基础上进行剪枝操作  
+例：poj3134，使用估价函数进行剪枝  
