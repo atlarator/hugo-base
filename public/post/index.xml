@@ -7,7 +7,64 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Thu, 09 Jan 2025 21:52:22 +0800</lastBuildDate><atom:link href="https://vzstless.moe/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Jan 2025 16:14:43 +0800</lastBuildDate><atom:link href="https://vzstless.moe/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE6</title>
+        <link>https://vzstless.moe/p/xv6-lecture6/</link>
+        <pubDate>Sun, 12 Jan 2025 16:14:43 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture6/</guid>
+        <description>&lt;h2 id=&#34;handout-6&#34;&gt;Handout 6
+&lt;/h2&gt;&lt;p&gt;focusing on user-&amp;gt;kernel transition&lt;br&gt;
+NEVER execute user code in supervisor mode&lt;br&gt;
+C on RISC-V puts function arguments in a0, a1, a2, &amp;amp;c&lt;/p&gt;
+&lt;p&gt;check pagetables: C-a c, info mem&lt;br&gt;
+trampoline: the start of kernel&amp;rsquo;s trap handling code&lt;br&gt;
+at the top: avoid punch a hole in user addr&lt;/p&gt;
+&lt;p&gt;observe PC is an indirect way to check whether we&amp;rsquo;re in supervisor mode&lt;/p&gt;
+&lt;p&gt;ecall:&lt;br&gt;
+change mode, save PC in SEPC, jump to STVEC, disable further interrupts&lt;br&gt;
+ecall does as little as possible&lt;br&gt;
+even supervisor mode is constrained to use pgtbl&lt;/p&gt;
+&lt;p&gt;save the user registers:&lt;br&gt;
+using trapframe or the sscratch register&lt;/p&gt;
+&lt;p&gt;why not a crash? we just switched page tables while executing&lt;br&gt;
+the trampoline is mapped at the same addr in pgtbls&lt;/p&gt;
+&lt;p&gt;back to usertrap(), return $ and space&lt;br&gt;
+usertrapret()&lt;br&gt;
+prepare for next transition&lt;br&gt;
+use sret instruction&lt;/p&gt;
+&lt;p&gt;complex from isolation&lt;br&gt;
+what if design for faster?&lt;/p&gt;
+&lt;h2 id=&#34;book-chapter-4&#34;&gt;Book Chapter 4
+&lt;/h2&gt;&lt;p&gt;ecall &amp;amp; exception will cause a trap&lt;br&gt;
+stvec: trap handler&lt;br&gt;
+sepc: PC saver&lt;br&gt;
+scause: cause of occurring a trap&lt;br&gt;
+sscratch: avoid overwriting&lt;br&gt;
+usertrap: determine the reason of trap&lt;br&gt;
+usertrapret -&amp;gt; userret -&amp;gt; switch satp to user space -&amp;gt; load trapframe addr to a0 -&amp;gt; executes sret&lt;/p&gt;
+&lt;p&gt;argint, argaddr, argfd retrieves n&amp;rsquo;th argument of integer, address or fd&lt;br&gt;
+kernelvec: save regs, jump to kerneltrap, yield&lt;/p&gt;
+&lt;h2 id=&#34;lecture-6&#34;&gt;Lecture 6
+&lt;/h2&gt;&lt;p&gt;don&amp;rsquo;t let user code to interfere the transition between user and kernel code&lt;br&gt;
+supervisor: R/W control regs, satp, stvec, sepc, sscratch, use PTE/PTE_U&lt;/p&gt;
+&lt;p&gt;write() -&amp;gt; ecall -(user-&amp;gt;kernel)-&amp;gt; uservec -&amp;gt; usertrap() -&amp;gt; syscall() &amp;lt;-&amp;gt; sys_write() -&amp;gt; usertrapret() -&amp;gt; userret()&lt;/p&gt;
+&lt;p&gt;the user code could only access memory with PTE_U flag&lt;br&gt;
+(checking by C-a c, info mem)&lt;br&gt;
+csrrw? swaps a0 and special temp register&lt;br&gt;
+lack of crash, the status of pc -&amp;gt; we&amp;rsquo;re in supervisor mode&lt;br&gt;
+OS cares lot about performance, so ecall never forces you to do stack operations&lt;br&gt;
+struct trapframe stays in proc.h, using 32 slots to save registers&lt;/p&gt;
+&lt;p&gt;when running shell, sscratch holds the pointer to trapframe&lt;br&gt;
+save? beware overwrite&lt;br&gt;
+the instructions not executed? we&amp;rsquo;re still in trampoline, where user VA = kernel VA&lt;/p&gt;
+&lt;p&gt;what if switch to another process?&lt;br&gt;
+we could only switch pgtbl on trampoline&lt;/p&gt;
+&lt;p&gt;sret? re-enables interrupts, setting the PC same as sepc, switching user mode&lt;br&gt;
+what happens in UIE?&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>xv6 LECTURE5</title>
         <link>https://vzstless.moe/p/xv6-lecture5/</link>
         <pubDate>Thu, 09 Jan 2025 21:52:22 +0800</pubDate>
