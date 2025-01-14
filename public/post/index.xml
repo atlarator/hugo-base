@@ -53,7 +53,30 @@ the new approach breaks RDMA self-tests&lt;/p&gt;
 something about the new rules&lt;br&gt;
 the way of using RDMA for soft-dirty or userfaultfd() is broken now&lt;/p&gt;
 &lt;h2 id=&#34;lecture-7&#34;&gt;Lecture 7
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;page faults can let page mapping from a static map to a dynamic one&lt;br&gt;
+information needed: faulted va page, stval register&lt;br&gt;
+type of page fault&lt;/p&gt;
+&lt;p&gt;when page fault happens:&lt;br&gt;
+allocate 1 page, set the page all 0, map the page, restart instruction&lt;br&gt;
+what if the process uses up the PM? just kill the process&lt;br&gt;
+lazy allocation: the memory not allocated will not be mapped&lt;/p&gt;
+&lt;p&gt;free the memory that is not allocated will cause a fault, as the sbrk() let p-&amp;gt;sz go upper&lt;br&gt;
+negative number? shrinking addr space, but be careful!!!&lt;/p&gt;
+&lt;p&gt;zero-fill on demand&lt;br&gt;
+kalloc() a zero page, change the mapping&lt;br&gt;
+copy, update, restart&lt;br&gt;
+the cost of switching space and storing registers will be huge!!!&lt;/p&gt;
+&lt;p&gt;COW fork: use share instead of copy&lt;br&gt;
+set all pages read only, receive page fault, copy the page into a new page, map it, restart instruction, call userret()&lt;br&gt;
+except trampoline which could never be freed, other physical memory blocks are belonged to two or more different processes&lt;br&gt;
+but when to free the page?&lt;/p&gt;
+&lt;p&gt;demand paging&lt;br&gt;
+exec(): load text, data, segment, eagerly alloc page&lt;br&gt;
+read, map, restart&lt;br&gt;
+If out of memory: evict, use the just-free-page, restart&lt;br&gt;
+evict the clean pages not dirty ones!!!&lt;/p&gt;
+&lt;p&gt;mmap(va, len, plot, flags, fd, off)&lt;br&gt;
+unmap(va, len), write back dirty block&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -62,7 +85,8 @@ the way of using RDMA for soft-dirty or userfaultfd() is broken now&lt;/p&gt;
         <pubDate>Mon, 13 Jan 2025 14:20:50 +0800</pubDate>
         
         <guid>https://vzstless.moe/p/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%AC%AC%E5%9B%9B%E7%AB%A0%E7%AC%94%E8%AE%B0/</guid>
-        <description></description>
+        <description>&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>xv6 LECTURE6</title>

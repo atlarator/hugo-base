@@ -62,4 +62,33 @@ the way of using RDMA for soft-dirty or userfaultfd() is broken now
 
 ## Lecture 7
 
-(TODO)
+page faults can let page mapping from a static map to a dynamic one  
+information needed: faulted va page, stval register  
+type of page fault  
+
+when page fault happens:  
+allocate 1 page, set the page all 0, map the page, restart instruction  
+what if the process uses up the PM? just kill the process  
+lazy allocation: the memory not allocated will not be mapped  
+
+free the memory that is not allocated will cause a fault, as the sbrk() let p->sz go upper  
+negative number? shrinking addr space, but be careful!!!  
+
+zero-fill on demand  
+kalloc() a zero page, change the mapping  
+copy, update, restart  
+the cost of switching space and storing registers will be huge!!!  
+
+COW fork: use share instead of copy  
+set all pages read only, receive page fault, copy the page into a new page, map it, restart instruction, call userret()  
+except trampoline which could never be freed, other physical memory blocks are belonged to two or more different processes  
+but when to free the page?  
+
+demand paging  
+exec(): load text, data, segment, eagerly alloc page  
+read, map, restart  
+If out of memory: evict, use the just-free-page, restart  
+evict the clean pages not dirty ones!!!  
+
+mmap(va, len, plot, flags, fd, off)  
+unmap(va, len), write back dirty block  
