@@ -1,5 +1,5 @@
 ---
-title: "Lxv6 LECTURE7"
+title: "xv6 LECTURE7"
 date: 2025-01-14T12:07:31+08:00
 draft: false
 tags: ["XV6 OS"]

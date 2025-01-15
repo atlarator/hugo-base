@@ -7,12 +7,44 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Tue, 14 Jan 2025 12:07:31 +0800</lastBuildDate><atom:link href="https://vzstless.moe/tags/xv6-os/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Lxv6 LECTURE7</title>
-        <link>https://vzstless.moe/p/lxv6-lecture7/</link>
+        <lastBuildDate>Wed, 15 Jan 2025 10:29:46 +0800</lastBuildDate><atom:link href="https://vzstless.moe/tags/xv6-os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE8</title>
+        <link>https://vzstless.moe/p/xv6-lecture8/</link>
+        <pubDate>Wed, 15 Jan 2025 10:29:46 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture8/</guid>
+        <description>&lt;h2 id=&#34;handout-8&#34;&gt;Handout 8
+&lt;/h2&gt;&lt;p&gt;pgtbl is hard to debug, why?&lt;br&gt;
+how to speed up syscall? Linux has vDSO&lt;br&gt;
+vDSO enables virtual syscalls&lt;br&gt;
+511: trampoline&lt;br&gt;
+510: trapframe&lt;br&gt;
+509: USYSCALL&lt;/p&gt;
+&lt;p&gt;protection bits? URV, WRV, XRV&lt;br&gt;
+scan all pages could be expensive!!&lt;/p&gt;
+&lt;h2 id=&#34;slides-8&#34;&gt;Slides 8
+&lt;/h2&gt;&lt;p&gt;which syscall could be sped up?&lt;br&gt;
+mo side-effect, return constant value, value can change after entering the kernel&lt;br&gt;
+options: getpid() &amp;amp; uptime()&lt;/p&gt;
+&lt;p&gt;provide a bitmask for pages accessed&lt;br&gt;
+detect page accesses without access bits? use page fault!&lt;br&gt;
+TOCTOU attack: argument is modified after the kernel reads it&lt;/p&gt;
+&lt;p&gt;chatgpt: reduce the time lap between check and use&lt;/p&gt;
+&lt;h2 id=&#34;virtual-syscalls&#34;&gt;virtual syscalls
+&lt;/h2&gt;&lt;p&gt;put syscalls access kernel space -&amp;gt; access process addr space, reduce the cost of context switching&lt;br&gt;
+vDSO? a library, or a memory region&lt;br&gt;
+vDSO is a fully formed ELF image&lt;/p&gt;
+&lt;h2 id=&#34;list-balancing&#34;&gt;List Balancing
+&lt;/h2&gt;&lt;p&gt;file-backed pages&lt;br&gt;
+change of kernel-tracking infrastructure&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>xv6 LECTURE7</title>
+        <link>https://vzstless.moe/p/xv6-lecture7/</link>
         <pubDate>Tue, 14 Jan 2025 12:07:31 +0800</pubDate>
         
-        <guid>https://vzstless.moe/p/lxv6-lecture7/</guid>
+        <guid>https://vzstless.moe/p/xv6-lecture7/</guid>
         <description>&lt;h2 id=&#34;handout-7&#34;&gt;Handout 7
 &lt;/h2&gt;&lt;p&gt;VM-related projects: COW, mappings, performance&lt;br&gt;
 ideas: isolation, indirection&lt;br&gt;
