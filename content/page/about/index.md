@@ -77,6 +77,8 @@ git config --global --unset https.proxy
 ```
 push成功！！！  
 
+## 2025.1.17(2)
 
+<a href="https://askubuntu.com/questions/1192347/temporary-failure-in-name-resolution-on-wsl/1401317#1401317?newreg=fc95a6947d13420fb5f39420bf285388">关于github主机无法解析的解决方法</a>
 
 总之，很高兴认识你，各种意义上的。愿你在这儿找到你想要的东西！
