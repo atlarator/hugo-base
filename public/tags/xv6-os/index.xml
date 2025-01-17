@@ -49,7 +49,12 @@ start.c executes before main, to program CLINT hardware, set up a scratch area, 
 The kernel could be made somewhat simpler if device and timer interrupts only
 occurred while executing user code.&lt;/p&gt;
 &lt;h2 id=&#34;lecture-9&#34;&gt;Lecture 9
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;save, process, resume&lt;br&gt;
+asynchronous, concurrency, program devices&lt;br&gt;
+How the &amp;lsquo;$&amp;rsquo; appears, and what happens after ls ?&lt;br&gt;
+PLIC: 53 interrupt connect from devices&lt;br&gt;
+core hold interrupt&lt;/p&gt;
+&lt;p&gt;Driver manages device&lt;/p&gt;
 </description>
         </item>
         <item>

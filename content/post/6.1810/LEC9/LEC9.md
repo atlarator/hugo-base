@@ -52,4 +52,10 @@ occurred while executing user code.
 
 ## Lecture 9
 
-(TODO)
+save, process, resume  
+asynchronous, concurrency, program devices  
+How the '$' appears, and what happens after ls ?  
+PLIC: 53 interrupt connect from devices  
+core hold interrupt  
+
+Driver manages device  

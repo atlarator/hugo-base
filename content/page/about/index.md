@@ -15,7 +15,7 @@ menu:
             icon: user
 ---
 
-2024.12.11
+## 2024.12.11
 
 确切来讲，这个博客的转移拖得太久太久了。最开始我用的Hexo框架弄，结果Hexo在20年之后的几乎所有issue都在痛骂这个框架，帮助信息也是没几个正经的。我年中弄这个框架的时候就受不了两点，一是你一个博客框架在我电脑开性能模式下还敢狂转风扇你也是没谁了，二是这玩意儿的定制化程度低得可怕。我想把Hexo主页最上方的地球图片换了，结果前脚改完配置文件后脚一生成发布版就给我改回去了。牛的。
 
@@ -27,12 +27,56 @@ Hugo另外一个和Hexo逻辑不太一样的地方在于Hugo的自动化部署�
 
 接下来就是找时间部署在Cloudflare上头然后尝试着把评论和Tag加上。
 
-2024.12.15
+## 2024.12.15
 
 ok，逆天，事实证明坑只会多不会少。当你发现你的工作流寄了的时候你的第一反应是什么？看log。然而log的醒目之处只是告诉了你github要把服务器换成ubuntu-24.04 LTS，尝试将工作流中的ubuntu-latest更改为ubuntu-24.04 LTS，无果，仍然失败，后来我猜测是不是DNS签名的问题，删除CNAME，无果。最后，发现居然是hugo推送的latest在snap上头下载不到，你得在工作流中把hugo的版本换了才能部署。又是一个不知道是该骂ubuntu还是该骂hugo的一天啊......
 
-2024.12.22
+## 2024.12.22
 
 域名转移居然要注册满60天，啊？！？
+
+## 2025.1.17
+
+记一次WSL-Git故障修复  
+
+从2025年1月16日下午开始机器莫名其妙无法进行push与clone，尝试查找原因，关闭代理再开启，无效，重启wsl，无效，重启本机，无效  
+在本机安装的其他Linux Distro上尝试进行push，无效，切换为powershell进行push，无效，下载git bash进行push，无效  
+推测可能是网络镜像问题，在用户目录下建立.wslconfig文件输入如下内容：
+```toml
+[wsl2]
+memory=32GB
+processors=10
+swap=8GB
+debugConsole=true
+networkingMode=mirrored
+```
+无效。  
+在Google上搜索"WSL git slow"，出现的结果都是让你从WSL1升级至WSL2，无效  
+Google搜索443error，出现的结果为：
+```shell
+git config --global http.proxy 127.0.0.1:8087
+```
+无效。  
+```shell
+git config --global --unset http.proxy
+```
+第二个回答，仍然无效  
+将代理转为高可用，无效；将代理从海外代理改为全局代理，无效且ping不到google  
+转战国内网站，最高点击的一个回答中有如下显示：
+```shell
+sudo rm /etc/resolv.conf
+sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+sudo bash -c 'echo "[network]" > /etc/wsl.conf'
+sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'
+```
+无效  
+再查证后，使用：
+```shell
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+push成功！！！  
+
+
 
 总之，很高兴认识你，各种意义上的。愿你在这儿找到你想要的东西！

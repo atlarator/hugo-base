@@ -49,7 +49,12 @@ start.c executes before main, to program CLINT hardware, set up a scratch area, 
 The kernel could be made somewhat simpler if device and timer interrupts only
 occurred while executing user code.&lt;/p&gt;
 &lt;h2 id=&#34;lecture-9&#34;&gt;Lecture 9
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;save, process, resume&lt;br&gt;
+asynchronous, concurrency, program devices&lt;br&gt;
+How the &amp;lsquo;$&amp;rsquo; appears, and what happens after ls ?&lt;br&gt;
+PLIC: 53 interrupt connect from devices&lt;br&gt;
+core hold interrupt&lt;/p&gt;
+&lt;p&gt;Driver manages device&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -3134,16 +3139,89 @@ $$&lt;p&gt;
         <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
         
         <guid>https://vzstless.moe/%E8%BD%AC%E7%A7%BB%E4%B8%AD%E7%9A%84%E6%95%85%E4%BA%8B/</guid>
-        <description>&lt;p&gt;2024.12.11&lt;/p&gt;
-&lt;p&gt;确切来讲，这个博客的转移拖得太久太久了。最开始我用的Hexo框架弄，结果Hexo在20年之后的几乎所有issue都在痛骂这个框架，帮助信息也是没几个正经的。我年中弄这个框架的时候就受不了两点，一是你一个博客框架在我电脑开性能模式下还敢狂转风扇你也是没谁了，二是这玩意儿的定制化程度低得可怕。我想把Hexo主页最上方的地球图片换了，结果前脚改完配置文件后脚一生成发布版就给我改回去了。牛的。&lt;/p&gt;
+        <description>&lt;h2 id=&#34;20241211&#34;&gt;2024.12.11
+&lt;/h2&gt;&lt;p&gt;确切来讲，这个博客的转移拖得太久太久了。最开始我用的Hexo框架弄，结果Hexo在20年之后的几乎所有issue都在痛骂这个框架，帮助信息也是没几个正经的。我年中弄这个框架的时候就受不了两点，一是你一个博客框架在我电脑开性能模式下还敢狂转风扇你也是没谁了，二是这玩意儿的定制化程度低得可怕。我想把Hexo主页最上方的地球图片换了，结果前脚改完配置文件后脚一生成发布版就给我改回去了。牛的。&lt;/p&gt;
 &lt;p&gt;大概半年后就是今年十二月，我尝试了Hugo，怎么说呢，槽点还是很多。主要集中在你在Ubuntu上apt装的Hugo出了一堆在官网issue上头都找不到的离奇bug（点名批评server后白屏），最后把Hugo卸了，去snap上头安装一个，问题居然解决了。哈，你甚至没法界定到底是Ubuntu的锅还是Hugo的锅。&lt;/p&gt;
 &lt;p&gt;Hugo另外一个和Hexo逻辑不太一样的地方在于Hugo的自动化部署比较麻烦，需要借助脚本还得分两个repo存放。因为Hexo是不区分public和dev的而Hugo在每次发布的时候都会生成一个新的public。&lt;/p&gt;
 &lt;p&gt;有一篇关于Turing Complete的指令集速查表在这次博客迁移的过程中丢失了，剩下的文章都从我的大机械盘中找了回来。总之，盖新家是真折腾人啊，但愿Hugo别突然爆发什么奇怪的Breaking Change，能让我的博客活久一点儿。如果Hugo爆发Breaking Change，大概率我就只能转战W3C了（笑）&lt;/p&gt;
 &lt;p&gt;接下来就是找时间部署在Cloudflare上头然后尝试着把评论和Tag加上。&lt;/p&gt;
-&lt;p&gt;2024.12.15&lt;/p&gt;
-&lt;p&gt;ok，逆天，事实证明坑只会多不会少。当你发现你的工作流寄了的时候你的第一反应是什么？看log。然而log的醒目之处只是告诉了你github要把服务器换成ubuntu-24.04 LTS，尝试将工作流中的ubuntu-latest更改为ubuntu-24.04 LTS，无果，仍然失败，后来我猜测是不是DNS签名的问题，删除CNAME，无果。最后，发现居然是hugo推送的latest在snap上头下载不到，你得在工作流中把hugo的版本换了才能部署。又是一个不知道是该骂ubuntu还是该骂hugo的一天啊&amp;hellip;&amp;hellip;&lt;/p&gt;
-&lt;p&gt;2024.12.22&lt;/p&gt;
-&lt;p&gt;域名转移居然要注册满60天，啊？！？&lt;/p&gt;
+&lt;h2 id=&#34;20241215&#34;&gt;2024.12.15
+&lt;/h2&gt;&lt;p&gt;ok，逆天，事实证明坑只会多不会少。当你发现你的工作流寄了的时候你的第一反应是什么？看log。然而log的醒目之处只是告诉了你github要把服务器换成ubuntu-24.04 LTS，尝试将工作流中的ubuntu-latest更改为ubuntu-24.04 LTS，无果，仍然失败，后来我猜测是不是DNS签名的问题，删除CNAME，无果。最后，发现居然是hugo推送的latest在snap上头下载不到，你得在工作流中把hugo的版本换了才能部署。又是一个不知道是该骂ubuntu还是该骂hugo的一天啊&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;20241222&#34;&gt;2024.12.22
+&lt;/h2&gt;&lt;p&gt;域名转移居然要注册满60天，啊？！？&lt;/p&gt;
+&lt;h2 id=&#34;2025117&#34;&gt;2025.1.17
+&lt;/h2&gt;&lt;p&gt;记一次WSL-Git故障修复&lt;/p&gt;
+&lt;p&gt;从2025年1月16日下午开始机器莫名其妙无法进行push与clone，尝试查找原因，关闭代理再开启，无效，重启wsl，无效，重启本机，无效&lt;br&gt;
+在本机安装的其他Linux Distro上尝试进行push，无效，切换为powershell进行push，无效，下载git bash进行push，无效&lt;br&gt;
+推测可能是网络镜像问题，在用户目录下建立.wslconfig文件输入如下内容：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;wsl2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;memory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;32&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;GB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;processors&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;swap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;GB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;debugConsole&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;networkingMode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mirrored&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;无效。&lt;br&gt;
+在Google上搜索&amp;quot;WSL git slow&amp;quot;，出现的结果都是让你从WSL1升级至WSL2，无效&lt;br&gt;
+Google搜索443error，出现的结果为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global http.proxy 127.0.0.1:8087
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;无效。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --unset http.proxy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;第二个回答，仍然无效&lt;br&gt;
+将代理转为高可用，无效；将代理从海外代理改为全局代理，无效且ping不到google&lt;br&gt;
+转战国内网站，最高点击的一个回答中有如下显示：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo rm /etc/resolv.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo bash -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;echo &amp;#34;nameserver 8.8.8.8&amp;#34; &amp;gt; /etc/resolv.conf&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo bash -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;echo &amp;#34;[network]&amp;#34; &amp;gt; /etc/wsl.conf&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo bash -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;echo &amp;#34;generateResolvConf = false&amp;#34; &amp;gt;&amp;gt; /etc/wsl.conf&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;无效&lt;br&gt;
+再查证后，使用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --unset http.proxy
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --unset https.proxy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;push成功！！！&lt;/p&gt;
 &lt;p&gt;总之，很高兴认识你，各种意义上的。愿你在这儿找到你想要的东西！&lt;/p&gt;
 </description>
         </item>
