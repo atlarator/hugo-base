@@ -54,7 +54,34 @@ asynchronous, concurrency, program devices&lt;br&gt;
 How the &amp;lsquo;$&amp;rsquo; appears, and what happens after ls ?&lt;br&gt;
 PLIC: 53 interrupt connect from devices&lt;br&gt;
 core hold interrupt&lt;/p&gt;
-&lt;p&gt;Driver manages device&lt;/p&gt;
+&lt;p&gt;Driver manages device&lt;br&gt;
+interrupt handler: top, bottom, a queue in it with read/write interface&lt;br&gt;
+the queue is used to decouple top &amp;amp; bottom&lt;br&gt;
+programming device: memory-mapped I/O; ld/st&lt;br&gt;
+the kernel and the device should make a protocol&lt;/p&gt;
+&lt;p&gt;$: device put it into UART, UART gen interrupts when the char has been sent&lt;br&gt;
+ls: keyboard connect to receive line, generate interrupt&lt;/p&gt;
+&lt;p&gt;RISC-V support:&lt;br&gt;
+SIE: 1 bit for external interrupt&lt;br&gt;
+SSTATUS: bit enable/disable&lt;br&gt;
+SIP: interrupt pending&lt;br&gt;
+SCAUSE: the cause of interrupt&lt;br&gt;
+STVEC: holds address for the switching&lt;/p&gt;
+&lt;p&gt;plicinit(): take interrupt from the devices&lt;br&gt;
+more initialization in main.c, main() finally calls scheduler()&lt;/p&gt;
+&lt;p&gt;init.c: creates a device as console&lt;br&gt;
+shell itself writes into fd 2&lt;/p&gt;
+&lt;p&gt;a pointer to producer and a pointer to consumer&lt;/p&gt;
+&lt;p&gt;Interrupt:&lt;br&gt;
+If SIE bitset: clear SIE bits&lt;br&gt;
+sepc&amp;lt;-pc, save current mode, entering supervisor mode, pc&amp;lt;-stvec&lt;/p&gt;
+&lt;p&gt;interrupts &amp;amp; concurrency:&lt;br&gt;
+devices &amp;amp; CPU run in parallel, interrupt stops current program&lt;br&gt;
+top &amp;amp; bottom deliver may run in parallel&lt;br&gt;
+producer &amp;amp; consumer: read after write, using a queue&lt;/p&gt;
+&lt;p&gt;once, interrupt was fast, now, interrupt is slow.&lt;br&gt;
+solution: polling &lt;br&gt;
+dynamic switch&lt;/p&gt;
 </description>
         </item>
         <item>

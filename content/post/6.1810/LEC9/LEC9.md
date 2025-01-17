@@ -59,3 +59,38 @@ PLIC: 53 interrupt connect from devices
 core hold interrupt  
 
 Driver manages device  
+interrupt handler: top, bottom, a queue in it with read/write interface  
+the queue is used to decouple top & bottom  
+programming device: memory-mapped I/O; ld/st  
+the kernel and the device should make a protocol  
+
+$: device put it into UART, UART gen interrupts when the char has been sent  
+ls: keyboard connect to receive line, generate interrupt  
+
+RISC-V support:  
+SIE: 1 bit for external interrupt  
+SSTATUS: bit enable/disable  
+SIP: interrupt pending  
+SCAUSE: the cause of interrupt  
+STVEC: holds address for the switching  
+
+plicinit(): take interrupt from the devices  
+more initialization in main.c, main() finally calls scheduler()  
+
+init.c: creates a device as console  
+shell itself writes into fd 2  
+
+a pointer to producer and a pointer to consumer  
+
+Interrupt:  
+If SIE bitset: clear SIE bits  
+sepc<-pc, save current mode, entering supervisor mode, pc<-stvec  
+
+interrupts & concurrency:  
+devices & CPU run in parallel, interrupt stops current program  
+top & bottom deliver may run in parallel  
+producer & consumer: read after write, using a queue  
+
+once, interrupt was fast, now, interrupt is slow.  
+solution: polling    
+dynamic switch  
