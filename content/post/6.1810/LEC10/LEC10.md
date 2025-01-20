@@ -71,4 +71,38 @@ scheduler, different process call fork() at the same time
 
 ## Lecture 10
 
-(TODO)
+apps want to use multiple cores, so kernel must handle multiple syscalls  
+the performance of single core has reached a limit  
+
+why locks? avoid race conditions  
+many locks -> more parallelism  
+access a shared data, one is write -> using lock  
+lock-free programming  
+
+could lock be automatic? wrong result, eg: rename('d1/x', d2/y);  
+lock avoids wrong updates, make operations atomic  
+lock helps maintain an invariant  
+
+deadlock:  
+```C
+acquire(lock);
+...
+acquire(lock);
+```
+order the locks globally  
+
+internals of m2 must be seen by m1  
+
+rebuild code with locks: start with coarse-grained locks, measure locks are co-required  
+lock isolation, redesign  
+
+UART in printf: a buffer with a read pointer and a write pointer  
+implementation of amoswap depends on memory layout  
+same CPU: let operation atomic  
+memory fence: any ld/st instruction aren't allowed to move after this instruction  
+use a race detector  
+
+is fence unnecessary as there are atomic memory instructions?  
+the compiler knows what couldn't be moved  
+
+old OS kernels didn't have lock acquire as they always assume that they run on a single core  

@@ -81,7 +81,40 @@ inode acts as a shard lock&lt;br&gt;
 implementation of spinlock: no lock at all&lt;br&gt;
 scheduler, different process call fork() at the same time&lt;/p&gt;
 &lt;h2 id=&#34;lecture-10&#34;&gt;Lecture 10
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;apps want to use multiple cores, so kernel must handle multiple syscalls&lt;br&gt;
+the performance of single core has reached a limit&lt;/p&gt;
+&lt;p&gt;why locks? avoid race conditions&lt;br&gt;
+many locks -&amp;gt; more parallelism&lt;br&gt;
+access a shared data, one is write -&amp;gt; using lock&lt;br&gt;
+lock-free programming&lt;/p&gt;
+&lt;p&gt;could lock be automatic? wrong result, eg: rename(&amp;lsquo;d1/x&amp;rsquo;, d2/y);&lt;br&gt;
+lock avoids wrong updates, make operations atomic&lt;br&gt;
+lock helps maintain an invariant&lt;/p&gt;
+&lt;p&gt;deadlock:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-C&#34; data-lang=&#34;C&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;acquire&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;acquire&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;order the locks globally&lt;/p&gt;
+&lt;p&gt;internals of m2 must be seen by m1&lt;/p&gt;
+&lt;p&gt;rebuild code with locks: start with coarse-grained locks, measure locks are co-required&lt;br&gt;
+lock isolation, redesign&lt;/p&gt;
+&lt;p&gt;UART in printf: a buffer with a read pointer and a write pointer&lt;br&gt;
+implementation of amoswap depends on memory layout&lt;br&gt;
+same CPU: let operation atomic&lt;br&gt;
+memory fence: any ld/st instruction aren&amp;rsquo;t allowed to move after this instruction&lt;br&gt;
+use a race detector&lt;/p&gt;
+&lt;p&gt;is fence unnecessary as there are atomic memory instructions?&lt;br&gt;
+the compiler knows what couldn&amp;rsquo;t be moved&lt;/p&gt;
+&lt;p&gt;old OS kernels didn&amp;rsquo;t have lock acquire as they always assume that they run on a single core&lt;/p&gt;
 </description>
         </item>
         <item>
