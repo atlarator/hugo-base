@@ -7,7 +7,59 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Sun, 19 Jan 2025 07:11:18 +0800</lastBuildDate><atom:link href="https://vzstless.moe/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Jan 2025 16:58:37 +0800</lastBuildDate><atom:link href="https://vzstless.moe/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE11</title>
+        <link>https://vzstless.moe/p/xv6-lecture11/</link>
+        <pubDate>Tue, 21 Jan 2025 16:58:37 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture11/</guid>
+        <description>&lt;h2 id=&#34;handout-11&#34;&gt;Handout 11
+&lt;/h2&gt;&lt;p&gt;concurrency: threads inside the kernel, processes&lt;br&gt;
+each thread, taken alone, executes in an ordinary way&lt;br&gt;
+need locks when interact&lt;/p&gt;
+&lt;p&gt;in xv6, only one user-level thread&lt;br&gt;
+event-driven and state machine could also use to multitasking&lt;br&gt;
+executing: using resources; not executing: save and release&lt;br&gt;
+each process has its own kernel thread&lt;/p&gt;
+&lt;p&gt;p-&amp;gt;state: running, runnable, sleeping&lt;br&gt;
+user-&amp;gt;kernel-&amp;gt;scheduler-&amp;gt;kernel-&amp;gt;user&lt;br&gt;
+scheduler thread: one per CPU&lt;br&gt;
+idle scheduler: no running thread&lt;br&gt;
+swtch() returns to scheduler()&lt;br&gt;
+swtch(): saves current registers in xx(a0), restores registers in xx(a1)&lt;/p&gt;
+&lt;p&gt;yield() acquires lock, scheduler() releases it&lt;br&gt;
+the lock is released by a different thread&lt;/p&gt;
+&lt;p&gt;p-&amp;gt;lock makes steps atomic&lt;br&gt;
+scheduling policy?&lt;/p&gt;
+&lt;p&gt;yield() can be called by kerneltrap()&lt;/p&gt;
+&lt;h2 id=&#34;book-chapter-7&#34;&gt;Book Chapter 7
+&lt;/h2&gt;&lt;p&gt;force switching: sleep &amp;amp; wakeup; long period without sleeping&lt;br&gt;
+context: struct context -&amp;gt; struct proc&lt;br&gt;
+swtch: save callee registers, return to instruction pointed by ra register&lt;br&gt;
+continue for loop, find a thread, run it&lt;br&gt;
+hold the lock, or different CPU may run same thread&lt;br&gt;
+procedures that intentionally transfer control to each other via thread switch are sometimes referred to as coroutines&lt;/p&gt;
+&lt;p&gt;scheduler: find a process, run, until it is terminated&lt;br&gt;
+maintain invariants: p-&amp;gt;lock acquires in a thread and releases in another thread&lt;/p&gt;
+&lt;p&gt;in multi-core, we can&amp;rsquo;t hold global variables for process, create struct cpu for each core&lt;br&gt;
+tp: stores the core&amp;rsquo;s haltid&lt;br&gt;
+xv6 disable caller interrupt but wait until the struct cpu is returned&lt;br&gt;
+return value of myproc() is safe&lt;/p&gt;
+&lt;p&gt;conceal actions from one thread to another: sleep &amp;amp; wakeup&lt;br&gt;
+sequence coordination mechanism&lt;br&gt;
+use a high-level spinlock? most of time it will produce right result but it&amp;rsquo;s expensive&lt;br&gt;
+naive approach of sleep and wakeup will cause lose wake-up problem&lt;br&gt;
+solution: the caller must pass condition lock to sleep&lt;/p&gt;
+&lt;p&gt;sleep: mark the current process SLEEPING and release the resources of core&lt;br&gt;
+same channel: see spurious wakeups&lt;/p&gt;
+&lt;p&gt;pipewrite &amp;amp; piperead are complex applications of sleep &amp;amp; wakeup&lt;br&gt;
+nwrite == nread + PIPESIZE&lt;br&gt;
+(until 7.8, TODO)&lt;/p&gt;
+&lt;h2 id=&#34;lecture-11&#34;&gt;Lecture 11
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>xv6 LECTURE10</title>
         <link>https://vzstless.moe/p/xv6-lecture10/</link>
         <pubDate>Sun, 19 Jan 2025 07:11:18 +0800</pubDate>
