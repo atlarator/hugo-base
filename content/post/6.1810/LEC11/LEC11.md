@@ -69,4 +69,31 @@ linux's sleep adds a wait queue
 
 ## Lecture 11
 
-(TODO)
+full use of multi-core  
+thread: one single exec  
+care the PC  
+interleaving of multiple threads  
+interleave threads  
+
+scheduling: interleave one thread, execute another thread  
+compute-bound?  
+pre-empitue scheduling: even the code doesn't release the resources of CPU, the kernel will interrupt it by timer  
+on the contrary, volunteer scheduling  
+p1 -> tf1 -> kernel stack-> swtch()-> ctx1 -> ctx0 -> swtch() -> scheduler() -> tf2 -> p2  
+where contexts stores? process structure, p->context  
+process vs threads? a process in user; or in kernel; or stored in trapframe and context  
+
+yield(): change the thread into runnable  
+no point to save PC as we know we're in swtch  
+ra will be the point to return  
+why only half of regs are stored by swtch()? it is called by C function  
+we want the start process also atomic  
+what we really care is ra  
+
+RISC-V uses general registers instead of floating-point registers  
+we believe the kernel code will infinitely looping without interrupt  
+why trampoline and swtch must be written in assembly? C is hard to reach ra & sp  
+
+almost each thread in Linux is a complete process  
+allocproc() sets the new context for the process  
+the first call in forkret is about initializing file system and crash recovery  

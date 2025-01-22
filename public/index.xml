@@ -60,7 +60,30 @@ p-&amp;gt;parent is protected by wait_lock instesd of p-&amp;gt;lock&lt;br&gt;
 round robin: run each process in turn&lt;br&gt;
 linux&amp;rsquo;s sleep adds a wait queue&lt;/p&gt;
 &lt;h2 id=&#34;lecture-11&#34;&gt;Lecture 11
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;full use of multi-core&lt;br&gt;
+thread: one single exec&lt;br&gt;
+care the PC&lt;br&gt;
+interleaving of multiple threads&lt;br&gt;
+interleave threads&lt;/p&gt;
+&lt;p&gt;scheduling: interleave one thread, execute another thread&lt;br&gt;
+compute-bound?&lt;br&gt;
+pre-empitue scheduling: even the code doesn&amp;rsquo;t release the resources of CPU, the kernel will interrupt it by timer&lt;br&gt;
+on the contrary, volunteer scheduling&lt;br&gt;
+p1 -&amp;gt; tf1 -&amp;gt; kernel stack-&amp;gt; swtch()-&amp;gt; ctx1 -&amp;gt; ctx0 -&amp;gt; swtch() -&amp;gt; scheduler() -&amp;gt; tf2 -&amp;gt; p2&lt;br&gt;
+where contexts stores? process structure, p-&amp;gt;context&lt;br&gt;
+process vs threads? a process in user; or in kernel; or stored in trapframe and context&lt;/p&gt;
+&lt;p&gt;yield(): change the thread into runnable&lt;br&gt;
+no point to save PC as we know we&amp;rsquo;re in swtch&lt;br&gt;
+ra will be the point to return&lt;br&gt;
+why only half of regs are stored by swtch()? it is called by C function&lt;br&gt;
+we want the start process also atomic&lt;br&gt;
+what we really care is ra&lt;/p&gt;
+&lt;p&gt;RISC-V uses general registers instead of floating-point registers&lt;br&gt;
+we believe the kernel code will infinitely looping without interrupt&lt;br&gt;
+why trampoline and swtch must be written in assembly? C is hard to reach ra &amp;amp; sp&lt;/p&gt;
+&lt;p&gt;almost each thread in Linux is a complete process&lt;br&gt;
+allocproc() sets the new context for the process&lt;br&gt;
+the first call in forkret is about initializing file system and crash recovery&lt;/p&gt;
 </description>
         </item>
         <item>
