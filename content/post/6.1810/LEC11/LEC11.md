@@ -60,7 +60,12 @@ same channel: see spurious wakeups
 
 pipewrite & piperead are complex applications of sleep & wakeup  
 nwrite == nread + PIPESIZE  
-(until 7.8, TODO)
+
+wait: wait_lock; exit: reparent  
+kill: set p->killed, wakeup  
+p->parent is protected by wait_lock instesd of p->lock  
+round robin: run each process in turn  
+linux's sleep adds a wait queue  
 
 ## Lecture 11
 

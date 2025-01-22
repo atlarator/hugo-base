@@ -53,8 +53,12 @@ solution: the caller must pass condition lock to sleep&lt;/p&gt;
 &lt;p&gt;sleep: mark the current process SLEEPING and release the resources of core&lt;br&gt;
 same channel: see spurious wakeups&lt;/p&gt;
 &lt;p&gt;pipewrite &amp;amp; piperead are complex applications of sleep &amp;amp; wakeup&lt;br&gt;
-nwrite == nread + PIPESIZE&lt;br&gt;
-(until 7.8, TODO)&lt;/p&gt;
+nwrite == nread + PIPESIZE&lt;/p&gt;
+&lt;p&gt;wait: wait_lock; exit: reparent&lt;br&gt;
+kill: set p-&amp;gt;killed, wakeup&lt;br&gt;
+p-&amp;gt;parent is protected by wait_lock instesd of p-&amp;gt;lock&lt;br&gt;
+round robin: run each process in turn&lt;br&gt;
+linux&amp;rsquo;s sleep adds a wait queue&lt;/p&gt;
 &lt;h2 id=&#34;lecture-11&#34;&gt;Lecture 11
 &lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
 </description>
