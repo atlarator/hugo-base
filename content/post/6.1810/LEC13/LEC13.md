@@ -55,9 +55,49 @@ mkfs: generate layout for new FS, the layout will stay static for the lifetime o
 indirect block: inode is fixed size, but file could be large  
 tree-structure: dir tree layer; inode layer; block layer  
 
-## Book Chapter 13
+## Book Chapter 8
 
-(TODO)
+file system must have crash recovery  
+
+block 0: boot sector  
+block 1: superblock, holds metadata  
+block start at 2 hold the log  
+inode, bitmap, data  
+
+bcache: only one kernel thread is using the copy, cache popular blocks  
+bcache is a doubly linked-list, main->binit  
+bread->bget->sleeplock, scan the bcache  
+at most one cached buffer per disk sector  
+brelse to release the buffer  
+
+block allocator: maintains a free bitmap  
+balloc: find the free block, refresh the bitmap, return the block  
+bfree: clear the block  
+
+on-disk inode: struct dinode  
+itable, struct inode to copy dinode into memory  
+iget, iput  
+there can be many same pointers point to same inode  
+hold ilock and release by iunlock  
+Code that modifies an in-memory inode writes it to disk with iupdate  
+iput() doesn’t truncate a file immediately when the link count for the file drops to zero  
+
+direct/indirect block  
+bmap: returns the nth data block for inode ip, or allocate one if not exists  
+itrunc: frees blocks and sets inode to 0  
+
+directory: has type T_DIR, dirlookup  
+namex -> skipelem  
+namex locks each directory in the path separately  
+avoid racing by using sleeplocks  
+
+opened file is symboled as struct file  
+kept in ftable, filealloc->filedup->fileclose->fileread/filewrite  
+file has no concept of offset  
+
+sys_link, sys_unlink  
+sys_link creates a new name for the inode  
+using create, it is easy to implement sys_open, sys_mkdir, and sys_mknod  
 
 ## Lecture 13
 

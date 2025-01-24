@@ -51,8 +51,40 @@ FD: stdin(0), stdout(1), stderr(2)&lt;/p&gt;
 &lt;p&gt;mkfs: generate layout for new FS, the layout will stay static for the lifetime of fs&lt;br&gt;
 indirect block: inode is fixed size, but file could be large&lt;br&gt;
 tree-structure: dir tree layer; inode layer; block layer&lt;/p&gt;
-&lt;h2 id=&#34;book-chapter-13&#34;&gt;Book Chapter 13
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;h2 id=&#34;book-chapter-8&#34;&gt;Book Chapter 8
+&lt;/h2&gt;&lt;p&gt;file system must have crash recovery&lt;/p&gt;
+&lt;p&gt;block 0: boot sector&lt;br&gt;
+block 1: superblock, holds metadata&lt;br&gt;
+block start at 2 hold the log&lt;br&gt;
+inode, bitmap, data&lt;/p&gt;
+&lt;p&gt;bcache: only one kernel thread is using the copy, cache popular blocks&lt;br&gt;
+bcache is a doubly linked-list, main-&amp;gt;binit&lt;br&gt;
+bread-&amp;gt;bget-&amp;gt;sleeplock, scan the bcache&lt;br&gt;
+at most one cached buffer per disk sector&lt;br&gt;
+brelse to release the buffer&lt;/p&gt;
+&lt;p&gt;block allocator: maintains a free bitmap&lt;br&gt;
+balloc: find the free block, refresh the bitmap, return the block&lt;br&gt;
+bfree: clear the block&lt;/p&gt;
+&lt;p&gt;on-disk inode: struct dinode&lt;br&gt;
+itable, struct inode to copy dinode into memory&lt;br&gt;
+iget, iput&lt;br&gt;
+there can be many same pointers point to same inode&lt;br&gt;
+hold ilock and release by iunlock&lt;br&gt;
+Code that modifies an in-memory inode writes it to disk with iupdate&lt;br&gt;
+iput() doesn’t truncate a file immediately when the link count for the file drops to zero&lt;/p&gt;
+&lt;p&gt;direct/indirect block&lt;br&gt;
+bmap: returns the nth data block for inode ip, or allocate one if not exists&lt;br&gt;
+itrunc: frees blocks and sets inode to 0&lt;/p&gt;
+&lt;p&gt;directory: has type T_DIR, dirlookup&lt;br&gt;
+namex -&amp;gt; skipelem&lt;br&gt;
+namex locks each directory in the path separately&lt;br&gt;
+avoid racing by using sleeplocks&lt;/p&gt;
+&lt;p&gt;opened file is symboled as struct file&lt;br&gt;
+kept in ftable, filealloc-&amp;gt;filedup-&amp;gt;fileclose-&amp;gt;fileread/filewrite&lt;br&gt;
+file has no concept of offset&lt;/p&gt;
+&lt;p&gt;sys_link, sys_unlink&lt;br&gt;
+sys_link creates a new name for the inode&lt;br&gt;
+using create, it is easy to implement sys_open, sys_mkdir, and sys_mknod&lt;/p&gt;
 &lt;h2 id=&#34;lecture-13&#34;&gt;Lecture 13
 &lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
 </description>
