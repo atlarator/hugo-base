@@ -86,7 +86,36 @@ file has no concept of offset&lt;/p&gt;
 sys_link creates a new name for the inode&lt;br&gt;
 using create, it is easy to implement sys_open, sys_mkdir, and sys_mknod&lt;/p&gt;
 &lt;h2 id=&#34;lecture-13&#34;&gt;Lecture 13
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;user-friendly, concurrency, persistence&lt;br&gt;
+the abstraction itself is useful&lt;br&gt;
+crash safety&lt;br&gt;
+disk layout&lt;br&gt;
+performance problems, as disk are always slow&lt;br&gt;
+pathname is human-readable, no explicit offset in write() syscall&lt;/p&gt;
+&lt;p&gt;file system structure: inode&lt;br&gt;
+link count &amp;amp; fd count = 0, miantain an offset&lt;br&gt;
+sync/async read/write option? yes, same way as console driver&lt;br&gt;
+max file size in xv6: (256+12)*1024&lt;br&gt;
+make files bigger: add indirect portions&lt;br&gt;
+why must 256 bytes a block? block address has only 4 digits&lt;/p&gt;
+&lt;p&gt;how to compute block index?  divide into 1024&lt;br&gt;
+get index from inode, read out 8000 bytes&lt;br&gt;
+how to find root inode index? scan root block, scan subdir&amp;rsquo;s block&lt;/p&gt;
+&lt;p&gt;create a file:&lt;br&gt;
+33, write into the free inode&lt;br&gt;
+33, fill in the inode&lt;br&gt;
+46, write the first block&lt;br&gt;
+32, size changed&lt;br&gt;
+33, return back the inode&lt;/p&gt;
+&lt;p&gt;write &amp;ldquo;hi&amp;rdquo; into x:&lt;br&gt;
+45, bitmap refresh&lt;br&gt;
+595: the block allocated for x&lt;br&gt;
+33: updating the size of inode again&lt;/p&gt;
+&lt;p&gt;bget: get the bcache lock, scan the buffer&lt;br&gt;
+xv6 follows a rule: any modification on bcache needs bcache lock, any modification on block 33 need to hold sleeplock&lt;/p&gt;
+&lt;p&gt;shortage of spinlock: must turn off interrupt&lt;br&gt;
+sleeplock will return the CPU resources&lt;/p&gt;
+&lt;p&gt;bcache: a copy of block in mem, sleeplock, LRU, 2-level-blocking&lt;/p&gt;
 </description>
         </item>
         <item>

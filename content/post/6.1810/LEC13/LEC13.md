@@ -101,4 +101,40 @@ using create, it is easy to implement sys_open, sys_mkdir, and sys_mknod
 
 ## Lecture 13
 
-(TODO)
+user-friendly, concurrency, persistence  
+the abstraction itself is useful  
+crash safety  
+disk layout  
+performance problems, as disk are always slow  
+pathname is human-readable, no explicit offset in write() syscall  
+
+file system structure: inode  
+link count & fd count = 0, miantain an offset  
+sync/async read/write option? yes, same way as console driver  
+max file size in xv6: (256+12)*1024  
+make files bigger: add indirect portions  
+why must 256 bytes a block? block address has only 4 digits  
+
+how to compute block index?  divide into 1024  
+get index from inode, read out 8000 bytes  
+how to find root inode index? scan root block, scan subdir's block  
+
+create a file:  
+33, write into the free inode  
+33, fill in the inode  
+46, write the first block  
+32, size changed  
+33, return back the inode  
+
+write "hi" into x:  
+45, bitmap refresh  
+595: the block allocated for x  
+33: updating the size of inode again  
+
+bget: get the bcache lock, scan the buffer  
+xv6 follows a rule: any modification on bcache needs bcache lock, any modification on block 33 need to hold sleeplock  
+
+shortage of spinlock: must turn off interrupt  
+sleeplock will return the CPU resources  
+
+bcache: a copy of block in mem, sleeplock, LRU, 2-level-blocking  
