@@ -7,7 +7,57 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Wed, 22 Jan 2025 14:43:23 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Jan 2025 08:33:35 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE13</title>
+        <link>https://vzstless.moe/p/xv6-lecture13/</link>
+        <pubDate>Fri, 24 Jan 2025 08:33:35 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture13/</guid>
+        <description>&lt;h2 id=&#34;handout-13&#34;&gt;Handout 13
+&lt;/h2&gt;&lt;p&gt;files, bit arrays, human-readable names&lt;br&gt;
+fs APIs&lt;br&gt;
+fd: listed to the file even if it changes&lt;br&gt;
+a file can have multiple links&lt;br&gt;
+file must have info stored other than directory&lt;/p&gt;
+&lt;p&gt;inode: i-number(initial version), link count, count of open FDs&lt;br&gt;
+inode deallocation deferred until last link and FD are gone&lt;/p&gt;
+&lt;p&gt;data stays on disk without power&lt;br&gt;
+historically, disks were read/write usually in 512-byte units, called sectors&lt;/p&gt;
+&lt;p&gt;in HDD, sub-sector operation are expensive(read-modify-write)&lt;br&gt;
+flash must be erased before written&lt;br&gt;
+xv6 uses 2-sector blocks&lt;/p&gt;
+&lt;p&gt;xv6 treats disk as an array of sectors&lt;br&gt;
+metadata: everything on disk other than file content&lt;br&gt;
+on-disk inode: type, nlink, size, addrs[12+1]&lt;/p&gt;
+&lt;p&gt;content is array of dirents&lt;br&gt;
+dirent: inum, 14-byte filename&lt;/p&gt;
+&lt;p&gt;view file system as an on-disk data structure&lt;br&gt;
+facing concurrency challenges&lt;br&gt;
+look at block cache&lt;br&gt;
+bread-&amp;gt;bget, watch the bcache&lt;br&gt;
+bcache.lock: description of what&amp;rsquo;s in the cache&lt;br&gt;
+b-&amp;gt;lock: protects just the one buffer&lt;/p&gt;
+&lt;p&gt;bcache replacement: bget, brelse&lt;br&gt;
+namex() ilock()&lt;br&gt;
+getting a reference separately from locking&lt;/p&gt;
+&lt;h2 id=&#34;slides-13&#34;&gt;Slides 13
+&lt;/h2&gt;&lt;p&gt;0: syscalls&lt;br&gt;
+1: names+fd&lt;br&gt;
+2: inodes&lt;br&gt;
+3: inode cache &amp;amp; buffer cache&lt;br&gt;
+4: Log&lt;br&gt;
+5: virtio &amp;amp; disk driver&lt;br&gt;
+FD: stdin(0), stdout(1), stderr(2)&lt;/p&gt;
+&lt;p&gt;mkfs: generate layout for new FS, the layout will stay static for the lifetime of fs&lt;br&gt;
+indirect block: inode is fixed size, but file could be large&lt;br&gt;
+tree-structure: dir tree layer; inode layer; block layer&lt;/p&gt;
+&lt;h2 id=&#34;book-chapter-13&#34;&gt;Book Chapter 13
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;h2 id=&#34;lecture-13&#34;&gt;Lecture 13
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>xv6 LECTURE12</title>
         <link>https://vzstless.moe/p/xv6-lecture12/</link>
         <pubDate>Wed, 22 Jan 2025 14:43:23 +0800</pubDate>
