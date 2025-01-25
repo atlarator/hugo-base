@@ -7,7 +7,108 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Fri, 24 Jan 2025 08:33:35 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 25 Jan 2025 11:45:07 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>龙芯杯讲座笔记</title>
+        <link>https://vzstless.moe/p/%E9%BE%99%E8%8A%AF%E6%9D%AF%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Sat, 25 Jan 2025 11:45:07 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/%E9%BE%99%E8%8A%AF%E6%9D%AF%E8%AE%B2%E5%BA%A7%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;h2 id=&#34;龙芯杯介绍&#34;&gt;龙芯杯介绍
+&lt;/h2&gt;&lt;p&gt;龙芯杯：CPU设计相关&lt;br&gt;
+第9届&lt;br&gt;
+loongarch类似于RISC-V&lt;/p&gt;
+&lt;p&gt;初赛：CPU+L1 cache&lt;br&gt;
+决赛配SoC外设和PMON BIOS&lt;br&gt;
+团队赛发平台&lt;/p&gt;
+&lt;p&gt;三月开始报名，八月上旬交初赛作品，八月中旬提交决赛作品&lt;br&gt;
+个人赛名额不限&lt;/p&gt;
+&lt;p&gt;按照官方接口实现指令集的正确性与性能，完全客观评分&lt;br&gt;
+决赛：启动相关设施&lt;br&gt;
+半天时间接一条指令&lt;/p&gt;
+&lt;p&gt;三等奖以上可进行加分&lt;br&gt;
+2022年第一次接触loongarch架构&lt;/p&gt;
+&lt;h2 id=&#34;个人赛经验分享&#34;&gt;个人赛经验分享
+&lt;/h2&gt;&lt;p&gt;个人赛：决赛100分，基准测试运行70%，编程任务30%&lt;br&gt;
+纯粹的性能比拼
+比较运行时间，只要运行时间足够短就行&lt;br&gt;
+运行时间=指令数/每秒指令数&lt;/p&gt;
+&lt;p&gt;提升IPC的思路：
+普通运算CPI=1，乘法CPI=2，访存CPI=3&lt;br&gt;
+条件分支需要分支预测相关&lt;/p&gt;
+&lt;p&gt;CPU微架构设计决定了IPC&lt;/p&gt;
+&lt;p&gt;编码技巧，流水级数的划分，布线质量和资源占用数&lt;br&gt;
+设计简单，频率反而高&lt;br&gt;
+FPGA芯片的体质可能不同&lt;br&gt;
+有些部件的加入可能反而使性能下降&lt;/p&gt;
+&lt;p&gt;面向测试程序进行设计&lt;br&gt;
+内存复制，矩阵乘法，哈希算法&lt;br&gt;
+观察发现程序1访存极其规律，矩阵乘法也比较规律，第三个程序访存就具有很大的随机性了&lt;br&gt;
+乱序多发射性价比不高，提升主频是有效的&lt;br&gt;
+程序2可能需要stride进行预取&lt;/p&gt;
+&lt;p&gt;大量的时间花在了访存上，数据预取&lt;br&gt;
+使用1bit BHT 或者 BTB也可&lt;/p&gt;
+&lt;p&gt;有可挖掘的指令并行性，但是性价比不高&lt;br&gt;
+实现指令cache很有必要&lt;br&gt;
+实现分支预测器，写缓冲器的性价比较高&lt;br&gt;
+实现数据预测器、数据cache和乱序多发射的性价比较低，不如考虑提升频率&lt;/p&gt;
+&lt;p&gt;提升频率？在vivado的PLL IP中设置&lt;br&gt;
+但是由于触发器有setup time，在下一个数据到来之前数据必须保持稳定的时间&lt;/p&gt;
+&lt;p&gt;WNS：时钟周期与满足所需约束的差值，当WNS &amp;lt; 0时电路时序可能无法保证&lt;br&gt;
+超频：只能说是最后的手段&lt;/p&gt;
+&lt;p&gt;使用时序分析工具&lt;br&gt;
+implementation -&amp;gt; Report timing summary&lt;br&gt;
+列出路径，理解是从什么部件到什么部件的关键路径&lt;br&gt;
+使用vivado对路径进行画图&lt;/p&gt;
+&lt;p&gt;更合理地划分流水等级&lt;br&gt;
+选择在哪里切一刀进行划分&lt;/p&gt;
+&lt;p&gt;数据cache：IPC↑，BRAM资源占用↑&lt;br&gt;
+数据预取：IPC↑，逻辑复杂，不利于超频&lt;br&gt;
+乱序多发射：IPC↑，逻辑变复杂，不利于超频&lt;/p&gt;
+&lt;p&gt;编码技巧：vivado user guide&lt;br&gt;
+使用更加激进的综合实现策略，最终还能带来10-20MHz的性能提升&lt;br&gt;
+个人赛的优化思路已经被挖的差不多了&lt;/p&gt;
+&lt;h2 id=&#34;团队赛经验分享&#34;&gt;团队赛经验分享
+&lt;/h2&gt;&lt;p&gt;特等奖：性能/功能重大创新&lt;br&gt;
+一等奖：Linux+性能优秀&lt;br&gt;
+二等奖：能跑操作系统&lt;br&gt;
+三等奖：能跑测试程序&lt;/p&gt;
+&lt;p&gt;CPU：超大工作量，SoC：大工作量，系统软件：中等工作量&lt;br&gt;
+正确性保证，性能调优，丰富功能&lt;/p&gt;
+&lt;p&gt;比较推荐Chisel和Spinal，面向功能写代码，上手难度低&lt;br&gt;
+基于其它语言的HDL扩展玩具性质较强，不太方便使用&lt;br&gt;
+乱序执行，多级流水线，分支预测，cache，TLB，MMU&lt;/p&gt;
+&lt;p&gt;参考往年开源方案，参考香山处理器微架构文档&lt;/p&gt;
+&lt;p&gt;CPU实现要点：简化设计&lt;br&gt;
+前端和后端实现，模块化实现&lt;br&gt;
+尽量保证不同模块之间是黑盒&lt;br&gt;
+分支预测和cache可以和cpu分开开发&lt;br&gt;
+浮点指令集等到启动Linux之后再做&lt;/p&gt;
+&lt;p&gt;参考书目：&lt;br&gt;
+计算机体系结构教材，超标量处理器设计，CPU设计实战&lt;/p&gt;
+&lt;p&gt;流程：
+开学前4人现在chiplab完成CPU设计实战的实验部分&lt;br&gt;
+开学后两人完成CPU设计，完成乱序和超标量部分&lt;br&gt;
+一人完成SoC，使用现成的CPU做&lt;br&gt;
+一人完成分支预测，cache和系统适配等&lt;/p&gt;
+&lt;p&gt;官方的trace太弱，很多问题测不出来&lt;br&gt;
+三步走：确保在最小的SoC上运行Linux&lt;br&gt;
+做出自己的SoC，支持更多外设&lt;br&gt;
+丰富系统软件&lt;br&gt;
+只有CPU强制要求自行实现&lt;/p&gt;
+&lt;p&gt;SoC：使用vivado block design&lt;br&gt;
+外设控制器，重视扩展I/O口&lt;/p&gt;
+&lt;p&gt;软件系统部署：
+PMON/u-boot，片上ROM/片外flash&lt;br&gt;
+只需要加载Linux内核elf即可&lt;br&gt;
+Linux内核：载入内存，正确配置设备树和驱动程序&lt;br&gt;
+根文件系统：busybox，buildroot，移植libc等运行库&lt;br&gt;
+应用软件：编译开源代码&lt;br&gt;
+推荐方向：物联网，网络应用，游戏应用&lt;br&gt;
+AI应用，发行版Linux中前者算力受限后者板载内存受限 &lt;br&gt;
+24年特等奖的GUI界面&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>xv6 LECTURE13</title>
         <link>https://vzstless.moe/p/xv6-lecture13/</link>
         <pubDate>Fri, 24 Jan 2025 08:33:35 +0800</pubDate>
