@@ -49,4 +49,26 @@ end_op()->commit()->write_log()->write_head()->install_trans()
 
 ## Lecture 14
 
-(TODO)
+crash will lead to on-disk incorrect state  
+fs operation are all multi-step  
+33, failure, 45: a block remain unallocated  
+if block is shared between files, there will be a security problem  
+solution: logging, atomic fs calls, fast recovery  
+
+crash between log write? see commit records  
+every fs-related syscall: begin_op() -> operations -> end_op()  
+ialloc() -> bwrite() -> log_write()  
+bwrite() could never used by itself but closed with log_write()  
+we don't expect the process live after the crash  
+log, create, install  
+ext3: deal with the factor 2  
+
+eviction: broken of atomicity, write-ahead rule violation  
+solution: don't evict blocks in the log  
+
+fs operation must fit in log  
+max log size is 30, 30 as the max block size(operation writes)  
+write fs->many transactions  
+
+concurrent fs calls  
+all concurrent ops must be fit, limit concurrent calls  
