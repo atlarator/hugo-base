@@ -54,7 +54,43 @@ keep old blocks unsynced before commiting to avoid crash&lt;br&gt;
 complete commit: close the transaction, flush transactions to disk, wait for outstanding operations, wait for outstanding transactions, update journal handle block, mark as pinned&lt;br&gt;
 without syncing, maybe data will lost if crash happens when completing commits&lt;/p&gt;
 &lt;h2 id=&#34;lecture-15&#34;&gt;Lecture 15
-&lt;/h2&gt;</description>
+&lt;/h2&gt;&lt;p&gt;ext3 = ext2 + journal&lt;br&gt;
+let operations in begin_op() and end_op() atomic&lt;br&gt;
+write-ahead: all of refresh or write should be pre-declared&lt;br&gt;
+free rule: only when only when synced the logging will delete the indexes&lt;/p&gt;
+&lt;p&gt;ext3 didn&amp;rsquo;t modify the bottom layer of ext2, but just added journalling system in it&lt;br&gt;
+cache, action info layer(sequence numbers, block numbers; handles), fs tree&lt;br&gt;
+ext3 log format:&lt;br&gt;
+log super block: off, seq, desc, commit&lt;br&gt;
+there&amp;rsquo;s a bunch of closed older transactions&lt;/p&gt;
+&lt;p&gt;async, batching, concurrency&lt;br&gt;
+fsync(fd): do all writes to the file descripter&lt;br&gt;
+batching: one open transaction&lt;br&gt;
+write absorbtion, disk scheduling&lt;/p&gt;
+&lt;p&gt;concurrency: syscalls in parallel, older transactions&lt;br&gt;
+one open, commiting, writing, freed&lt;br&gt;
+we can&amp;rsquo;t have a transaction started since close&lt;/p&gt;
+&lt;p&gt;sys_unlink()&lt;br&gt;
+h = start()&lt;br&gt;
+get(h, block#)&lt;br&gt;
+stop()&lt;/p&gt;
+&lt;p&gt;steps in commit:&lt;br&gt;
+block new syscalls, wait for outstanding syscall, open a new transaction, write a descriptor block with block numbers, write blocks to log, wait for finish, write commit record to the block, wait for the commit point, write the transactions blocks to the home locations, re-use log&lt;br&gt;
+lots of records to show the transactions&lt;/p&gt;
+&lt;p&gt;if there&amp;rsquo;s a crash?&lt;br&gt;
+assuming the disk is still all right, when the power reboot, there&amp;rsquo;s a bunch of old completed transactions&lt;/p&gt;
+&lt;p&gt;every descriptor block starts with a magic number&lt;br&gt;
+after SB, start with a magic number, it must be a descriptor block&lt;/p&gt;
+&lt;p&gt;why not let T2 get syscall just after T1 finishes syscall?&lt;br&gt;
+create()-&amp;gt;unlink(), crash?&lt;br&gt;
+the inode won&amp;rsquo;t be deleted, y still exists in file system&lt;br&gt;
+no possibility to see the refresh in the future transaction&lt;br&gt;
+copy into cache, copy into disk&lt;/p&gt;
+&lt;p&gt;logging let multi-step disk transaction into atomic ones&lt;br&gt;
+the correctness of logging is depend on write-ahead rule&lt;/p&gt;
+&lt;p&gt;why not put commit message right in the descriptor block?&lt;br&gt;
+no problem is eliminated&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>xv6 LECTURE14</title>

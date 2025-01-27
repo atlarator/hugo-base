@@ -61,4 +61,49 @@ without syncing, maybe data will lost if crash happens when completing commits
 
 ## Lecture 15
 
+ext3 = ext2 + journal  
+let operations in begin_op() and end_op() atomic  
+write-ahead: all of refresh or write should be pre-declared  
+free rule: only when only when synced the logging will delete the indexes  
 
+ext3 didn't modify the bottom layer of ext2, but just added journalling system in it  
+cache, action info layer(sequence numbers, block numbers; handles), fs tree  
+ext3 log format:  
+log super block: off, seq, desc, commit  
+there's a bunch of closed older transactions  
+
+async, batching, concurrency  
+fsync(fd): do all writes to the file descripter  
+batching: one open transaction  
+write absorbtion, disk scheduling  
+
+concurrency: syscalls in parallel, older transactions  
+one open, commiting, writing, freed  
+we can't have a transaction started since close  
+
+sys_unlink()  
+h = start()  
+get(h, block#)  
+stop()  
+
+steps in commit:  
+block new syscalls, wait for outstanding syscall, open a new transaction, write a descriptor block with block numbers, write blocks to log, wait for finish, write commit record to the block, wait for the commit point, write the transactions blocks to the home locations, re-use log  
+lots of records to show the transactions  
+
+if there's a crash?  
+assuming the disk is still all right, when the power reboot, there's a bunch of old completed transactions  
+
+every descriptor block starts with a magic number  
+after SB, start with a magic number, it must be a descriptor block  
+
+why not let T2 get syscall just after T1 finishes syscall?  
+create()->unlink(), crash?  
+the inode won't be deleted, y still exists in file system  
+no possibility to see the refresh in the future transaction  
+copy into cache, copy into disk  
+
+logging let multi-step disk transaction into atomic ones  
+the correctness of logging is depend on write-ahead rule  
+
+why not put commit message right in the descriptor block?  
+no problem is eliminated  
