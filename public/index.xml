@@ -7,7 +7,56 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Sun, 26 Jan 2025 09:37:33 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Jan 2025 08:59:50 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE15</title>
+        <link>https://vzstless.moe/p/xv6-lecture15/</link>
+        <pubDate>Mon, 27 Jan 2025 08:59:50 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture15/</guid>
+        <description>&lt;h2 id=&#34;handout-15&#34;&gt;Handout 15
+&lt;/h2&gt;&lt;p&gt;crashes may lead to problem that won&amp;rsquo;t show immediately&lt;br&gt;
+make syscalls atomic(all-or-nothing)&lt;br&gt;
+ext3: less waiting, reduced writes, ordered data mode&lt;/p&gt;
+&lt;p&gt;batch update blocks, commit the current open transaction&lt;br&gt;
+performance: multiple syscalls, multiple transactions&lt;/p&gt;
+&lt;p&gt;the crash may forget last few ops&lt;br&gt;
+log is circular: SB T4 T5 T2 T3&lt;br&gt;
+before re-use, must write log superblock with offset/seq of resulting now-oldest transaction in log&lt;/p&gt;
+&lt;p&gt;logging could help with &amp;ldquo;fail-stop&amp;rdquo;&lt;br&gt;
+reboot, look in log, find the end of log, re-write all logs&lt;br&gt;
+another crash? just repeat the logging steps&lt;br&gt;
+commit needs to write on-disk log from a snapshot of cached blocks? if not, repeat but not all&lt;br&gt;
+efficient using COW fork&lt;/p&gt;
+&lt;p&gt;in ext3, metadata and blocks are both written in log&lt;br&gt;
+write content after metadata? no, crash may leave inode pointing to blocks from other file!&lt;/p&gt;
+&lt;p&gt;correctness challenges&lt;br&gt;
+no enough free blocks? free oldest ones&lt;br&gt;
+use checksums&lt;/p&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper
+&lt;/h2&gt;&lt;p&gt;preservation, predictability, atomicity&lt;br&gt;
+ex2fs, however, is not atomic&lt;br&gt;
+synchronous metadata update has performance problems&lt;br&gt;
+solution: defered-ordered write way, but may leat to a cyclic problem&lt;br&gt;
+soft-update way: share same problem as the recovery process still need to scan the whole disk&lt;/p&gt;
+&lt;p&gt;commit: mot make effect until final&lt;br&gt;
+journaling file system: the old and new versions of incomplete updates are preserved by writing the new versions to a separate location on disk until such time as the update has be committed&lt;/p&gt;
+&lt;p&gt;transactions are atomic: either undo or redo&lt;br&gt;
+contains all changed metadata&lt;br&gt;
+reading the existing file system&lt;br&gt;
+before commiting, make sure all blocks are written in the disk&lt;/p&gt;
+&lt;p&gt;fs has no transaction abort, transactions are short-lived&lt;br&gt;
+create a new transaction so often&lt;br&gt;
+less IO operations is needed for long term, but make fs time-predictless&lt;/p&gt;
+&lt;p&gt;inodes, bitmaps, record new contents and maintain atomicity&lt;/p&gt;
+&lt;p&gt;journal metadata block: contains entire component&lt;br&gt;
+keep track of metadata buffers&lt;br&gt;
+keep old blocks unsynced before commiting to avoid crash&lt;br&gt;
+complete commit: close the transaction, flush transactions to disk, wait for outstanding operations, wait for outstanding transactions, update journal handle block, mark as pinned&lt;br&gt;
+without syncing, maybe data will lost if crash happens when completing commits&lt;/p&gt;
+&lt;h2 id=&#34;lecture-15&#34;&gt;Lecture 15
+&lt;/h2&gt;</description>
+        </item>
+        <item>
         <title>xv6 LECTURE14</title>
         <link>https://vzstless.moe/p/xv6-lecture14/</link>
         <pubDate>Sun, 26 Jan 2025 09:37:33 +0800</pubDate>
