@@ -19,6 +19,11 @@ tags: ["MISC"]
 - ✉️ 2319725508@qq.com
 - 🍀I work so I live.
 
-![skills](https://skillicons.dev/icons?i=arch,ubuntu,debian,bash,powershell,cloudflare,python,javascript,scala,go,c,haskell,ts,react,fastapi,git,github,githubactions,notion,ps,redis,vscode,vim,azure)
+GPG Public Key: 81F97A3DCC8ACF8128F6FBF6D96D94E92C64A252
 
-<img src="https://github-readme-stats-one-bice.vercel.app/api?username=victorzhangai&count_private=true&theme=calm&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR" alt="Where had I walked" height="185px" /> <!-- img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=victorzhangai&layout=compact&langs_count=8&theme=calm&role=OWNER,ORGANIZATION_MEMBER" alt="Mostly Used" height="185px" / -->
+  <a href="http://vzstless.moe">blog</a>
+  <a href="http://vzstless.notion.so">notion</a>
+
+![skills](https://skillicons.dev/icons?i=arch,ubuntu,debian,nix,plan9,bash,powershell,cloudflare,python,julia,javascript,scala,go,c,haskell,ts,regex,react,fastapi,git,github,githubactions,notion,ps,htmx,jquery,vscode,vim,azure,emacs,)
+
+<img src="https://github-readme-stats-one-bice.vercel.app/api?username=victorzhangai&count_private=true&theme=calm&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR" alt="Where had I walked" height="185px" /> 
