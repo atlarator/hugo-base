@@ -62,7 +62,30 @@ batch the shootdown to stop the shootdown to the multi-core&lt;/p&gt;
 &lt;p&gt;optimal page size &amp;lt;- dynamic ram&lt;br&gt;
 algorithms must be asynchronous friendly&lt;/p&gt;
 &lt;h2 id=&#34;lecture-16&#34;&gt;Lecture 16
-&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;OS kernel uses VM in creative way&lt;br&gt;
+VM could have same mechanism as the kernel&lt;/p&gt;
+&lt;p&gt;what primitives of VM does user program need&lt;br&gt;
+trap&lt;br&gt;
+prot1-decrease accessibility(R+W-&amp;gt;R-&amp;gt;not at all)&lt;br&gt;
+unprot-increase accessibility&lt;br&gt;
+mprotect() still works on page accuracy not addr accuracy&lt;br&gt;
+AS: pagetable+VMA&lt;br&gt;
+contiguous range of memory, some permission, backed by same object&lt;/p&gt;
+&lt;p&gt;user-level traps&lt;br&gt;
+does this trap break the isolation? upcall lets the whole program runs in same conrtext and same page&lt;/p&gt;
+&lt;p&gt;challenge: the table may be big&lt;br&gt;
+use VM promitives, allocate huge range, allow page fault&lt;/p&gt;
+&lt;p&gt;GC: copying, forwarding, move objects from FROM space to TO space&lt;br&gt;
+Baker&amp;rsquo;s algorithm: just copy the root&lt;br&gt;
+new: forward a few more objects&lt;br&gt;
+check whether the reference of the pointer is in from space&lt;br&gt;
+fault handler, scan a page of objects, forward them&lt;br&gt;
+no pointer to check anymore&lt;br&gt;
+if you fulfill the to-space, flip it as a new from space, if the space is still fulfilled, flip it again&lt;/p&gt;
+&lt;p&gt;tricky use of concurrency&lt;br&gt;
+maps mapping app&amp;rsquo;s space to GC&amp;rsquo;s space&lt;/p&gt;
+&lt;p&gt;VM is a still developing system&lt;br&gt;
+through the VMA there is no hole&lt;/p&gt;
 </description>
         </item>
         <item>

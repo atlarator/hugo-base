@@ -70,4 +70,33 @@ algorithms must be asynchronous friendly
 
 ## Lecture 16
 
-(TODO)
+OS kernel uses VM in creative way  
+VM could have same mechanism as the kernel  
+
+what primitives of VM does user program need  
+trap  
+prot1-decrease accessibility(R+W->R->not at all)  
+unprot-increase accessibility  
+mprotect() still works on page accuracy not addr accuracy  
+AS: pagetable+VMA  
+contiguous range of memory, some permission, backed by same object  
+
+user-level traps  
+does this trap break the isolation? upcall lets the whole program runs in same conrtext and same page  
+
+challenge: the table may be big  
+use VM promitives, allocate huge range, allow page fault  
+
+GC: copying, forwarding, move objects from FROM space to TO space  
+Baker's algorithm: just copy the root  
+new: forward a few more objects  
+check whether the reference of the pointer is in from space  
+fault handler, scan a page of objects, forward them  
+no pointer to check anymore  
+if you fulfill the to-space, flip it as a new from space, if the space is still fulfilled, flip it again  
+
+tricky use of concurrency  
+maps mapping app's space to GC's space  
+
+VM is a still developing system  
+through the VMA there is no hole  
