@@ -7,12 +7,24 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Fri, 31 Jan 2025 12:49:19 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>LEC19</title>
-        <link>https://vzstless.moe/p/lec19/</link>
+        <lastBuildDate>Sat, 01 Feb 2025 11:07:10 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE20</title>
+        <link>https://vzstless.moe/p/xv6-lecture20/</link>
+        <pubDate>Sat, 01 Feb 2025 11:07:10 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture20/</guid>
+        <description>&lt;h2 id=&#34;handout-20&#34;&gt;Handout 20
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>xv6 LECTURE19</title>
+        <link>https://vzstless.moe/p/xv6-lecture19/</link>
         <pubDate>Fri, 31 Jan 2025 12:49:19 +0800</pubDate>
         
-        <guid>https://vzstless.moe/p/lec19/</guid>
+        <guid>https://vzstless.moe/p/xv6-lecture19/</guid>
         <description>&lt;h2 id=&#34;slides&#34;&gt;Slides
 &lt;/h2&gt;&lt;p&gt;what if write an OS in HLL?&lt;br&gt;
 less faults, but with less performance and less chance to interact with bottom of a computer&lt;br&gt;

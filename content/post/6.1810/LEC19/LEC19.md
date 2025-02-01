@@ -1,7 +1,8 @@
 ---
-title: "LEC19"
+title: "xv6 LECTURE19"
 date: 2025-01-31T12:49:19+08:00
-draft: true
+draft: false
+tags: ["XV6 OS"]
 ---
 
 ## Slides
