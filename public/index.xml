@@ -7,7 +7,55 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Sat, 01 Feb 2025 11:07:10 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 01 Feb 2025 22:25:39 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>xv6 LECTURE24</title>
+        <link>https://vzstless.moe/p/xv6-lecture24/</link>
+        <pubDate>Sat, 01 Feb 2025 22:25:39 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture24/</guid>
+        <description>&lt;h2 id=&#34;handout-24&#34;&gt;Handout 24
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>xv6 LECTURE23</title>
+        <link>https://vzstless.moe/p/xv6-lecture23/</link>
+        <pubDate>Sat, 01 Feb 2025 22:25:33 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture23/</guid>
+        <description>&lt;h2 id=&#34;handout-23&#34;&gt;Handout 23
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>xv6 LECTURE22</title>
+        <link>https://vzstless.moe/p/xv6-lecture22/</link>
+        <pubDate>Sat, 01 Feb 2025 22:25:25 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture22/</guid>
+        <description>&lt;h2 id=&#34;handout-22&#34;&gt;Handout 22
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>xv6 LECTURE21</title>
+        <link>https://vzstless.moe/p/xv6-lecture21/</link>
+        <pubDate>Sat, 01 Feb 2025 22:25:18 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/xv6-lecture21/</guid>
+        <description>&lt;h2 id=&#34;handout-21&#34;&gt;Handout 21
+&lt;/h2&gt;&lt;p&gt;What if malicious user code execute in kernel?&lt;/p&gt;
+&lt;h2 id=&#34;paper&#34;&gt;Paper
+&lt;/h2&gt;&lt;p&gt;(TODO)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>xv6 LECTURE20</title>
         <link>https://vzstless.moe/p/xv6-lecture20/</link>
         <pubDate>Sat, 01 Feb 2025 11:07:10 +0800</pubDate>
@@ -4198,6 +4246,8 @@ Google搜索443error，出现的结果为：&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;push成功！！！&lt;/p&gt;
 &lt;h2 id=&#34;20251172&#34;&gt;2025.1.17(2)
 &lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://askubuntu.com/questions/1192347/temporary-failure-in-name-resolution-on-wsl/1401317#1401317?newreg=fc95a6947d13420fb5f39420bf285388&#34;&gt;关于github主机无法解析的解决方法&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;202521&#34;&gt;2025.2.1
+&lt;/h2&gt;&lt;p&gt;部署了一个Notion页面，够无脑，但是有太多的功能是付费才能使用的&lt;/p&gt;
 &lt;p&gt;总之，很高兴认识你，各种意义上的。愿你在这儿找到你想要的东西！&lt;/p&gt;
 </description>
         </item>

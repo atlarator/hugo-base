@@ -79,6 +79,10 @@ push成功！！！
 
 ## 2025.1.17(2)
 
-<a href="https://askubuntu.com/questions/1192347/temporary-failure-in-name-resolution-on-wsl/1401317#1401317?newreg=fc95a6947d13420fb5f39420bf285388">关于github主机无法解析的解决方法</a>
+<a href="https://askubuntu.com/questions/1192347/temporary-failure-in-name-resolution-on-wsl/1401317#1401317?newreg=fc95a6947d13420fb5f39420bf285388">关于github主机无法解析的解决方法</a>  
+
+## 2025.2.1
+
+部署了一个Notion页面，够无脑，但是有太多的功能是付费才能使用的  
 
 总之，很高兴认识你，各种意义上的。愿你在这儿找到你想要的东西！
