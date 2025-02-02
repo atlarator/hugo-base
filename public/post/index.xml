@@ -40,7 +40,19 @@ implement the graceful delay&lt;/p&gt;
 &lt;p&gt;RCU implements nearly zero in reads&lt;br&gt;
 reference counting, redesign for no sharing&lt;/p&gt;
 &lt;h2 id=&#34;paper&#34;&gt;Paper
-&lt;/h2&gt;&lt;p&gt;RCU&amp;rsquo;s success: high performance in concurrent reading and updating&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;RCU&amp;rsquo;s success: high performance in concurrent reading and updating&lt;br&gt;
+support for concurrent reading and updating, low computation and storage overhead, deterministic completion time&lt;br&gt;
+VFS needs concurrent reading and updating&lt;br&gt;
+RCU allows thread to wait for the completion of pre-existing RCU critical sections, but coordinate activities using other mechanisms&lt;br&gt;
+synchroize_rcu: ensure every cpu acts a context switch&lt;br&gt;
+writer just need to wait for reader, but reader must communicate with writer that the critical section is complete&lt;/p&gt;
+&lt;p&gt;RCU&amp;rsquo;s simplest usage is to wait for a transaction complete&lt;br&gt;
+using RCU in NMI system&lt;br&gt;
+execute in RCU, apply the reference counting&lt;br&gt;
+using an RCU critical section is good if the object is relatively short&lt;br&gt;
+RCU could use to remove need for type-safe memory&lt;br&gt;
+RCU has higher deadlock immunity than read/write lock&lt;/p&gt;
+&lt;p&gt;RCU is used increasingly in Linux kernel source code&lt;/p&gt;
 </description>
         </item>
         <item>

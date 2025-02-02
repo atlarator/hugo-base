@@ -26,3 +26,17 @@ reference counting, redesign for no sharing
 ## Paper
 
 RCU's success: high performance in concurrent reading and updating  
+support for concurrent reading and updating, low computation and storage overhead, deterministic completion time  
+VFS needs concurrent reading and updating  
+RCU allows thread to wait for the completion of pre-existing RCU critical sections, but coordinate activities using other mechanisms  
+synchroize_rcu: ensure every cpu acts a context switch  
+writer just need to wait for reader, but reader must communicate with writer that the critical section is complete  
+
+RCU's simplest usage is to wait for a transaction complete  
+using RCU in NMI system  
+execute in RCU, apply the reference counting  
+using an RCU critical section is good if the object is relatively short  
+RCU could use to remove need for type-safe memory  
+RCU has higher deadlock immunity than read/write lock  
+
+RCU is used increasingly in Linux kernel source code  
