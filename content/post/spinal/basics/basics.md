@@ -164,4 +164,46 @@ showRtl(new Top)
 
 for initialization for simulation, using randBoot() method  
 
-Memory: (TODO)
+Memory: use Mem() class  
+```Scala
+val mem = Mem(Bits(32 bits),wordCount = 256)
+```
+
+memory could be blackboxed  
+```Scala
+val mem = Mem(Rgb(RgbConfig(8,8,8)),1024)
+mem.generateAsBlackBox()
+```
+## Fixed-Point
+
+```Scala
+val c = a + b //return 8 bits without protection, may cause overflow
+val c = a +^ b //return 9 bits, adder with carry
+```
+bits also can be rounded  
+```Scala
+val a = in SInt(16 bits) //source data is 16 bits 
+val f = a.roundUp(2)     //round 2 bits to +Inf  return 15 bits
+```
+fixTo: a way same as round to inf  
+
+width propagation is auto in Spinal.  
+bit join:  
+```Scala
+c:= (a0 ## a1).asSInt
+//assign c = {a0,a1};
+```
+in/out < Typename > or use master/slave  
+jump wire:  
+```Scala
+xx :=  ctrl.counter.pull() //Jump wire auto through IO
+```
+SpinalHDL will never Pruned signals with names  
+The ways you can use Scala functions to generate hardware are radically different than VHDL/Verilog for many reasons:  
+You can instantiate registers, combinational logic and components inside them.  
+You don’t have to play with process/@always that limit the scope of assignment of signals  
+Everything is passed by reference, which allows easy manipulation. For example you can give a bus to a function as an argument, then the function can internaly read/write to it. You can also return a Component, a Bus, or anything else from scala and the scala world.  
+
+define something inside the class is accepted  
+Area is used to define a group of logic  
+(TODO)
