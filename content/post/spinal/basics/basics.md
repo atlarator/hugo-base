@@ -206,4 +206,17 @@ Everything is passed by reference, which allows easy manipulation. For example y
 
 define something inside the class is accepted  
 Area is used to define a group of logic  
-(TODO)
+
+## Clock Domain
+```Scala
+val a = in Bits(8 bits);
+val b = RegNext(a) init 0
+```
+set your own clock domain:
+```Scala
+new ClockingArea(ClockDomain(myclk,myrst)){
+  val reg0 = RegNext(a) init 0
+  b := reg0
+}
+```
+setSyncWith lets you divide the clock or gate it  
