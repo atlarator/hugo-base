@@ -42,3 +42,15 @@ bs.flip();
 也可以使用``to_ulong()`` ``to_ullong()`` ``to_string()``进行类型转换  
 
 bitset可以直接进行位操作  
+
+## Lambda
+
+```C++
+auto init = []() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 'c';
+}();
+```
+做力扣的时候突然发现的一段未知的玩意儿，一查发现其实是一个lambda函数定义，第一行中的``[]()``表示不捕获，不传参，函数体中，第一行关闭stdio与iostream的同步操作，后两行解除cin与cout的缓冲区绑定，最后的一个``()``表示立即执行  
