@@ -18,6 +18,11 @@ STL中的元素还可以进行在某个初始值基础上的累加操作：
 int sum_vi = accumulate(vi.begin(), vi.end(), 0);
 ```
 
+关于查找：
+```C++
+int val = find(vec.begin(), vec,end(), target);
+```
+
 ## bitset
 bitset 可以使用初始值初始化也可以使用字符串进行初始化：
 ```C++
