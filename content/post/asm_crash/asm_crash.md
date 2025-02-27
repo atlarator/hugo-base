@@ -48,3 +48,22 @@ mov rdx, <bytes>
 mov rax, 0
 syscall
 ```
+
+assemble the program:
+```shell
+gcc -nostdlib hello.S -o hello # assemble the code
+objdump -M intel -d hello # read the code
+objcopy --dump-section .text=hello_bin_code hello # extracting binary code
+```
+
+arithmetic:
+```assembly
+add <reg> <opr> # reg += opr
+sub <reg> <opr> # reg -= opr
+imul <reg> <opr> # reg *= opr
+```
+
+specially, for division:
+```assembly
+div <reg> # rax = {rdx, rax} / reg, rdx = remainder
+```
