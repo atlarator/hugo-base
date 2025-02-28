@@ -67,3 +67,10 @@ specially, for division:
 ```assembly
 div <reg> # rax = {rdx, rax} / reg, rdx = remainder
 ```
+shifting
+```assembly
+shl <reg1> <reg2> # reg1 << reg2
+shr <reg1> <reg2> # reg1 >> reg2
+```
+
+and, not, or, xor could be use to process bitwise operations  
