@@ -74,3 +74,9 @@ shr <reg1> <reg2> # reg1 >> reg2
 ```
 
 and, not, or, xor could be use to process bitwise operations  
+
+stack:
+```assembly
+push <reg>
+pop <reg>
+```
