@@ -80,3 +80,25 @@ stack:
 push <reg>
 pop <reg>
 ```
+
+jump:
+```assembly
+jmp reg # jump to the addr in the reg
+```
+
+repeat the instruction:
+```assembly
+.rept 0x51
+nop # repeat nop for 0x51 times
+.endr
+```
+
+compare:
+
+```assembly
+cmp dword ptr [edi] 0x12345678
+je label
+```
+
+ja must jump to a label not an address
+
