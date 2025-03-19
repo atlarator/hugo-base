@@ -13,22 +13,18 @@ links:
     description: 也许是未来硬件开发的先声
     website: https://spinalhdl.github.io/SpinalDoc-RTD/zh_CN/index.html
     image: spinal.png
+  - title: Arch Linux
+    description: 滚更的，易用的Linux
+    website: https://archlinux.org/
+    image: archlinux.ico
   - title: NixOS
-    description: 新的Linux物种
+    description: 基于fp的Linux Distro
     website: https://nixos-cn.org/
     image: NixOS.ico
-  - title: Nushell
-    description: 新的Shell
-    website: https://www.nushell.sh/zh-CN/
-    image: nushell.png
   - title: IT邦帮忙
     description: 宝岛电脑论坛
     website: https://ithelp.ithome.com.tw/
     image: ithelp.png
-  - title: limonnur
-    description: 猫猫的咖啡馆
-    website: https://forum.limonnur.party/
-    image: limo.png
   - title: clansty
     description: 某个给我很大启发的猫猫
     website: https://nyac.at/
