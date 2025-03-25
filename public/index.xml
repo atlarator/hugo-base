@@ -7,7 +7,19 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Thu, 13 Mar 2025 17:07:52 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 25 Mar 2025 16:40:59 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>UNIX系统编程杂谈</title>
+        <link>https://vzstless.moe/p/unix%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%E6%9D%82%E8%B0%88/</link>
+        <pubDate>Tue, 25 Mar 2025 16:40:59 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/unix%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%E6%9D%82%E8%B0%88/</guid>
+        <description>&lt;p&gt;最近在pwn.college做不下去的时候试了试UNIX系统编程，在查阅“程序的开始与终止”的资料的时候有评论觉得apue不适合如今的UNIX环境了，推荐了&lt;em&gt;The Linux Programming Interface&lt;/em&gt;和&lt;em&gt;Understanding UNIX/Linux Programming&lt;/em&gt;（下文简称为UULP）两本书，遂花了半个多月的时间学了后者。我没全学完，但是学了之后我觉得大概率之后我不会大范围涉足这个领域了。&lt;/p&gt;
+&lt;p&gt;UULP是一本简要介绍UNIX系统并使用这些系统调用进行UNIX系统工具撰写的书。然而这本书并不好。首先是讲述。看起来书里的图很多，然而当你真的学过一点OS基础你就会觉得这本书在该深入的地方浅尝辄止了，而在讲深入的地方处理的并不好。这本书也有点老了，老到书中的很多示例代码要么缺少 &lt;code&gt;#include&lt;/code&gt; 的库要么干脆就是代码片段散落在书的角落或者网站的角落，调试也比想象中的头疼（不过没有OS头疼就是了）。这是一本典型的前AI时代的书，书中有大量的XX-demo示例，但这些示例并没有真正意义上明确这些API的一些特殊行为。同样的代码我为什么不参考apue或者直接给大模型丢一个prompt而要去看你呢？&lt;/p&gt;
+&lt;p&gt;OK，骂的有点狠了，说实话，自己造UNIX的轮子还是很难忘的。归根结底我不推荐这本书。如果你真的想了解UNIX系统编程还是需要man page或者大模型。apue不评价，许多人说这本书属于“这辈子也用不上”的范畴，我也没买（同样位列用不上名单的还有编译原理，TAOCP等上古巨神）。UNIX系统编程时至今日在书籍资料方面还是短缺的。apue和TLPI多年之后还是top1参考，而top1下头没有任何的top2。哪怕对于C，top1的K&amp;amp;R下头还有一堆的top2。也许Rust和zig等新兴编程语言在Linux内核的介入能够改变这一切？&lt;/p&gt;
+&lt;p&gt;假期的xv6让我对操作系统心驰神往，然而从os1000到UNIX系统编程则某种程度上让我为操作系统相关的脏活累活祛魅了。是时候投入现代编程语言的怀抱了，不能死守着C不走了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>程序的开始与终止</title>
         <link>https://vzstless.moe/p/%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%BC%80%E5%A7%8B%E4%B8%8E%E7%BB%88%E6%AD%A2/</link>
         <pubDate>Thu, 13 Mar 2025 17:07:52 +0800</pubDate>
