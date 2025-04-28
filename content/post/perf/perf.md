@@ -1,7 +1,8 @@
 ---
 title: "关于perf的应用"
 date: 2025-03-09T08:31:14+08:00
-draft: true
+draft: false
+tags: ["MISC"]
 ---
 
 示例：  
