@@ -7,7 +7,136 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Sun, 09 Mar 2025 08:31:14 +0800</lastBuildDate><atom:link href="https://vzstless.moe/tags/misc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 06 Jul 2025 15:10:33 +0800</lastBuildDate><atom:link href="https://vzstless.moe/tags/misc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>随手记下的乐理知识</title>
+        <link>https://vzstless.moe/p/%E9%9A%8F%E6%89%8B%E8%AE%B0%E4%B8%8B%E7%9A%84%E4%B9%90%E7%90%86%E7%9F%A5%E8%AF%86/</link>
+        <pubDate>Sun, 06 Jul 2025 15:10:33 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/%E9%9A%8F%E6%89%8B%E8%AE%B0%E4%B8%8B%E7%9A%84%E4%B9%90%E7%90%86%E7%9F%A5%E8%AF%86/</guid>
+        <description>&lt;p&gt;一些根据OzaShin Music Channel的讲座汉化版随堂做的笔记&lt;/p&gt;
+&lt;h2 id=&#34;基础篇&#34;&gt;基础篇
+&lt;/h2&gt;&lt;p&gt;音名，音程，全音，半音&lt;/p&gt;
+&lt;p&gt;全全半全全全半的排列直接平移就能得到大调音阶，从C开始即为C大调&lt;/p&gt;
+&lt;p&gt;与大调相对的是自然小调，大调的3，6，7降半音即为自然小调&lt;/p&gt;
+&lt;p&gt;自然小调的第三音开始，排列就和大调一样了&lt;/p&gt;
+&lt;p&gt;平行调：整体移位音阶中的两个音符得到对应的大调/小调（如C大调和A小调）&lt;/p&gt;
+&lt;p&gt;同主调：同一个主音的大调和小调（如C大调和C小调）&lt;/p&gt;
+&lt;p&gt;顺阶和弦：每三度一个音，共计三个音（如CEG，DFA）称为3和音和弦，四个音同理&lt;/p&gt;
+&lt;p&gt;根音到三音的距离为四个半音的为大和弦，三个半音的为小和弦&lt;/p&gt;
+&lt;p&gt;将中间的音（三音）降低/升高半音即可改变和弦的大小&lt;/p&gt;
+&lt;p&gt;大调的最后一个和弦较为特殊，三个音中间都是三个半音的距离，即五音相比其他和弦降了一个半音的音程（♭5和弦）&lt;/p&gt;
+&lt;p&gt;7和maj7：总计距离是十个半音还是十一个半音&lt;/p&gt;
+&lt;p&gt;和弦进行：多个和弦改变排列顺序，通常这个顺序中的第一个和弦会给人这个曲子的最初印象（一般用C和Am最多）&lt;/p&gt;
+&lt;p&gt;C | Am | Dm G ： 1625&lt;/p&gt;
+&lt;p&gt;C | G | Am | Em | F | C | Dm | G ： 卡农&lt;/p&gt;
+&lt;p&gt;改变和弦进行中各个和弦之间的间隔也能改变给人的感受&lt;/p&gt;
+&lt;p&gt;Voicing：把相邻的两个和弦的同音部分保持一致，只改变不同的那个音，就能减少手在钢琴上的移位距离&lt;/p&gt;
+&lt;p&gt;转位：把下位的音转移到上位（CEG-EGC-GCE）&lt;/p&gt;
+&lt;p&gt;标注：最低音（C，C/E，C/G）&lt;/p&gt;
+&lt;p&gt;只要最低音是根音就算原位和弦，所以可以使用左手弹奏更低位的根音&lt;/p&gt;
+&lt;p&gt;bass的音可以直接视作最低音&lt;/p&gt;
+&lt;p&gt;一般的曲子多用C这样较为稳定的和弦结束 tonic-dominant-tonic(C-G7-C)&lt;/p&gt;
+&lt;p&gt;主-下属-主的组合（C-F-C）&lt;/p&gt;
+&lt;p&gt;Cadence：T-D-T，T-SD-T，（T-）SD-D-T&lt;/p&gt;
+&lt;p&gt;代理和弦：Dm，Em，Am，Bm，根据同音数量分T，D和SD&lt;/p&gt;
+&lt;p&gt;同功能的代理和弦互相替代的时候要做到“听着觉得没问题”&lt;/p&gt;
+&lt;h2 id=&#34;应用篇&#34;&gt;应用篇
+&lt;/h2&gt;&lt;p&gt;基音：音量很大，一般能盖过泛音&lt;/p&gt;
+&lt;p&gt;强进行：“泛音能够让人联想到基音”，G-C一类的走向&lt;/p&gt;
+&lt;p&gt;C大调中C，E，G为稳定音，而与稳定音紧挨着的音是不稳定的，如果相隔着全音则不易被吸引&lt;/p&gt;
+&lt;p&gt;间隔三个全音的音听着会不和谐&lt;/p&gt;
+&lt;p&gt;G7：强进行+三全音，最倾向于解决C&lt;/p&gt;
+&lt;p&gt;属七和弦：三音和七音一定是 三全音的关系&lt;/p&gt;
+&lt;p&gt;偶尔使用平行调的和弦能够增加曲子的色彩&lt;/p&gt;
+&lt;p&gt;自然小调缺少导音（实际上是缺少和弦中的三全音）这时候需要将作为导音的音升半音，构成三全音&lt;/p&gt;
+&lt;p&gt;和声小调：为了制造导音和三全音把自然小调的第七音提高半音组成的&lt;/p&gt;
+&lt;p&gt;在和声小调的基础上把增音程去除变为全音即为旋律小调&lt;/p&gt;
+&lt;p&gt;曲中也可以中途转向和声/旋律小调&lt;/p&gt;
+&lt;p&gt;属七和弦：形如〇7的和弦&lt;/p&gt;
+&lt;p&gt;附属和弦的解决方法：往右数3个或者往左数4个&lt;/p&gt;
+&lt;p&gt;注意：F7不能作为附属和弦使用（可能会出现曲调跑偏）&lt;/p&gt;
+&lt;p&gt;可以使用度名来标记和弦，如C大调中C为I，Dm为II…Bm为VII&lt;/p&gt;
+&lt;p&gt;2-5-1，最初的两个和弦一般用4和音和弦，连续的两个强进行，有很强的终止感&lt;/p&gt;
+&lt;p&gt;J-Pop常用Gm7-C7-Fmaj7的走向（很常见，背下来）&lt;/p&gt;
+&lt;p&gt;251也有大调和小调之分，&lt;/p&gt;
+&lt;p&gt;附属和弦适合在进入副歌之前用于调动情绪&lt;/p&gt;
+&lt;p&gt;sus4：大和弦的三音提升半音构成的&lt;/p&gt;
+&lt;p&gt;减和弦：根音和三音，三音和五音之间的距离都是三个半音&lt;/p&gt;
+&lt;p&gt;强调经过减和弦使用dim标识，强调从小和弦变换而来使用♭5标识&lt;/p&gt;
+&lt;p&gt;dim7：四个音之间相邻的两个音都是三个半音的距离&lt;/p&gt;
+&lt;p&gt;m7♭5又称半减七和弦，它的七音并没有进行降半音的处理&lt;/p&gt;
+&lt;p&gt;只有在根音以全音移动的进行中才能使用减和弦进行改写，插入第一个和弦距离半音的dim&lt;/p&gt;
+&lt;p&gt;dim中含有三全音：与属七和弦省略根音相同&lt;/p&gt;
+&lt;p&gt;减和弦一般会给人复杂、阴暗的感受，如果减七和弦带来的情感过于浓重也可以使用减三和弦进行代替&lt;/p&gt;
+&lt;p&gt;五度圈：十二点钟方向是C，顺时针转动就上行七个半音&lt;/p&gt;
+&lt;p&gt;沿图顺时针旋转度数为对应大调的声调数，逆时针则为降调数&lt;/p&gt;
+&lt;p&gt;加升号：从F开始顺时针旋转，加降号：从B开始逆时针旋转&lt;/p&gt;
+&lt;p&gt;逆时针移动：纯五度下行=纯四度上行=强进行方向&lt;/p&gt;
+&lt;p&gt;减七和弦的构成音相互间隔90度&lt;/p&gt;
+&lt;p&gt;增三和弦的三个音在五度图中构成等边三角形&lt;/p&gt;
+&lt;p&gt;里和弦：属七和弦的形态，但是不做下行&lt;/p&gt;
+&lt;p&gt;里和弦D♭7的所有构成音都和C半音相连&lt;/p&gt;
+&lt;p&gt;所有属七和弦都一定有且只有一个对应的里和弦，这两个和弦在五度圈上是一条直线的两端&lt;/p&gt;
+&lt;p&gt;F7虽然不能作为附属和弦使用，但是可以作为里和弦下落半音&lt;/p&gt;
+&lt;p&gt;下属到主是比属到主更加平稳的下降方法&lt;/p&gt;
+&lt;p&gt;属系分数和弦：低音构成强进行的下属和弦&lt;/p&gt;
+&lt;p&gt;下属和弦低音无法强进行，可以改成属系分数和弦解决&lt;/p&gt;
+&lt;p&gt;另一个弱点是与主和弦相邻半音的音只有一个F&lt;/p&gt;
+&lt;p&gt;下属和弦除了改变的那个音之外相较于主和弦太过稳定了，需要改变和弦结构解决，把其中的A改成A♭即可形成下属小和弦&lt;/p&gt;
+&lt;p&gt;套句：根音不变，改变上方三，五，七音之间的和弦&lt;/p&gt;
+&lt;p&gt;低音以半音或者全音级进的进行：低音线套句&lt;/p&gt;
+&lt;p&gt;低音线套句中所有和弦都含有C，可以以C音作为长音结束&lt;/p&gt;
+&lt;p&gt;持续低音：固定一组和弦进行低音部&lt;/p&gt;
+&lt;p&gt;低音固定在主音：持续低主音，低音固定在属音：持续低属音&lt;/p&gt;
+&lt;h2 id=&#34;发展篇&#34;&gt;发展篇
+&lt;/h2&gt;&lt;p&gt;sus4分数和弦：既不是大和弦也不是小和弦，因为没有三度音&lt;/p&gt;
+&lt;p&gt;sus4的根音和三音之间是五个半音的距离&lt;/p&gt;
+&lt;p&gt;分数和弦：转位和弦，Hybrid Chord，Polychord&lt;/p&gt;
+&lt;p&gt;Hybrid Chord：分子上的和弦的构成因以外的音构成分母&lt;/p&gt;
+&lt;p&gt;属系分数和弦属于Hybrid Chord&lt;/p&gt;
+&lt;p&gt;F/G拥有sus4的特征音&lt;/p&gt;
+&lt;p&gt;sus4系分数和弦：由于分子与分母的错位形成的&lt;/p&gt;
+&lt;p&gt;构成方法：分母不动，分子构成下方全音上的大三和弦&lt;/p&gt;
+&lt;p&gt;下方全音的和弦作分子用大和弦，反之用小和弦&lt;/p&gt;
+&lt;p&gt;Tension Chord: add9th和九和弦&lt;/p&gt;
+&lt;p&gt;9度：根音高八度再加一个全音&lt;/p&gt;
+&lt;p&gt;构成方法：原有的四和弦基础上加一个根音的九度&lt;/p&gt;
+&lt;p&gt;小九度：Em7♭9，由于它的九度音和根音是半音的距离&lt;/p&gt;
+&lt;p&gt;不含七音的和弦加上9/11/13的时候要有add记号&lt;/p&gt;
+&lt;p&gt;和弦的纯五度音对和弦的音响影响也不大，也可以删除&lt;/p&gt;
+&lt;p&gt;九和弦中的九音排列在和弦内部能够让声音更饱满&lt;/p&gt;
+&lt;p&gt;Cmaj13：CEGBA&lt;/p&gt;
+&lt;p&gt;避免音（Avoid Note）：距离任一Chord Tone（1/3/5/7）小九度或八度上下的小九度（同音名）的Tension&lt;/p&gt;
+&lt;p&gt;要检查是否在Tension和Chord Tone之间有没有小九度&lt;/p&gt;
+&lt;p&gt;避免音的形成条件：对Chord Tone形成小九度（或相差八度的小九度）的Tension&lt;/p&gt;
+&lt;p&gt;同为Chord Tone的音即使形成小九度也不构成避免音&lt;/p&gt;
+&lt;p&gt;对Tension形成小九度（或相差八度的小九度）的Chord Tone不算做避免音&lt;/p&gt;
+&lt;p&gt;将和弦的一处音改为避免音的同音，避免音不再存在，但也失去了七和弦的三全音&lt;/p&gt;
+&lt;p&gt;但这种方法容易形成转位和弦导致声音变得更奇怪&lt;/p&gt;
+&lt;p&gt;小九度变大九度也可以去除避免音（将与避免音冲突的和弦构成音下降半音）&lt;/p&gt;
+&lt;p&gt;不改变和弦形态——伴奏不会改变&lt;/p&gt;
+&lt;p&gt;Altered Tension：带有升降记号的Tension&lt;/p&gt;
+&lt;p&gt;只有升11度和降13度的Altered Tension，否则就是其他的音了&lt;/p&gt;
+&lt;p&gt;Altered Tension中的音的升降号和琴键上的升降号没有对应关系&lt;/p&gt;
+&lt;p&gt;从Natural9th位置开始，降半音为♭9，升半音为♯9&lt;/p&gt;
+&lt;p&gt;大和弦的Natural 11th一定是一个避免音，不能使用&lt;/p&gt;
+&lt;p&gt;属七和弦原本音色浑浊，所以加上♭9是可以的&lt;/p&gt;
+&lt;p&gt;但即便是属七和弦也禁止纯11度的避免音&lt;/p&gt;
+&lt;p&gt;所有的Altered Tension都可以由12小节的蓝调形式与蓝调音阶中的音组合产生&lt;/p&gt;
+&lt;p&gt;G7♭9=G7+Bdim7，是一种不稳定的音&lt;/p&gt;
+&lt;p&gt;Tension Resolve：有紧张感的Tension移动到稳定的和弦音&lt;/p&gt;
+&lt;p&gt;Omit：省略与Tension相邻的和弦音&lt;/p&gt;
+&lt;p&gt;两个或两个以上的Tension可以复合使用，适用于表达复杂哀伤的情绪&lt;/p&gt;
+&lt;p&gt;使用Altered Tension时应该省略和音且排列不要过于紧密&lt;/p&gt;
+&lt;p&gt;两个相隔半音的Tension不能同时使用，否则会影响彼此的音响&lt;/p&gt;
+&lt;p&gt;7（♭9♯11）有一些不同寻常的性质&lt;/p&gt;
+&lt;p&gt;Poly Chord：双层结构，竖着写&lt;/p&gt;
+&lt;p&gt;上层结构多为三个和音，下层结构多为四个和音，下层的避免音不能出现在上层中（属和弦除外）&lt;/p&gt;
+&lt;p&gt;上层必须含有下层的一个Tension&lt;/p&gt;
+&lt;p&gt;上层可以自由转位，下层只有在有低音乐器衬底的情况下转位&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>关于perf的应用</title>
         <link>https://vzstless.moe/p/%E5%85%B3%E4%BA%8Eperf%E7%9A%84%E5%BA%94%E7%94%A8/</link>
         <pubDate>Sun, 09 Mar 2025 08:31:14 +0800</pubDate>
