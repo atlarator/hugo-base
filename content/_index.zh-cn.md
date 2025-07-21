@@ -22,7 +22,6 @@ tags: ["MISC"]
 GPG Public Key: 81F97A3DCC8ACF8128F6FBF6D96D94E92C64A252
 
   <a href="http://vzstless.moe">blog</a>
-  <a href="https://vzstless.notion.site/Hi-VZstless-here-18cfefdbc8d98017965ff458ec105c76">notion</a>
 
 ![Static Badge](https://img.shields.io/badge/telegram-VZstless-blue) ![Static Badge](https://img.shields.io/badge/Discord-VZstless-purple) ![Static Badge](https://img.shields.io/badge/bilibili-VZstless-pink)
 
