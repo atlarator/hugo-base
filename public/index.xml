@@ -7,7 +7,49 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Wed, 20 Aug 2025 07:18:16 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 23 Aug 2025 12:20:01 +0800</lastBuildDate><atom:link href="https://vzstless.moe/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DL First Taste</title>
+        <link>https://vzstless.moe/p/dl-first-taste/</link>
+        <pubDate>Sat, 23 Aug 2025 12:20:01 +0800</pubDate>
+        
+        <guid>https://vzstless.moe/p/dl-first-taste/</guid>
+        <description>&lt;h2 id=&#34;lecture-1&#34;&gt;Lecture 1
+&lt;/h2&gt;&lt;p&gt;neuron: a function that records a feature&lt;br&gt;
+connection: a number of weight&lt;br&gt;
+spread: calculate the function, times the weight, sum the bias and impulse using ReLU(modern way) or Sigmoid(older way)&lt;/p&gt;
+&lt;p&gt;Deep Learning itself is just build a huge function.&lt;/p&gt;
+&lt;h2 id=&#34;lecture-2&#34;&gt;Lecture 2
+&lt;/h2&gt;&lt;p&gt;Cost: how the whole network recognizes your data&lt;br&gt;
+It&amp;rsquo;s always easy to find a local minimum in a function&lt;br&gt;
+The way to calculate the gradient descent is backpropagation&lt;/p&gt;
+&lt;h2 id=&#34;lecture-3&#34;&gt;Lecture 3
+&lt;/h2&gt;&lt;p&gt;backpropagation: calculate which bunch of biases &amp;amp; weights change will have a repid decrease on cost function, all of the calculation rely on previous layer of network&lt;br&gt;
+backpropagation needs a huge bunch of data to train the model, it will be good to divide random shuffled data into mini-batches, and do backpropagation one by one&lt;/p&gt;
+&lt;h2 id=&#34;lecture-5&#34;&gt;Lecture 5
+&lt;/h2&gt;&lt;p&gt;large language model: generate next possible word based on previous input(context of human-AI talking)&lt;br&gt;
+train, reinforcement learning with human feedback&lt;br&gt;
+transformers: attention, forward propagation, attention, so on&lt;br&gt;
+finally choose the most value connects to the context to output&lt;/p&gt;
+&lt;h2 id=&#34;lecture-6&#34;&gt;Lecture 6
+&lt;/h2&gt;&lt;p&gt;Attention: vectors communicate with each other to change value&lt;br&gt;
+propagation: vectors passes through network to another attention layer&lt;br&gt;
+weights are ones to train, not data&lt;/p&gt;
+&lt;p&gt;embedded layer: a huge matrix for words and their features&lt;br&gt;
+unembedded layer: use the last vector to generate the probability of next possible word to generate&lt;/p&gt;
+&lt;p&gt;softmax: an algorithm turns vectors into probability distribution, to let largest value close to 1 and smallest value close to 0&lt;/p&gt;
+&lt;h2 id=&#34;lecture-7&#34;&gt;Lecture 7
+&lt;/h2&gt;&lt;p&gt;query: what the word care about in the context&lt;br&gt;
+key: what is provided for queries to check whether it is relevant&lt;br&gt;
+value: final result that the word vector should care&lt;br&gt;
+using softmax to form a normal data, before this, change all non-relevant words a neg-inf weight&lt;br&gt;
+it would be hard to enlarge the context size&lt;br&gt;
+multi-head is the way GPT scale-out&lt;/p&gt;
+&lt;h2 id=&#34;lecture-8&#34;&gt;Lecture 8
+&lt;/h2&gt;&lt;p&gt;perpendicular: same family of meaning, find most vectors that are perpendicular&lt;br&gt;
+linear, ReLU, linear, MLP are just simplest neural networks&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>关于电脑的问与答</title>
         <link>https://vzstless.moe/p/%E5%85%B3%E4%BA%8E%E7%94%B5%E8%84%91%E7%9A%84%E9%97%AE%E4%B8%8E%E7%AD%94/</link>
         <pubDate>Wed, 20 Aug 2025 07:18:16 +0800</pubDate>
@@ -56,7 +98,7 @@
 </description>
         </item>
         <item>
-        <title>Arch Linux安装初体验&#34;</title>
+        <title>Arch Linux安装初体验</title>
         <link>https://vzstless.moe/p/arch-linux%E5%AE%89%E8%A3%85%E5%88%9D%E4%BD%93%E9%AA%8C/</link>
         <pubDate>Tue, 15 Jul 2025 19:51:37 +0800</pubDate>
         
