@@ -2,7 +2,7 @@
 title: "Arch Linux安装初体验"
 date: 2025-07-15T19:51:37+08:00
 draft: false
-tags: ["OS"]
+tags: ["Linux"]
 ---
 
 什么嘛，Arch Linux哪里劝退了（）  
