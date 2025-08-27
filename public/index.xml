@@ -691,38 +691,38 @@ vdso是一个特殊的共享库，提供一些常用的syscall供用户态实现
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;看看它们分别是什么。别小看这件事情，某种意义上你刨一下发现这是个巨大的历史残留&amp;hellip;&amp;hellip;&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;pid&lt;/th&gt;
-&lt;th&gt;CMD&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;/sbin/init&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;/init&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;plan9 &amp;ndash;control-socket 7 &amp;ndash;log-level 4 &amp;ndash;server-fd 8 &amp;ndash;pipe-fd 10 &amp;ndash;log-truncate&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;107&lt;/td&gt;
-&lt;td&gt;/usr/lib/systemd/systemd-udevd&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1219&lt;/td&gt;
-&lt;td&gt;/sbin/agetty -o -p &amp;ndash; \u &amp;ndash;noclear &amp;ndash;keep-baud - 115200,38400,9600 vt220&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;200&lt;/td&gt;
-&lt;td&gt;snapfuse /var/lib/snapd/snaps/snapd_23545.snap /snap/snapd/23545 -oro,nodev,allow_other,suid&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;pid&lt;/th&gt;
+          &lt;th&gt;CMD&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;/sbin/init&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;/init&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;7&lt;/td&gt;
+          &lt;td&gt;plan9 &amp;ndash;control-socket 7 &amp;ndash;log-level 4 &amp;ndash;server-fd 8 &amp;ndash;pipe-fd 10 &amp;ndash;log-truncate&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;107&lt;/td&gt;
+          &lt;td&gt;/usr/lib/systemd/systemd-udevd&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1219&lt;/td&gt;
+          &lt;td&gt;/sbin/agetty -o -p &amp;ndash; \u &amp;ndash;noclear &amp;ndash;keep-baud - 115200,38400,9600 vt220&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;200&lt;/td&gt;
+          &lt;td&gt;snapfuse /var/lib/snapd/snaps/snapd_23545.snap /snap/snapd/23545 -oro,nodev,allow_other,suid&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;这个plan9出来的时候没绷住，感觉像是一位已经死了的故人突然复活了一样&lt;/p&gt;
 &lt;h2 id=&#34;遍历整个地址空间&#34;&gt;遍历整个地址空间
@@ -2074,8 +2074,7 @@ popen()
 &lt;h3 id=&#34;效率问题&#34;&gt;效率问题
 &lt;/h3&gt;&lt;p&gt;我们循规蹈矩一点儿，至少还有两招能用。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;1.小数比整数快。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;1.小数比整数快。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;如果你在Mathematica计算1/2，结果会返回二分之一。同理的，解方程也会如此。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2093,8 +2092,7 @@ popen()
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Mathematica中整数的精度不是1，而是无穷。我们显然不需要那么高的精度，用机器精度足以完成任务了。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;2.专用函数比通用函数快。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;2.专用函数比通用函数快。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Solve和NSolve的求解原理是求f(x)=0的反函数，对于超越方程来说，没办法，只能是它。但是我们今天的主角是多项式，可以有更快的方法。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2185,8 +2183,7 @@ popen()
 &lt;/p&gt;
 $$
 a_3x^3+a_2x^2+a_1x+a_0=0
-$$
-&lt;p&gt;
+$$&lt;p&gt;
 构造矩阵：
 &lt;/p&gt;
 $$
@@ -2195,16 +2192,14 @@ A=\begin{bmatrix}
   1 &amp; 0 &amp; 0\\
  0 &amp; 1 &amp; 0
 \end{bmatrix}
-$$
-&lt;p&gt;
+$$&lt;p&gt;
 解为：
 &lt;/p&gt;
 $$
 x=\begin{bmatrix}
 x_1\\x_2\\x_3
 \end{bmatrix}
-$$
-&lt;p&gt;
+$$&lt;p&gt;
 对解有Ax=λx，则有方程：
 &lt;/p&gt;
 $$
@@ -2213,8 +2208,7 @@ $$
 x_1=\lambda x_2\\
 x_2=\lambda x_3
 \end{matrix}
-$$
-&lt;p&gt;
+$$&lt;p&gt;
 代入原方程就可以把求解方程的解转化为求解矩阵的特征值，以上原理对n次方程依然成立。&lt;/p&gt;
 &lt;p&gt;明白了原理就可以自己写一个类似的，不过我们只要系数±1的情况所以不必完全照抄。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
