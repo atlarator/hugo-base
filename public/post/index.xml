@@ -7,7 +7,19 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>VZstless</copyright>
-        <lastBuildDate>Wed, 27 Aug 2025 13:34:05 +0000</lastBuildDate><atom:link href="https://vzstless.moe/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 13 Sep 2025 01:27:43 +0000</lastBuildDate><atom:link href="https://vzstless.moe/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>“帮我选个字体吧！”</title>
+        <link>https://vzstless.moe/p/%E5%B8%AE%E6%88%91%E9%80%89%E4%B8%AA%E5%AD%97%E4%BD%93%E5%90%A7/</link>
+        <pubDate>Sat, 13 Sep 2025 01:27:43 +0000</pubDate>
+        
+        <guid>https://vzstless.moe/p/%E5%B8%AE%E6%88%91%E9%80%89%E4%B8%AA%E5%AD%97%E4%BD%93%E5%90%A7/</guid>
+        <description>&lt;p&gt;近期折腾社团报纸总结了好多出版方面的知识，这里先写一点关于字体的。&lt;br&gt;
+最大的头版要用大家有点“刻板印象”很适合用来上头版的字体，或者说这种字不一定耐读，但是看着一定要大气，一定要有那种我出来就是权威的感觉。如果是中文，推荐草檀毛泽东字体，如果是西文可以用Chomsky。&lt;/p&gt;
+&lt;p&gt;接下来是文章的标题和内容。这里我一般习惯标题20磅或者15磅而正文10磅，这样在A3纸上能做到至少看起来不费眼睛。这里的字体还是有点讲究的。如果你喜欢那种传统的，容易把人镇住的，能够凸显纸媒的权威性的风格，推荐衬线字体，比如中文的宋体和英文的Times New Roman。但是这两种（或者说这两类）字体如果出现在ppt或者某些更加现代的场合会给人带来不合时宜的年代感和腐旧感。这种需要更加现代字样的场合就需要等线字体了。幸运的是很多等线字体由于本身设计的年代就不太久远，出生便拥有多国字母和CJK的适配，比如MiSans和NotoSans都是不错的。顺带提一嘴，一定要选用开源可商用的字体，诸如微软雅黑和Tahoma之类容易引起纠纷的字体就算了。&lt;/p&gt;
+&lt;p&gt;接下来是一些特殊用途。如果你想让你的海报有更多上个二十年的设计感可以使用隶书。如果你想让你的代码更加清楚可以使用Nerdfont或者Cascadia Mono这两个专门为代码特化的字体。如果你喜欢让你的字体像是直接从某个电脑屏幕上抠下来的，可以试试NokiaSans或者Ubuntu font。如果你喜欢那种高冷、扁平而又显得很“平面设计”，苹果的San Francisco绝对不能错过。如果你要做视频字幕，站酷快乐体和得意黑这种活泼而又易读的字体不错。如果你喜欢那种某些电脑零配件厂牌标识的画风，可以试试Modern Warfare、Horyzen之类的仿制开源字体。其实选字体没啥诀窍，最大的诀窍也许是多看身边的东西，觉得设计得好就丢到AI上问问这是什么字体，问完之后下载就行。然后记得避开那些许多人喜欢在QQ聊天记录上使用的艺术字。这些艺术字虽然看着像画，但是笔触之间缺少一种大气，而且不好读。最后要尽量避免大篇幅地使用艺术字。艺术字只适合小块的氛围渲染，但凡使用面积过大就会大大降低整个文件的可读性。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>失败的远征</title>
         <link>https://vzstless.moe/p/%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%BF%9C%E5%BE%81/</link>
         <pubDate>Wed, 27 Aug 2025 13:34:05 +0000</pubDate>
