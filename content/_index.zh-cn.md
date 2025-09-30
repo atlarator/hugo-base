@@ -19,9 +19,8 @@ tags: ["MISC"]
 - ✉️ vzstless@qq.com
 - 🍀I work so I live.
 
-GPG Public Key ID: D96D94E92C64A252  
-(Or search Public Key wiz the fingerprint: 81F97A3DCC8ACF8128F6FBF6D96D94E92C64A252)
-  
+GPG Public Key ID: 20BC01681DED4C9C5C4CB83F6D2C840D51DB624B  
+ 
   <a href="http://vzstless.moe">blog</a>
   
   ![Static Badge](https://img.shields.io/badge/telegram-VZstless-blue) ![Static Badge](https://img.shields.io/badge/Discord-VZstless-purple) ![Static Badge](https://img.shields.io/badge/bilibili-VZstless-pink)
