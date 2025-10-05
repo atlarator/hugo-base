@@ -5,6 +5,10 @@ links:
     description: 一位热衷于cngal的老学长
     website: https://shiokiri.com
     image: https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png
+  - title: anri
+    description: 炉石传说，启动！
+    website: https://github.com/copicomi
+    image: kagami.jpg
   - title: GitHub
     description: 猫之家
     website: https://github.com
