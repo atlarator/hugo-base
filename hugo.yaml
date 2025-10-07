@@ -202,13 +202,13 @@ menu:
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/VictorZhangAI
+          url: https://github.com/atlarator
           params:
               icon: brand-github
 
         - identifier: notion
-          name: Twitter
-          url: https://vzstless.notion.site/Hi-VZstless-here-18cfefdbc8d98017965ff458ec105c76
+          name: bcom-moe
+          url: https://bcom.moe/@VZstless
           params:
               icon: brand-twitter
 

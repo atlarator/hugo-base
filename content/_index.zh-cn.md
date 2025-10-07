@@ -26,5 +26,3 @@ GPG Public Key ID: 20BC01681DED4C9C5C4CB83F6D2C840D51DB624B
   ![Static Badge](https://img.shields.io/badge/telegram-VZstless-blue) ![Static Badge](https://img.shields.io/badge/Discord-VZstless-purple) ![Static Badge](https://img.shields.io/badge/bilibili-VZstless-pink)
 
 ![skills](https://skillicons.dev/icons?i=arch,ubuntu,debian,nix,plan9,bash,powershell,cloudflare,python,julia,javascript,scala,go,c,haskell,ts,regex,react,fastapi,git,github,githubactions,notion,ps,htmx,jquery,vscode,vim,azure,emacs,)
-
-<img src="https://github-readme-stats-one-bice.vercel.app/api?username=victorzhangai&count_private=true&theme=calm&show_icons=true&include_all_commits=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR" alt="Where had I walked" height="185px" /> <!-- img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=victorzhangai&layout=compact&langs_count=8&theme=calm&role=OWNER,ORGANIZATION_MEMBER" alt="Mostly Used" height="185px" / -->
